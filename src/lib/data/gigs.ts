@@ -48,6 +48,12 @@ export const gigs: Gig[] = [
         description: 'Details zum VVK folgen in Kürze.',
     },
     {
+        title: 'Doppelkonzert /m Soundescape',
+        time: '24. Juni 2023 um 20:00',
+        place: ['Bürgerhaus Köln-Kalk', 'Kalk-Mühlheimer Str. 58', '51103 Köln'],
+        description: 'Details zum VVK folgen in Kürze.',
+    },
+    {
         title: '10 - Das Jubiläumskonzert!',
         time: '4. November 2023 um 20:00',
         place: ['Friedrich-Wilhelm-Gymnasium', 'Severinstraße 241', '50676 Köln'],

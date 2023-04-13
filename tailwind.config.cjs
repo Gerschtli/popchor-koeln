@@ -17,6 +17,7 @@ const config = {
                     DEFAULT: '#d57e56',
                     light: '#f2936a',
                 },
+                gray: '#5c5c5c'
             },
         },
     },
