@@ -15,7 +15,7 @@
 </svelte:head>
 
 <Section id="chor" title="Chor" classContent="space-y-4">
-    <p>
+    <p class="text-neutral-600">
         Der <strong>popCHORköln</strong>, ehemals <strong>d'acCHORd</strong>, besteht aus rund 60 Sänger:innen aus Köln
         und Umgebung. Das Repertoire umfasst hauptsächlich Popmusik in anspruchsvollen A-cappella-Arrangements, aber
         auch speziell für den Chor arrangierte, weniger bekannte Stücke aus Genres abseits des Mainstreams, Rock- und
@@ -30,7 +30,7 @@
         >
     </div>
 
-    <p class:hidden={!textExpand}>
+    <p class="text-neutral-600" class:hidden={!textExpand}>
         Die Idee, einen Chor zu gründen, entstand 2013 auf einer WG-Party. Kurz darauf fand unter der Leitung von Niklas
         Genschel die erste Probe statt. Es entstand ein spannendes und stetig wachsendes Chor-Projekt mit zahlreichen
         Konzerten, diversen Medienauftritten sowie aufwendigen Film- und Videoproduktionen. Inzwischen zählt der Chor zu
@@ -41,7 +41,7 @@
 </Section>
 
 <Section id="chorleiter" title="Chorleiter">
-    <p>
+    <p class="text-neutral-600">
         Niklas Genschel ist Schlagzeuger, Musikpädagoge und Chorleiter. Während seines Studiums (Jazz- und Popschlagzeug
         in Köln und Arnheim) belegte er auch einige Semester Dirigieren und Chorleitung und sang selbst im Kammerchor
         der Musikhochschule Köln unter der Leitung von Marcus Creed (SWR Vokalensemble Stuttgart). Wenn er nicht gerade

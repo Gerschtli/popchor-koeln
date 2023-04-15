@@ -14,7 +14,7 @@
         <h2 class="relative bg-white px-8 font-heading text-3xl first-letter:text-accent">{title}</h2>
     </hgroup>
 
-    <div class="px-4 sm:px-8 lg:px-16 [&_p]:text-paragraph {classContent}">
+    <div class="px-4 sm:px-8 lg:px-16 {classContent}">
         <slot />
     </div>
 </section>

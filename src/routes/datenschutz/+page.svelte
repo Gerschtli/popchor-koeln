@@ -7,6 +7,8 @@
 </svelte:head>
 
 <Section title="Datenschutz">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, consectetur nisi dolorum esse sit libero
-    numquam enim sequi repellat ducimus commodi aliquam aliquid recusandae aperiam sunt ipsa earum pariatur error.
+    <p class="text-neutral-600">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, consectetur nisi dolorum esse sit libero
+        numquam enim sequi repellat ducimus commodi aliquam aliquid recusandae aperiam sunt ipsa earum pariatur error.
+    </p>
 </Section>

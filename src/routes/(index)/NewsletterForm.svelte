@@ -34,7 +34,7 @@
 <div class="space-y-2">
     <h3 class="font-heading text-lg font-bold">Newsletter</h3>
 
-    <p>
+    <p class="text-neutral-600">
         Trage dich in unseren Newsletter ein und bleibe so immer auf dem neusten Stand zu unseren Konzerten, Videos und
         Aktivitäten!
     </p>

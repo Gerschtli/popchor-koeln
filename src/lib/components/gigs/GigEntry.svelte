@@ -48,7 +48,7 @@
             <GigLine label="Einlass">{entryTime}</GigLine>
         {/if}
 
-        <p class="mt-2 text-sm"><slot /></p>
+        <p class="mt-2 text-sm text-neutral-600"><slot /></p>
 
         {#if linkTickets}
             <div class="mt-2 flex justify-end">
@@ -72,6 +72,6 @@
             </div>
         {/if}
     {:else}
-        <p class="text-sm">{time} @ {place[0]}</p>
+        <p class="text-sm text-neutral-600">{time} @ {place[0]}</p>
     {/if}
 </div>

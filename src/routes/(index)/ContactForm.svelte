@@ -37,12 +37,12 @@
 <div class="space-y-2">
     <h3 class="font-heading text-lg font-bold">Kontaktformular</h3>
 
-    <p>
+    <p class="text-neutral-600">
         Sei es Lob, Kritik, eine Auftrittsanfrage oder einfach so - schreibt uns einfach über unser Kontaktformular. Wir
         freuen uns auf eure Nachrichten!
     </p>
 
-    <p>
+    <p class="text-neutral-600">
         Habt ihr bereits Chorerfahrung und Interesse bei uns mitzusingen? Auch dann könnt ihr uns gerne schreiben,
         allerdings sind wir momentan in den Frauenstimmen voll besetzt und können euch nur für unser nächstes Vorsingen
         vormerken. In den Männerstimmen gibt es noch das ein oder andere Plätzchen 🙂
