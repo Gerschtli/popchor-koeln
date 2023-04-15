@@ -30,7 +30,23 @@
         vormerken. In den Männerstimmen gibt es noch das ein oder andere Plätzchen 🙂
     </p>
 
-    <form class="space-y-3" method="POST" action="?/contact#{id}" use:enhance>
+    <form
+        class="space-y-3"
+        method="POST"
+        action="?/contact#{id}"
+        use:enhance={() => {
+            status = 'loading';
+
+            return async ({ result, update }) => {
+                status = 'ready';
+                if (result.status === 500) {
+                    status = 'error';
+                }
+
+                return await update();
+            };
+        }}
+    >
         <Textbox
             label="Dein Name"
             name="name"

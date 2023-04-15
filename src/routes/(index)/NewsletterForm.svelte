@@ -22,7 +22,23 @@
         Aktivitäten!
     </p>
 
-    <form class="space-y-3" method="POST" action="?/newsletter#{id}" use:enhance>
+    <form
+        class="space-y-3"
+        method="POST"
+        action="?/newsletter#{id}"
+        use:enhance={() => {
+            status = 'loading';
+
+            return async ({ result, update }) => {
+                status = 'ready';
+                if (result.status === 500) {
+                    status = 'error';
+                }
+
+                return await update();
+            };
+        }}
+    >
         <Textbox
             label="Deine Email"
             name="email"
