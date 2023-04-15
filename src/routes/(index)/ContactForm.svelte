@@ -1,40 +1,22 @@
 <script lang="ts">
-    import { sendToApi } from '$lib/api';
+    import { enhance } from '$app/forms';
+    import Checkbox from '$lib/components/forms/Checkbox.svelte';
+    import Select from '$lib/components/forms/Select.svelte';
+    import SubmitButton from '$lib/components/forms/SubmitButton.svelte';
+    import Textbox from '$lib/components/forms/Textbox.svelte';
+    import TextboxMultiline from '$lib/components/forms/TextboxMultiline.svelte';
     import type { FormStatus } from '$lib/types';
-    import type { RequestBody } from '../api/contact-form/+server';
-    import Checkbox from './Checkbox.svelte';
-    import SubmitButton from './SubmitButton.svelte';
+    import type { ActionData } from './$types';
 
-    let name: string;
-    let email: string;
-    let subject: string;
-    let message: string;
-    let newsletter = false;
+    export let form: ActionData;
 
+    const id = 'kontaktformular';
     let status: FormStatus = 'ready';
 
-    const onSubmit = async () => {
-        status = 'loading';
-
-        var body = {
-            name,
-            email,
-            subject,
-            message,
-            newsletter,
-        } satisfies RequestBody;
-
-        try {
-            await sendToApi('/api/contact-form', body);
-
-            status = 'success';
-        } catch (e) {
-            status = 'error';
-        }
-    };
+    $: if (form?.contact?.success) status = 'success';
 </script>
 
-<div class="space-y-2">
+<div {id} class="space-y-2">
     <h3 class="font-heading text-lg font-bold">Kontaktformular</h3>
 
     <p class="text-neutral-600">
@@ -48,74 +30,53 @@
         vormerken. In den Männerstimmen gibt es noch das ein oder andere Plätzchen 🙂
     </p>
 
-    <form class="space-y-3" on:submit|preventDefault={onSubmit}>
-        <label class="block">
-            <span class="text-xs font-bold uppercase tracking-wide text-slate-500">Dein Name:</span>
-            <input
-                type="text"
-                name="name"
-                bind:value={name}
-                required
-                class="
-                    mt-1 block w-full rounded-md border border-transparent bg-slate-100 px-3 py-2 outline-none
-                    focus:border-slate-500 focus:bg-white
-                "
-            />
-        </label>
+    <form class="space-y-3" method="POST" action="?/contact#{id}" use:enhance>
+        <Textbox
+            label="Dein Name"
+            name="name"
+            type="text"
+            required={true}
+            value={form?.contact?.data.name}
+            errors={form?.contact?.errors?.name}
+            errorMessage="Bitte trage deinen Namen ein."
+        />
 
-        <label class="block">
-            <span class="text-xs font-bold uppercase tracking-wide text-slate-500">Deine Email:</span>
-            <input
-                type="email"
-                name="email"
-                bind:value={email}
-                required
-                class="
-                    mt-1 block w-full rounded-md border border-transparent bg-slate-100 px-3 py-2 outline-none
-                    focus:border-slate-500 focus:bg-white
-                "
-            />
-        </label>
+        <Textbox
+            label="Deine Email"
+            name="email"
+            type="email"
+            required={true}
+            value={form?.contact?.data.email}
+            errors={form?.contact?.errors?.email}
+            errorMessage="Bitte trage deine Email Adresse ein."
+        />
 
-        <label class="block">
-            <span class="text-xs font-bold uppercase tracking-wide text-slate-500">Betreff:</span>
-            <select
-                name="subject"
-                class="
-                    mt-1 block w-full rounded-md border border-transparent bg-slate-100 px-3 py-2 outline-none
-                    focus:border-slate-500 focus:bg-white
-                "
-                bind:value={subject}
-            >
-                <option value="Lob und Kritik">Lob und Kritik</option>
-                <option value="Mitsingen">Mitsingen</option>
-                <option value="Anfrage">Anfrage</option>
-                <option value="Sonstiges">Sonstiges</option>
-            </select>
-        </label>
+        <Select
+            label="Betreff"
+            name="subject"
+            required={true}
+            value={form?.contact?.data.subject}
+            errors={form?.contact?.errors?.subject}
+            errorMessage="Bitte wähle einen Betreff aus."
+            options={['Lob und Kritik', 'Mitsingen', 'Anfrage', 'Sonstiges']}
+        />
 
-        <label class="block">
-            <span class="text-xs font-bold uppercase tracking-wide text-slate-500">Deine Nachricht:</span>
-            <textarea
-                name="message"
-                bind:value={message}
-                required
-                class="
-                    mt-1 block w-full rounded-md border border-transparent bg-slate-100 px-3 py-2 outline-none
-                    focus:border-slate-500 focus:bg-white
-                "
-            />
-        </label>
+        <TextboxMultiline
+            label="Deine Nachricht"
+            name="message"
+            required={true}
+            value={form?.contact?.data.message}
+            errors={form?.contact?.errors?.message}
+            errorMessage="Bitte trage deine Nachricht ein."
+        />
 
-        <!-- svelte-ignore a11y-label-has-associated-control -->
-        <label class="flex items-center gap-4">
-            <Checkbox bind:enabled={newsletter} screenReaderText="Für Newsletter eintragen" />
-
-            <span class="text-sm text-slate-700">
-                Ja, bitte trage mich auch in euren Newsletter ein. Ich weiß, dass ich mich jederzeit vom Verteiler
-                abmelden kann.
-            </span>
-        </label>
+        <Checkbox
+            label="Ja, bitte trage mich auch in euren Newsletter ein. Ich weiß, dass ich mich jederzeit vom Verteiler abmelden kann."
+            name="newsletter"
+            screenReaderText="Für Newsletter eintragen"
+            value={form?.contact?.data.newsletter}
+            errors={form?.contact?.errors?.newsletter}
+        />
 
         <SubmitButton {status} text="Senden" />
     </form>

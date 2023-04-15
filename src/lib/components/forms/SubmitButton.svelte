@@ -3,17 +3,15 @@
     import { Check, Loader2, MailWarning } from 'lucide-svelte';
 
     export let status: FormStatus = 'ready';
-    export let disabled = false;
     export let text: string;
 </script>
 
 <button
     type="submit"
-    disabled={disabled || status !== 'ready'}
+    disabled={status !== 'ready'}
     class="
         block w-full rounded-md bg-accent px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-colors duration-100 ease-in-out
         hover:bg-accent-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500
-        disabled:bg-slate-400
     "
     class:disabled:bg-slate-400={status !== 'success' && status !== 'error'}
     class:disabled:bg-green-500={status === 'success'}
