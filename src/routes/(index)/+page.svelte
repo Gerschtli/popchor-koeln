@@ -7,7 +7,7 @@
     import NewsletterForm from './NewsletterForm.svelte';
 
     let textExpand = false;
-    const gigCount = 5;
+    const gigCount = 6;
 </script>
 
 <svelte:head>
