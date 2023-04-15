@@ -25,6 +25,7 @@ specifiers:
   typescript: ^5.0.4
   vite: ^4.2.1
   zod: ^3.21.4
+  zod-form-data: ^2.0.1
 
 devDependencies:
   '@sveltejs/adapter-netlify': 2.0.6_@sveltejs+kit@1.15.2
@@ -51,6 +52,7 @@ devDependencies:
   typescript: 5.0.4
   vite: 4.2.1
   zod: 3.21.4
+  zod-form-data: 2.0.1_zod@3.21.4
 
 packages:
 
@@ -2415,6 +2417,14 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: true
+
+  /zod-form-data/2.0.1_zod@3.21.4:
+    resolution: {integrity: sha512-4jcsj3vFyFGINLLHEmehfOPKdcw+HqV65RwsV2IdyLHp9wpvGJRVXWg1yY8sq0ASEbQfTVBRtI7LcDGv3Qpj8g==}
+    peerDependencies:
+      zod: ^3.11.x
+    dependencies:
+      zod: 3.21.4
     dev: true
 
   /zod/3.21.4:
