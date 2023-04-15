@@ -2,7 +2,7 @@
     export let label: string;
     export let screenReaderText: string;
     export let name: string;
-    export let value: FormDataEntryValue | boolean | undefined = undefined;
+    export let value: string | boolean | undefined = undefined;
     export let errors: string[] | undefined = undefined;
 
     $: showError = errors?.length;

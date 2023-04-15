@@ -2,7 +2,7 @@
     export let label: string;
     export let name: string;
     export let type: 'text' | 'email' = 'text';
-    export let value: FormDataEntryValue | boolean | undefined = '';
+    export let value: string | boolean | undefined = '';
     export let required: boolean;
     export let errors: string[] | undefined = undefined;
     export let errorMessage: string;

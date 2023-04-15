@@ -28,7 +28,7 @@ const RequestBodySchemaNewsletter = zfd.formData({
 
 type ResponsePartial = {
     success: boolean;
-    data: Record<string, FormDataEntryValue | boolean>;
+    data: Record<string, string | boolean | undefined>;
     errors?: Record<string, string[] | undefined>;
 };
 type Response = {
@@ -47,7 +47,9 @@ const wrapper = async <T extends Record<string, string | boolean>>(
 
     const response: ResponsePartial = {
         success: false,
-        data: Object.fromEntries(formData),
+        data: Object.fromEntries(
+            Array.from(formData.entries()).map(([k, v]) => [k, typeof v === 'string' ? v : undefined]),
+        ),
     };
 
     if (!result.success) {
