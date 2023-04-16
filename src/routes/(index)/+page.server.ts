@@ -1,6 +1,8 @@
 import {
     CONTACT_FORM_RECEIVER_MAIL,
+    CONTACT_FORM_RECEIVER_MAIL_SINGING,
     CONTACT_FORM_RECEIVER_NAME,
+    CONTACT_FORM_RECEIVER_NAME_SINGING,
     CONTACT_FORM_SENDER_MAIL,
     CONTACT_FORM_SENDER_NAME,
 } from '$env/static/private';
@@ -54,9 +56,15 @@ export const actions = {
         const { email, message, name, newsletter, subject } = form.data;
 
         const newsletterResult = await handleNewsletterSubscription(newsletter, email);
+
+        const to =
+            subject === 'Mitsingen'
+                ? { name: CONTACT_FORM_RECEIVER_NAME_SINGING, address: CONTACT_FORM_RECEIVER_MAIL_SINGING }
+                : { name: CONTACT_FORM_RECEIVER_NAME, address: CONTACT_FORM_RECEIVER_MAIL };
+
         const success = await sendMail({
             from: { name: CONTACT_FORM_SENDER_NAME, address: CONTACT_FORM_SENDER_MAIL },
-            to: { name: CONTACT_FORM_RECEIVER_NAME, address: CONTACT_FORM_RECEIVER_MAIL },
+            to,
             replyTo: { name, address: email },
             subject: `Kontaktformular: ${subject}`,
             text: `Name: ${name}\nNewsletter: ${newsletterResult}\n\n${message}`,
