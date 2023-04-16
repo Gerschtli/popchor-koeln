@@ -1,5 +1,6 @@
 <script lang="ts">
     import LogoDacSvg from '$lib/assets/LogoDacSvg.svelte';
+    import LogoPopchorSvg from '$lib/assets/LogoPopchorSvg.svelte';
     import imageHeader160 from '$lib/assets/header-160px.png';
     import imageHeader240 from '$lib/assets/header-240px.png';
     import imageHeader320 from '$lib/assets/header-320px.png';
@@ -14,7 +15,7 @@
             <h1 class="flex flex-col items-center space-y-4 font-heading text-4xl font-bold">
                 <LogoDacSvg class="h-20" />
                 <small class="block text-2xl">heißt jetzt</small>
-                <span>popCHORköln</span>
+                <LogoPopchorSvg class="h-24" />
             </h1>
         </a>
 
