@@ -18,7 +18,7 @@
             </h1>
         </a>
 
-        <button class="absolute right-6 top-6 p-2" on:click={openNavigation}>
+        <button aria-label="Menü öffnen" class="absolute right-6 top-6 p-2" on:click={openNavigation}>
             <Menu class="text-accent" size={32} />
         </button>
     </div>

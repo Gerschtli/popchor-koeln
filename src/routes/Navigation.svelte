@@ -42,7 +42,12 @@
             {/each}
         </ul>
 
-        <button tabindex={tabIndexNav} class="absolute right-6 top-6 p-2" on:click={navigationModal.close}>
+        <button
+            aria-label="Menü schließen"
+            tabindex={tabIndexNav}
+            class="absolute right-6 top-6 p-2"
+            on:click={navigationModal.close}
+        >
             <X class="hover:text-slate-500" size={32} />
         </button>
     </div>

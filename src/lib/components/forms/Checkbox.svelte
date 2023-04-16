@@ -30,7 +30,7 @@
         class:ring-red-500={$errors}
         class:ring-offset-1={$errors}
         role="switch"
-        aria-checked={$checked}
+        aria-checked={$checked ? 'true' : 'false'}
         data-invalid={$errors}
         on:click={() => ($checked = !$checked)}
     >

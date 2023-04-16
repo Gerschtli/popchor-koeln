@@ -2,6 +2,7 @@
     import type { SvelteComponent } from 'svelte';
 
     export let link: string;
+    export let label: string;
     export let icon: typeof SvelteComponent;
 </script>
 
@@ -10,6 +11,7 @@
     href={link}
     target="_blank"
     rel="noopener noreferrer"
+    aria-label={label}
 >
     <svelte:component this={icon} size={20} />
 </a>
