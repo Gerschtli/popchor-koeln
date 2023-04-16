@@ -44,7 +44,7 @@
         />
     </button>
 
-    <span class="text-sm" class:text-slate-700={!$errors} class:text-red-500={$errors}>
+    <span class="text-sm" class:text-neutral-600={!$errors} class:text-red-500={$errors}>
         <slot />
     </span>
 </label>

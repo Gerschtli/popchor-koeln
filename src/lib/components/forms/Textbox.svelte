@@ -15,7 +15,7 @@
 </script>
 
 <label class="block space-y-1">
-    <span class="text-xs font-bold uppercase tracking-wide text-slate-500">{label}:</span>
+    <span class="text-xs font-bold uppercase tracking-wide text-neutral-600">{label}:</span>
     {#if type === 'text'}
         <input
             type="text"
