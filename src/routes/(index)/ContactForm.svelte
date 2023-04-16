@@ -25,9 +25,7 @@
     </p>
 
     <p class="text-neutral-600">
-        Habt ihr bereits Chorerfahrung und Interesse bei uns mitzusingen? Auch dann könnt ihr uns gerne schreiben,
-        allerdings sind wir momentan in den Frauenstimmen voll besetzt und können euch nur für unser nächstes Vorsingen
-        vormerken. In den Männerstimmen gibt es noch das ein oder andere Plätzchen 🙂
+        Bist du ein*e erfahrene*r Sänger*in und hast Lust auf intensive Chorarbeit? Schreib uns:
     </p>
 
     <form
