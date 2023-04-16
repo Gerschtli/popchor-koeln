@@ -2,7 +2,7 @@
     import type { FormStatus } from '$lib/types';
     import { Check, Loader2, MailWarning } from 'lucide-svelte';
 
-    export let status: FormStatus = 'ready';
+    export let status: FormStatus;
     export let text: string;
 </script>
 
@@ -10,7 +10,7 @@
     type="submit"
     disabled={status !== 'ready'}
     class="
-        block w-full rounded-md bg-accent px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-colors duration-100 ease-in-out
+        flex w-full items-center justify-center rounded-md bg-accent px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors duration-100 ease-in-out
         hover:bg-accent-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500
     "
     class:disabled:bg-slate-400={status !== 'success' && status !== 'error'}

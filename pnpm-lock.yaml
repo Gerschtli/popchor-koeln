@@ -20,12 +20,12 @@ specifiers:
   svelte: ^3.58.0
   svelte-check: ^3.2.0
   svelte-preprocess: ^5.0.3
+  sveltekit-superforms: ^0.6.18
   tailwindcss: ^3.3.1
   tslib: ^2.5.0
   typescript: ^5.0.4
   vite: ^4.2.1
   zod: ^3.21.4
-  zod-form-data: ^2.0.1
 
 devDependencies:
   '@sveltejs/adapter-netlify': 2.0.6_@sveltejs+kit@1.15.5
@@ -47,12 +47,12 @@ devDependencies:
   svelte: 3.58.0
   svelte-check: 3.2.0_2hvvzllqxfj4tjxqrekw73wrxm
   svelte-preprocess: 5.0.3_vpz3ivzqmx6s5f6rwmz2nbdq6q
+  sveltekit-superforms: 0.6.18_6j7343s6mnaq6h2piynp2uq3p4
   tailwindcss: 3.3.1_postcss@8.4.21
   tslib: 2.5.0
   typescript: 5.0.4
   vite: 4.2.1
   zod: 3.21.4
-  zod-form-data: 2.0.1_zod@3.21.4
 
 packages:
 
@@ -2200,6 +2200,18 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
+  /sveltekit-superforms/0.6.18_6j7343s6mnaq6h2piynp2uq3p4:
+    resolution: {integrity: sha512-dEklp71snow0bfAQMDHld6sEoahxf7kiPhh1BtJCSo67NgoRHnUhDH17qwPb/d//RzcmTRFPIiPCz0A2iB5bhw==}
+    peerDependencies:
+      '@sveltejs/kit': 1.x
+      svelte: 3.x
+      zod: 3.x
+    dependencies:
+      '@sveltejs/kit': 1.15.5_svelte@3.58.0+vite@4.2.1
+      svelte: 3.58.0
+      zod: 3.21.4
+    dev: true
+
   /tailwindcss/3.3.1_postcss@8.4.21:
     resolution: {integrity: sha512-Vkiouc41d4CEq0ujXl6oiGFQ7bA3WEhUZdTgXAhtKxSy49OmKs8rEfQmupsfF0IGW8fv2iQkp1EVUuapCFrZ9g==}
     engines: {node: '>=12.13.0'}
@@ -2417,14 +2429,6 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-    dev: true
-
-  /zod-form-data/2.0.1_zod@3.21.4:
-    resolution: {integrity: sha512-4jcsj3vFyFGINLLHEmehfOPKdcw+HqV65RwsV2IdyLHp9wpvGJRVXWg1yY8sq0ASEbQfTVBRtI7LcDGv3Qpj8g==}
-    peerDependencies:
-      zod: ^3.11.x
-    dependencies:
-      zod: 3.21.4
     dev: true
 
   /zod/3.21.4:

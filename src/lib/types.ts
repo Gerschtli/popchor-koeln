@@ -1,3 +1,8 @@
+export enum FormId {
+    contact = 'contact',
+    newsletter = 'newsletter',
+}
+
 export type FormStatus = 'ready' | 'loading' | 'success' | 'error';
 
 export type Gig = {

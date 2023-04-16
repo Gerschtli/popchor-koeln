@@ -1,17 +1,14 @@
 <script lang="ts">
-    import { enhance } from '$app/forms';
     import Checkbox from '$lib/components/forms/Checkbox.svelte';
     import SubmitButton from '$lib/components/forms/SubmitButton.svelte';
     import Textbox from '$lib/components/forms/Textbox.svelte';
-    import type { FormStatus } from '$lib/types';
-    import type { ActionData } from './$types';
+    import { superFormBuilder } from '$lib/forms';
+    import type { PageData } from './$types';
 
-    export let form: ActionData;
+    export let data: PageData;
 
     const id = 'newsletter';
-    let status: FormStatus = 'ready';
-
-    $: if (form?.newsletter?.success) status = 'success';
+    const { form, status } = superFormBuilder(data.formNewsletter);
 </script>
 
 <div {id} class="space-y-2">
@@ -22,41 +19,14 @@
         Aktivitäten!
     </p>
 
-    <form
-        class="space-y-3"
-        method="POST"
-        action="?/newsletter#{id}"
-        use:enhance={() => {
-            status = 'loading';
+    <form class="space-y-3" method="POST" action="?/newsletter#{id}" use:form.enhance>
+        <Textbox {form} field="email" name="email" type="email" label="Deine Email" />
 
-            return async ({ result, update }) => {
-                status = 'ready';
-                if (result.status === 500) {
-                    status = 'error';
-                }
+        <Checkbox {form} field="acceptTerms" name="acceptTerms" screenReaderText="Für Newsletter eintragen">
+            Ich stimme zu, dass meine E-Mail-Adresse genutzt werden darf, um mir werbliche E-Mails und Newsletter zu
+            schicken. Ich weiß, dass ich mich jederzeit vom Verteiler abmelden kann.
+        </Checkbox>
 
-                return await update();
-            };
-        }}
-    >
-        <Textbox
-            label="Deine Email"
-            name="email"
-            type="email"
-            required={true}
-            value={form?.newsletter?.data.email}
-            errors={form?.newsletter?.errors?.email}
-            errorMessage="Bitte trage deine Email Adresse ein."
-        />
-
-        <Checkbox
-            label="Ich stimme zu, dass meine E-Mail-Adresse genutzt werden darf, um mir werbliche E-Mails und Newsletter zu schicken. Ich weiß, dass ich mich jederzeit vom Verteiler abmelden kann."
-            name="acceptTerms"
-            screenReaderText="Für Newsletter eintragen"
-            value={form?.newsletter?.data.acceptTerms}
-            errors={form?.newsletter?.errors?.acceptTerms}
-        />
-
-        <SubmitButton {status} text="Abonnieren" />
+        <SubmitButton status={$status} text="Abonnieren" />
     </form>
 </div>

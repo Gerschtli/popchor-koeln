@@ -1,19 +1,17 @@
 <script lang="ts">
-    import { enhance } from '$app/forms';
     import Checkbox from '$lib/components/forms/Checkbox.svelte';
     import Select from '$lib/components/forms/Select.svelte';
     import SubmitButton from '$lib/components/forms/SubmitButton.svelte';
     import Textbox from '$lib/components/forms/Textbox.svelte';
     import TextboxMultiline from '$lib/components/forms/TextboxMultiline.svelte';
-    import type { FormStatus } from '$lib/types';
-    import type { ActionData } from './$types';
+    import { superFormBuilder } from '$lib/forms';
+    import type { PageData } from './$types';
 
-    export let form: ActionData;
+    export let data: PageData;
 
     const id = 'kontaktformular';
-    let status: FormStatus = 'ready';
-
-    $: if (form?.contact?.success) status = 'success';
+    const subjectOptions = ['Lob und Kritik', 'Mitsingen', 'Anfrage', 'Sonstiges'];
+    const { form, status } = superFormBuilder(data.formContact);
 </script>
 
 <div {id} class="space-y-2">
@@ -28,70 +26,20 @@
         Bist du ein*e erfahrene*r Sänger*in und hast Lust auf intensive Chorarbeit? Schreib uns:
     </p>
 
-    <form
-        class="space-y-3"
-        method="POST"
-        action="?/contact#{id}"
-        use:enhance={() => {
-            status = 'loading';
+    <form class="space-y-3" method="POST" action="?/contact#{id}" use:form.enhance>
+        <Textbox {form} field="name" name="name" type="text" label="Dein Name" />
 
-            return async ({ result, update }) => {
-                status = 'ready';
-                if (result.status === 500) {
-                    status = 'error';
-                }
+        <Textbox {form} field="email" name="email" type="email" label="Deine Email" />
 
-                return await update();
-            };
-        }}
-    >
-        <Textbox
-            label="Dein Name"
-            name="name"
-            type="text"
-            required={true}
-            value={form?.contact?.data.name}
-            errors={form?.contact?.errors?.name}
-            errorMessage="Bitte trage deinen Namen ein."
-        />
+        <Select {form} field="subject" name="subject" label="Betreff" options={subjectOptions} />
 
-        <Textbox
-            label="Deine Email"
-            name="email"
-            type="email"
-            required={true}
-            value={form?.contact?.data.email}
-            errors={form?.contact?.errors?.email}
-            errorMessage="Bitte trage deine Email Adresse ein."
-        />
+        <TextboxMultiline {form} label="Deine Nachricht" field="message" name="message" />
 
-        <Select
-            label="Betreff"
-            name="subject"
-            required={true}
-            value={form?.contact?.data.subject}
-            errors={form?.contact?.errors?.subject}
-            errorMessage="Bitte wähle einen Betreff aus."
-            options={['Lob und Kritik', 'Mitsingen', 'Anfrage', 'Sonstiges']}
-        />
+        <Checkbox {form} field="newsletter" name="newsletter" screenReaderText="Für Newsletter eintragen">
+            Ja, bitte trage mich auch in euren Newsletter ein. Ich weiß, dass ich mich jederzeit vom Verteiler abmelden
+            kann.
+        </Checkbox>
 
-        <TextboxMultiline
-            label="Deine Nachricht"
-            name="message"
-            required={true}
-            value={form?.contact?.data.message}
-            errors={form?.contact?.errors?.message}
-            errorMessage="Bitte trage deine Nachricht ein."
-        />
-
-        <Checkbox
-            label="Ja, bitte trage mich auch in euren Newsletter ein. Ich weiß, dass ich mich jederzeit vom Verteiler abmelden kann."
-            name="newsletter"
-            screenReaderText="Für Newsletter eintragen"
-            value={form?.contact?.data.newsletter}
-            errors={form?.contact?.errors?.newsletter}
-        />
-
-        <SubmitButton {status} text="Senden" />
+        <SubmitButton status={$status} text="Senden" />
     </form>
 </div>
