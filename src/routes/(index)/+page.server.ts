@@ -4,8 +4,8 @@ import {
     CONTACT_FORM_SENDER_MAIL,
     CONTACT_FORM_SENDER_NAME,
 } from '$env/static/private';
-import { sendMail } from '$lib/mail';
-import { subscribeToNewsletter } from '$lib/newsletter';
+import { sendMail } from '$lib/server/mail';
+import { subscribeToNewsletter } from '$lib/server/newsletter';
 import { FormId } from '$lib/types.js';
 import { fail } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms/server';
