@@ -44,6 +44,8 @@ jobs:
 
       - run: pnpm run check
 
+      - run: pnpm run test
+
   nix:
     runs-on: ubuntu-latest
 
@@ -57,6 +59,16 @@ jobs:
           CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
       - run: nix flake check
+
+      # keep playwright pnpm library and nixpkgs package in sync
+      - name: Test playwright version
+        run: |
+          playwright_pnpm="$(jq --raw-output '.devDependencies."@playwright/test"' package.json)"
+
+          echo "playwright_nix:  $PLAYWRIGHT_BROWSERS_VERSION"
+          echo "playwright_pnpm: $playwright_pnpm"
+
+          [[ "$PLAYWRIGHT_BROWSERS_VERSION" == "$playwright_pnpm" ]]
 
   deploy-netlify:
     runs-on: ubuntu-latest

@@ -16,6 +16,10 @@
           pkgs.nodejs_latest
           pkgs.nodePackages_latest.pnpm
         ];
+
+        PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "true";
+        PLAYWRIGHT_BROWSERS_PATH = pkgs.playwright.browsers;
+        PLAYWRIGHT_BROWSERS_VERSION = pkgs.playwright.version;
       };
     };
 }
