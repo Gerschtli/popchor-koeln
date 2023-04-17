@@ -10,14 +10,10 @@
         </div>
 
         <div class="flex justify-center gap-4">
-            <SocialLink label="Facebook" link="https://www.facebook.com/dacchord/" icon={Facebook} />
-            <SocialLink label="Email" link="mailto:kontakt@popchor-koeln.de" icon={Mail} />
-            <SocialLink
-                label="Youtube"
-                link="https://www.youtube.com/channel/UCT14OZsAo7IzRTJDFofQiQA"
-                icon={Youtube}
-            />
-            <SocialLink label="Instagram" link="https://www.instagram.com/dacchord/" icon={Instagram} />
+            <SocialLink label="Facebook" link="https://www.facebook.com/popchorkoeln/" icon={Facebook} />
+            <SocialLink label="Email" link="mailto:hallo@popchor-koeln.de" icon={Mail} />
+            <SocialLink label="Youtube" link="https://www.youtube.com/@popchorkoeln" icon={Youtube} />
+            <SocialLink label="Instagram" link="https://www.instagram.com/popchorkoeln/" icon={Instagram} />
         </div>
 
         <div class="hidden sm:block sm:flex-1" />

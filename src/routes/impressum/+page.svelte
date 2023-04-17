@@ -19,7 +19,7 @@
         Niklas Genschel<br />
         Kontakt:<br />
         Telefon: +49 1763 1727953<br />
-        E-Mail: kontakt@popchor-koeln.de
+        E-Mail: hallo@popchor-koeln.de
     </p>
 
     <p class="text-neutral-600">
