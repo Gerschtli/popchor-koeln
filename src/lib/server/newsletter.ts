@@ -1,4 +1,4 @@
-import { MAILCHIMP_API_KEY, MAILCHIMP_AUDIENCE_ID, MAILCHIMP_SERVER_PREFIX } from '$env/static/private';
+import { MAILCHIMP_API_KEY, MAILCHIMP_AUDIENCE_ID, MAILCHIMP_MOCK, MAILCHIMP_SERVER_PREFIX } from '$env/static/private';
 
 const apiPut = async (url: string, body: Record<string, string>) => {
     const response = await fetch(`https://${MAILCHIMP_SERVER_PREFIX}.api.mailchimp.com/3.0${url}`, {
@@ -17,6 +17,12 @@ const apiPut = async (url: string, body: Record<string, string>) => {
 };
 
 export const subscribeToNewsletter = async (email: string) => {
+    if (MAILCHIMP_MOCK) {
+        console.info(`mocked subscription to newsletter. email=${email}`);
+
+        return true;
+    }
+
     try {
         await apiPut(`/lists/${MAILCHIMP_AUDIENCE_ID}/members/${encodeURIComponent(email)}`, {
             email_address: email,
