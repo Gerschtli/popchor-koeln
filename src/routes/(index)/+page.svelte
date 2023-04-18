@@ -58,7 +58,11 @@
 
     {#if gigs.length > gigCount}
         <div class="mt-2 flex items-center justify-end">
-            <a href="/termine" class="inline-flex text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700">
+            <a
+                class="inline-flex text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700"
+                href="/termine"
+                data-sveltekit-preload-data
+            >
                 Zu allen Termine <ChevronRight class="inline" size={20} />
             </a>
         </div>

@@ -6,7 +6,13 @@
 <footer class="border-t border-slate-500">
     <div class="container mx-auto flex items-center justify-between gap-y-4 p-8 sm:px-12 lg:px-20">
         <div class="flex-1 sm:-order-1">
-            <a class="text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700" href="/impressum">Impressum</a>
+            <a
+                class="text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700"
+                href="/impressum"
+                data-sveltekit-preload-data
+            >
+                Impressum
+            </a>
         </div>
 
         <div class="flex justify-center gap-4">
