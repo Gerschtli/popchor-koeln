@@ -53,7 +53,7 @@ export const sendMail = async ({ from, to, replyTo, subject, text }: SendMailReq
             text,
         });
 
-        console.info('mail sent successfully');
+        console.info('mail sent successfully.');
 
         if (SMTP_USE_TEST) {
             console.info('mail preview url: %s', nodemailer.getTestMessageUrl(info));
@@ -61,7 +61,7 @@ export const sendMail = async ({ from, to, replyTo, subject, text }: SendMailReq
 
         return true;
     } catch (e) {
-        console.error('send mail failed', e);
+        console.error('send mail failed.', e);
 
         return false;
     }
