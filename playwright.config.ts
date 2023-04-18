@@ -17,6 +17,10 @@ const config: PlaywrightTestConfig = {
         baseURL: 'http://localhost:4173/',
     },
     webServer: {
+        env: {
+            MAILCHIMP_MOCK: '1',
+            SMTP_USE_TEST: '1',
+        },
         command: 'pnpm run build && pnpm run preview',
         port: 4173,
     },
