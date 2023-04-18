@@ -15,22 +15,24 @@
 
 <div
     class="
-        cursor-pointer border-l-2 border-accent py-1 pl-2
-        focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500
+        border-l-2 border-accent py-1 pl-2
+        focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-slate-500
     "
-    on:click={toggle}
-    on:keypress={toggle}
-    role="button"
-    tabindex={0}
 >
-    <h3 class="flex items-start font-heading font-bold" class:mb-2={expanded}>
-        {#if expanded}
-            <ChevronDown class="-ml-1 inline-block flex-shrink-0" size={20} />
-        {:else}
-            <ChevronRight class="-ml-1 inline-block flex-shrink-0" size={20} />
+    <button on:click={toggle} class="text-left focus:outline-none">
+        <h3 class="flex items-start font-heading font-bold" class:mb-2={expanded}>
+            {#if expanded}
+                <ChevronDown class="-ml-1 inline-block flex-shrink-0" size={20} />
+            {:else}
+                <ChevronRight class="-ml-1 inline-block flex-shrink-0" size={20} />
+            {/if}
+            {title}
+        </h3>
+
+        {#if !expanded}
+            <p class="text-sm text-neutral-600">{time} @ {place[0]}</p>
         {/if}
-        {title}
-    </h3>
+    </button>
 
     {#if expanded}
         <GigLine label="Wann">{time}</GigLine>
@@ -71,7 +73,5 @@
                 </a>
             </div>
         {/if}
-    {:else}
-        <p class="text-sm text-neutral-600">{time} @ {place[0]}</p>
     {/if}
 </div>
