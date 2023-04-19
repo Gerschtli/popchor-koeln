@@ -6,11 +6,7 @@
 
     let navigationModal = modalStore('navigation-open');
 
-    $: if (browser) {
-        $navigationModal.isOpen
-            ? document.body.classList.add('overflow-hidden')
-            : document.body.classList.remove('overflow-hidden');
-    }
+    $: if (browser) document.body.classList.toggle('overflow-hidden', $navigationModal.isOpen);
 
     export const openNavigation = navigationModal.open;
 
