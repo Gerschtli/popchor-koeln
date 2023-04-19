@@ -1,9 +1,12 @@
 <script lang="ts">
     import LogoDacSvg from '$lib/assets/LogoDacSvg.svelte';
     import LogoPopchorSvg from '$lib/assets/LogoPopchorSvg.svelte';
-    import imageHeader160 from '$lib/assets/header-160px.png';
-    import imageHeader240 from '$lib/assets/header-240px.png';
-    import imageHeader320 from '$lib/assets/header-320px.png';
+    import imageHeader160Png from '$lib/assets/header-160px.png';
+    import imageHeader160Webp from '$lib/assets/header-160px.webp';
+    import imageHeader240Png from '$lib/assets/header-240px.png';
+    import imageHeader240Webp from '$lib/assets/header-240px.webp';
+    import imageHeader320Png from '$lib/assets/header-320px.png';
+    import imageHeader320Webp from '$lib/assets/header-320px.webp';
     import { Menu } from 'lucide-svelte';
 
     export let openNavigation: () => void;
@@ -30,10 +33,23 @@
 
     <div class="flex h-[160px] justify-center sm:h-[240px] md:h-[320px]">
         <picture>
-            <source media="(max-width: 639px)" srcset="{imageHeader160} 1x, {imageHeader320} 2x" />
-            <source media="(min-width: 640px) and (max-width: 767px)" srcset={imageHeader240} />
-            <source media="(min-width: 768px)" srcset={imageHeader320} />
-            <img src={imageHeader320} alt="Header Bild von dem gesamten Chor" class="h-full object-cover" />
+            <source
+                media="(max-width: 639px)"
+                srcset="{imageHeader160Webp} 1x, {imageHeader320Webp} 2x"
+                type="image/webp"
+            />
+            <source media="(min-width: 640px) and (max-width: 767px)" srcset={imageHeader240Webp} type="image/webp" />
+            <source media="(min-width: 768px)" srcset={imageHeader320Webp} type="image/webp" />
+
+            <source
+                media="(max-width: 639px)"
+                srcset="{imageHeader160Png} 1x, {imageHeader320Png} 2x"
+                type="image/png"
+            />
+            <source media="(min-width: 640px) and (max-width: 767px)" srcset={imageHeader240Png} type="image/png" />
+            <source media="(min-width: 768px)" srcset={imageHeader320Png} type="image/png" />
+
+            <img src={imageHeader320Png} alt="Header Bild von dem gesamten Chor" class="h-full object-cover" />
         </picture>
     </div>
 </header>
