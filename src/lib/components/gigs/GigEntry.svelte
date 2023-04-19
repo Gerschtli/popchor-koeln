@@ -16,7 +16,8 @@
 <div
     class="
         border-l-2 border-accent py-1 pl-2
-        focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-slate-500
+        focus-within:border-accent-dark focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-slate-500
+        hover:border-accent-dark
     "
 >
     <button on:click={toggle} class="text-left focus:outline-none">
@@ -61,7 +62,7 @@
                     class="
                         flex gap-2 rounded-md bg-accent px-4 py-2 text-center text-sm font-semibold
                         text-white shadow-sm transition-colors duration-100 ease-in-out
-                        hover:bg-accent-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                        hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
                         focus-visible:outline-slate-500
                     "
                     on:click={(e) => {

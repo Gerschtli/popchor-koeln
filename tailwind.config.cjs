@@ -15,7 +15,7 @@ const config = {
             colors: {
                 accent: {
                     DEFAULT: '#d57e56',
-                    light: '#f2936a',
+                    dark: '#ab542b',
                 },
             },
         },

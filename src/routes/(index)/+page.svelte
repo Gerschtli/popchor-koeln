@@ -27,7 +27,7 @@
 
     <div class="flex justify-end">
         <button
-            class="flex text-accent hover:text-accent-light focus:text-accent-light"
+            class="flex text-accent hover:text-accent-dark focus:text-accent-dark"
             on:click={() => (textExpand = true)}
             class:hidden={textExpand}>mehr lesen&hellip; <ChevronRight class="inline" size={20} /></button
         >
