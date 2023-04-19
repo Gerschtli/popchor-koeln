@@ -11,7 +11,7 @@
 </svelte:head>
 
 <Section {title}>
-    <p>
+    <p class="text-neutral-600">
         {#if isNotFoundError}
             Diese Seite haben wir nicht gefunden, vielleicht findest du, was du gesucht hast, auf
             <a href="/" class="text-blue-500 hover:text-blue-700 focus:text-blue-700">unserer Startseite</a>!
