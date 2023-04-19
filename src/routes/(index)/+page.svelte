@@ -15,6 +15,10 @@
 
 <svelte:head>
     <title>Startseite - popCHORköln</title>
+    <meta
+        name="description"
+        content="Der popCHORköln, ehemals d'acCHORd, besteht aus rund 60 Sänger:innen aus Köln und Umgebung."
+    />
 </svelte:head>
 
 <Section id="chor" title="Chor" classContent="space-y-4">
