@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 devDependencies:
   '@playwright/test':
-    specifier: 1.27.1
-    version: 1.27.1
+    specifier: 1.33.0
+    version: 1.33.0
   '@sveltejs/adapter-netlify':
     specifier: ^2.0.6
     version: 2.0.6(@sveltejs/kit@1.15.5)
@@ -576,13 +576,15 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@playwright/test@1.27.1:
-    resolution: {integrity: sha512-mrL2q0an/7tVqniQQF6RBL2saskjljXzqNcCOVMUjRIgE6Y38nCNaP+Dc2FBW06bcpD3tqIws/HT9qiMHbNU0A==}
+  /@playwright/test@1.33.0:
+    resolution: {integrity: sha512-YunBa2mE7Hq4CfPkGzQRK916a4tuZoVx/EpLjeWlTVOnD4S2+fdaQZE0LJkbfhN5FTSKNLdcl7MoT5XB37bTkg==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
       '@types/node': 18.15.11
-      playwright-core: 1.27.1
+      playwright-core: 1.33.0
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /@polka/url@1.0.0-next.21:
@@ -1770,8 +1772,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /playwright-core@1.27.1:
-    resolution: {integrity: sha512-9EmeXDncC2Pmp/z+teoVYlvmPWUC6ejSSYZUln7YaP89Z6lpAaiaAnqroUt/BoLo8tn7WYShcfaCh+xofZa44Q==}
+  /playwright-core@1.33.0:
+    resolution: {integrity: sha512-aizyPE1Cj62vAECdph1iaMILpT0WUDCq3E6rW6I+dleSbBoGbktvJtzS6VHkZ4DKNEOG9qJpiom/ZxO+S15LAw==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
