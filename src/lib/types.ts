@@ -6,6 +6,7 @@ export enum FormId {
 export type FormStatus = 'ready' | 'loading' | 'success' | 'error';
 
 export type Gig = {
+    date: Date;
     title: string;
     time: string;
     place: string[];

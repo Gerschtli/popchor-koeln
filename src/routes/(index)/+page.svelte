@@ -10,7 +10,10 @@
     export let data: PageData;
 
     let textExpand = false;
+
     const gigCount = 6;
+    const now = Date.now();
+    const gigsIndexPage = gigs.filter((gig) => gig.date.getTime() >= now).slice(0, gigCount);
 </script>
 
 <svelte:head>
@@ -58,19 +61,17 @@
 </Section>
 
 <Section id="termine" title="Termine">
-    <GigList gigs={gigs.slice(0, gigCount)} />
+    <GigList gigs={gigsIndexPage} />
 
-    {#if gigs.length > gigCount}
-        <div class="mt-2 flex items-center justify-end">
-            <a
-                class="inline-flex text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700"
-                href="/termine"
-                data-sveltekit-preload-data
-            >
-                Zu allen Termine <ChevronRight class="inline" size={20} />
-            </a>
-        </div>
-    {/if}
+    <div class="mt-2 flex items-center justify-end">
+        <a
+            class="inline-flex text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700"
+            href="/termine"
+            data-sveltekit-preload-data
+        >
+            Zu allen Termine <ChevronRight class="inline" size={20} />
+        </a>
+    </div>
 </Section>
 
 <Section id="kontakt" title="Kontakt" classContent="space-y-6">
