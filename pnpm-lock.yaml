@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^4.0.0
     version: 4.0.0(eslint@8.38.0)(svelte@3.58.0)
   lucide-svelte:
-    specifier: ^0.176.0
-    version: 0.176.0(svelte@3.58.0)
+    specifier: ^0.187.0
+    version: 0.187.0(svelte@3.58.0)
   nodemailer:
     specifier: ^6.9.1
     version: 6.9.1
@@ -1560,8 +1560,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lucide-svelte@0.176.0(svelte@3.58.0):
-    resolution: {integrity: sha512-ubk8+b4pipFMGOGKgEMUvUy0PCDaxJqDjBcbQBI6yyXPwSVIjg3LWjUrgjA7pg/OocD5ToNmoB3qM+7htB40Hg==}
+  /lucide-svelte@0.187.0(svelte@3.58.0):
+    resolution: {integrity: sha512-KMKJ9Yx4xmMG/1qoqf7OljAenMKDy9BDq4gBadsCkWmBbA5j+frmMmtHgUE76t3EokgfMzmxS76sQao7MSDVlw==}
     peerDependencies:
       svelte: ^3.49.0
     dependencies:
