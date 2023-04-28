@@ -56,7 +56,10 @@ export const gigs: Gig[] = [
         title: 'Doppelkonzert /m Soundescape',
         time: '24. Juni 2023 um 20:00',
         place: ['Bürgerhaus Köln-Kalk', 'Kalk-Mühlheimer Str. 58', '51103 Köln'],
+        price: '10/16,50 €',
         description: 'Details zum VVK folgen in Kürze.',
+        linkTickets: 'https://www.eventbrite.com/e/popchorkoln-soundescape-open-air-doppelkonzert-tickets-620148610187',
+        entryTime: 'ab 19:30 Uhr',
     },
     {
         date: new Date('2023-11-04'),
