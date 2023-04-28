@@ -24,8 +24,8 @@ test.describe('index page', () => {
     test('gigs can be expanded and collapsed', async ({ page }) => {
         await page.goto('/');
 
-        const locatorButton = page.getByRole('button', { name: /Doppelkonzert Mönchengladbach \/m Piece of Peace/ });
-        const locatorText = page.getByText(/Unser kleines Konzertwochenende im April startet in Mönchengladbach/);
+        const locatorButton = page.getByRole('button', { name: /10 - Das Jubiläumskonzert!/ });
+        const locatorText = page.getByText(/Save the date/);
 
         await expect(locatorText).not.toBeVisible();
 
