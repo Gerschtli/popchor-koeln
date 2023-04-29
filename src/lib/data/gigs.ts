@@ -49,7 +49,11 @@ export const gigs: Gig[] = [
         title: 'Doppelkonzert /m Soundescape',
         time: '23. Juni 2023 um 20:00',
         place: ['Scala-Club', 'Uhlandstraße 9', '51379 Leverkusen'],
-        description: 'Details zum VVK folgen in Kürze.',
+        description: `
+            Doppelkonzert mit dem vielseitigen A-cappella-Quintett Soundescape in schöner Club-Atmosphäre.
+        `,
+        link: 'https://www.facebook.com/Soundescape.acappella',
+        linkText: 'facebook.com/Soundescape.acappella',
     },
     {
         date: new Date('2023-06-24'),
@@ -57,8 +61,12 @@ export const gigs: Gig[] = [
         time: '24. Juni 2023 um 20:00',
         place: ['Bürgerhaus Köln-Kalk', 'Kalk-Mühlheimer Str. 58', '51103 Köln'],
         price: '10/16,50 €',
-        description: 'Details zum VVK folgen in Kürze.',
+        description: `
+            Doppelkonzert mit dem vielseitigen A-cappella-Quintett Soundescape auf der wunderbaren Open-Air-Bühne vom Bürgerhaus Köln-Kalk.
+        `,
         linkTickets: 'https://www.eventbrite.com/e/popchorkoln-soundescape-open-air-doppelkonzert-tickets-620148610187',
+        link: 'https://www.facebook.com/Soundescape.acappella',
+        linkText: 'facebook.com/Soundescape.acappella',
         entryTime: 'ab 19:30 Uhr',
     },
     {
