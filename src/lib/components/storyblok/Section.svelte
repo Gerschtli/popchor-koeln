@@ -1,8 +1,9 @@
 <script lang="ts">
-    import { renderRichText, storyblokEditable, type SbBlokData } from '@storyblok/svelte';
+    import type { SectionStoryblok } from '$lib/component-types-storyblok';
+    import { renderRichText, storyblokEditable } from '@storyblok/svelte';
     import { ChevronRight } from 'lucide-svelte';
 
-    export let blok: SbBlokData;
+    export let blok: SectionStoryblok;
 
     let textExpand = false;
 </script>

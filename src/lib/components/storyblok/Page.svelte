@@ -1,7 +1,8 @@
 <script lang="ts">
-    import { StoryblokComponent, storyblokEditable, type SbBlokData } from '@storyblok/svelte';
+    import type { PageStoryblok } from '$lib/component-types-storyblok';
+    import { StoryblokComponent, storyblokEditable } from '@storyblok/svelte';
 
-    export let blok: SbBlokData;
+    export let blok: PageStoryblok;
 </script>
 
 {#key blok}
