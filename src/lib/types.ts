@@ -13,7 +13,5 @@ export type Gig = {
     price?: string;
     description: string;
     linkTickets?: string;
-    link?: string;
-    linkText?: string;
     entryTime?: string;
 };

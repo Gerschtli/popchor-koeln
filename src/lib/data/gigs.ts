@@ -10,10 +10,9 @@ export const gigs: Gig[] = [
         description: `
             Unser kleines Konzertwochenende im April startet in Mönchengladbach mit dem wunderbaren Vokalensemble
             Piece of Peace!
+            >>>&nbsp;<a href="https://www.piece-of-peace.de" target="_blank" rel="noopener noreferrer">piece-of-peace.de</a>
         `,
         linkTickets: 'http://projekt42.info/tickets/',
-        link: 'https://www.piece-of-peace.de',
-        linkText: 'piece-of-peace.de',
         entryTime: 'ab 19:30 Uhr',
     },
     {
@@ -25,10 +24,9 @@ export const gigs: Gig[] = [
         description: `
             Der zweite Stopp unserer kleinen Tour ist in Dortmund bei der grandiosen Vocal Crew, die letztes Jahr beim
             Sing & Swing Festival auch zum Meisterchor gekürt wurde!
+            >>>&nbsp;<a href="https://www.vocalcrew.com" target="_blank" rel="noopener noreferrer">vocalcrew.com</a>
         `,
         linkTickets: 'https://www.vocalcrew.com/termine/tickets/',
-        link: 'https://www.vocalcrew.com',
-        linkText: 'vocalcrew.com',
         entryTime: 'ab 18:00 Uhr',
     },
     {
@@ -39,9 +37,8 @@ export const gigs: Gig[] = [
         price: '5/10 €',
         description: `
             Aller guten Dinge sind drei! Und so singen wir am Sonntag unseres Tour-Wochenendes auch noch in Bochum mit dem Jazzchor Ruhr!!
+            >>>&nbsp;<a href="https://www.jazzchorruhr.de" target="_blank" rel="noopener noreferrer">jazzchorruhr.de</a>
         `,
-        link: 'https://www.jazzchorruhr.de',
-        linkText: 'jazzchorruhr.de',
         entryTime: 'ab 15:30 Uhr',
     },
     {
@@ -50,10 +47,10 @@ export const gigs: Gig[] = [
         time: '23. Juni 2023 um 20:00',
         place: ['Scala-Club', 'Uhlandstraße 9', '51379 Leverkusen'],
         description: `
-            Doppelkonzert mit dem vielseitigen A-cappella-Quintett Soundescape in schöner Club-Atmosphäre.
+            Doppelkonzert mit dem vielseitigen A-cappella-Quintett
+            <a href="https://www.facebook.com/Soundescape.acappella" target="_blank" rel="noopener noreferrer">Soundescape</a>
+            in schöner Club-Atmosphäre.
         `,
-        link: 'https://www.facebook.com/Soundescape.acappella',
-        linkText: 'facebook.com/Soundescape.acappella',
     },
     {
         date: new Date('2023-06-24'),
@@ -62,11 +59,11 @@ export const gigs: Gig[] = [
         place: ['Bürgerhaus Köln-Kalk', 'Kalk-Mühlheimer Str. 58', '51103 Köln'],
         price: '10/16,50 €',
         description: `
-            Doppelkonzert mit dem vielseitigen A-cappella-Quintett Soundescape auf der wunderbaren Open-Air-Bühne vom Bürgerhaus Köln-Kalk.
+            Doppelkonzert mit dem vielseitigen A-cappella-Quintett
+            <a href="https://www.facebook.com/Soundescape.acappella" target="_blank" rel="noopener noreferrer">Soundescape</a>
+            auf der wunderbaren Open-Air-Bühne vom Bürgerhaus Köln-Kalk.
         `,
         linkTickets: 'https://www.eventbrite.com/e/popchorkoln-soundescape-open-air-doppelkonzert-tickets-620148610187',
-        link: 'https://www.facebook.com/Soundescape.acappella',
-        linkText: 'facebook.com/Soundescape.acappella',
         entryTime: 'ab 19:30 Uhr',
     },
     {

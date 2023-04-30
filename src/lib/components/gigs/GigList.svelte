@@ -6,19 +6,11 @@
 </script>
 
 <div class="space-y-4">
-    {#each gigs as { title, time, place, price, entryTime, description, linkTickets, link, linkText }}
+    {#each gigs as { title, time, place, price, entryTime, description, linkTickets }}
         <GigEntry {title} {time} {place} {price} {entryTime} {linkTickets}>
-            {#if link}
-                <span class="after:content-['>>>']">{description}</span>
-                <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-blue-500 hover:text-blue-700 focus:text-blue-700">{linkText}</a
-                >
-            {:else}
-                {description}
-            {/if}
+            <span class="[&_a]:text-blue-500 [&_a]:hover:text-blue-700 [&_a]:focus:text-blue-700"
+                >{@html description}</span
+            >
         </GigEntry>
     {/each}
 </div>
