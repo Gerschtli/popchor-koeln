@@ -52,6 +52,7 @@ export const gigs: Gig[] = [
             <a href="https://www.facebook.com/Soundescape.acappella" target="_blank" rel="noopener noreferrer">Soundescape</a>
             in schöner Club-Atmosphäre.
         `,
+        linkTickets: 'https://www.scala-leverkusen.de/veranstaltungen/1031-2/',
         entryTime: 'ab 19:30 Uhr',
     },
     {
