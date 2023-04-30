@@ -34,7 +34,7 @@
 
     <div class="flex justify-end">
         <button
-            class="flex text-accent hover:text-accent-dark focus:text-accent-dark"
+            class="flex text-sm text-accent hover:text-accent-dark focus:text-accent-dark"
             on:click={() => (textExpand = true)}
             class:hidden={textExpand}>mehr lesen&hellip; <ChevronRight class="inline" size={20} /></button
         >
@@ -65,11 +65,11 @@
 
     <div class="mt-2 flex items-center justify-end">
         <a
-            class="inline-flex text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700"
+            class="inline-flex text-sm text-accent hover:text-accent-dark focus:text-accent-dark"
             href="/termine"
             data-sveltekit-preload-data
         >
-            Zu allen Termine <ChevronRight class="inline" size={20} />
+            zu allen Terminen <ChevronRight class="inline" size={20} />
         </a>
     </div>
 </Section>
