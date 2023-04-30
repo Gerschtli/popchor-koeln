@@ -6,27 +6,12 @@ import {
     CONTACT_FORM_SENDER_MAIL,
     CONTACT_FORM_SENDER_NAME,
 } from '$env/static/private';
+import { schemaContact, schemaNewsletter } from '$lib/forms.js';
 import { sendMail } from '$lib/server/mail';
 import { subscribeToNewsletter } from '$lib/server/newsletter';
 import { FormId } from '$lib/types.js';
 import { fail } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms/server';
-import { z } from 'zod';
-
-const buildRequiredString = (message: string) => z.string({ required_error: message }).trim().min(1, { message });
-const buildRequiredEmail = (message: string) => buildRequiredString(message).email({ message });
-
-const schemaContact = z.object({
-    name: buildRequiredString('Bitte trage deinen Namen ein.'),
-    email: buildRequiredEmail('Bitte trage deine Email Adresse ein.'),
-    subject: buildRequiredString('Bitte wähle einen Betreff aus.'),
-    message: buildRequiredString('Bitte trage deinen Nachricht ein.'),
-    newsletter: z.boolean(),
-});
-const schemaNewsletter = z.object({
-    email: buildRequiredEmail('Bitte trage deine Email Adresse ein.'),
-    acceptTerms: z.literal(true),
-});
 
 const handleNewsletterSubscription = async (newsletter: boolean, email: string) => {
     if (!newsletter) {
@@ -36,13 +21,6 @@ const handleNewsletterSubscription = async (newsletter: boolean, email: string) 
     const success = await subscribeToNewsletter(email);
 
     return success ? 'abbonniert' : 'Abonnieren fehlgeschlagen';
-};
-
-export const load = async () => {
-    return {
-        formContact: superValidate(schemaContact, { id: FormId.contact }),
-        formNewsletter: superValidate(schemaNewsletter, { id: FormId.newsletter }),
-    };
 };
 
 export const actions = {

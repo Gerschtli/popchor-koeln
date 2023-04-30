@@ -3,6 +3,7 @@ import { derived, writable, type Readable } from 'svelte/store';
 import { superForm } from 'sveltekit-superforms/client';
 import type { Validation } from 'sveltekit-superforms/index';
 import type { AnyZodObject } from 'zod';
+import { z } from 'zod';
 
 export const superFormBuilder = <T extends AnyZodObject>(data: Validation<T>) => {
     const error = writable(false);
@@ -26,3 +27,18 @@ export const superFormBuilder = <T extends AnyZodObject>(data: Validation<T>) =>
 
     return { form, status };
 };
+
+const buildRequiredString = (message: string) => z.string({ required_error: message }).trim().min(1, { message });
+const buildRequiredEmail = (message: string) => buildRequiredString(message).email({ message });
+
+export const schemaContact = z.object({
+    name: buildRequiredString('Bitte trage deinen Namen ein.'),
+    email: buildRequiredEmail('Bitte trage deine Email Adresse ein.'),
+    subject: buildRequiredString('Bitte wähle einen Betreff aus.'),
+    message: buildRequiredString('Bitte trage deinen Nachricht ein.'),
+    newsletter: z.boolean(),
+});
+export const schemaNewsletter = z.object({
+    email: buildRequiredEmail('Bitte trage deine Email Adresse ein.'),
+    acceptTerms: z.literal(true),
+});
