@@ -16,6 +16,7 @@
           pkgs.jq
           pkgs.netlify-cli
           pkgs.nodejs_latest
+          pkgs.ripgrep
           pkgsUnstable.nodePackages_latest.pnpm
         ];
 
