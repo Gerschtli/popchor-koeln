@@ -6,7 +6,7 @@
     <title>Impressum - popCHORköln</title>
 </svelte:head>
 
-<Section title="Impressum" classContent="space-y-4">
+<Section title="Impressum">
     <p class="text-neutral-600">
         Angaben gemäß § 5 TMG<br />
         Niklas Genschel<br />

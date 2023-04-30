@@ -1,7 +1,6 @@
 <script lang="ts">
     export let id: string | null = null;
     export let title: string;
-    export let classContent: string | null = null;
 </script>
 
 <section {id} class="container mx-auto my-8 p-4">
@@ -14,7 +13,7 @@
         <h2 class="relative bg-white px-8 font-heading text-3xl first-letter:text-accent">{title}</h2>
     </hgroup>
 
-    <div class="px-4 sm:px-8 lg:px-16 {classContent}">
+    <div class="space-y-4 px-4 sm:px-8 lg:px-16">
         <slot />
     </div>
 </section>

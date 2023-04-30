@@ -24,7 +24,7 @@
     />
 </svelte:head>
 
-<Section id="chor" title="Chor" classContent="space-y-4">
+<Section id="chor" title="Chor">
     <p class="text-neutral-600">
         Der <strong>popCHORköln</strong>, ehemals <strong>d'acCHORd</strong>, besteht aus rund 60 Sänger:innen aus Köln
         und Umgebung. Das Repertoire umfasst hauptsächlich Popmusik in anspruchsvollen A-cappella-Arrangements, aber
@@ -74,7 +74,7 @@
     </div>
 </Section>
 
-<Section id="kontakt" title="Kontakt" classContent="space-y-6">
+<Section id="kontakt" title="Kontakt">
     <NewsletterForm {data} />
 
     <ContactForm {data} />
