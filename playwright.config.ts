@@ -14,7 +14,8 @@ const config: PlaywrightTestConfig = {
     workers: process.env.CI ? 1 : undefined,
 
     use: {
-        baseURL: 'http://localhost:4173/',
+        baseURL: 'https://localhost:4173/',
+        ignoreHTTPSErrors: true,
     },
     webServer: {
         env: {
