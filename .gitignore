@@ -6,5 +6,6 @@
 /build
 /components.*.json
 /node_modules
+/static/editor.html
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
