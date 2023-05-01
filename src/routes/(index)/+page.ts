@@ -1,3 +1,4 @@
+import { dev } from '$app/environment';
 import { schemaContact, schemaNewsletter } from '$lib/forms';
 import { FormId } from '$lib/types';
 import { superValidate } from 'sveltekit-superforms/client';
@@ -7,7 +8,7 @@ export const load: PageLoad = async ({ parent }) => {
     const { storyblokApi } = await parent();
 
     const dataStory = await storyblokApi.get('cdn/stories/home', {
-        version: 'draft',
+        version: dev ? 'draft' : 'published',
     });
 
     return {
