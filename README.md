@@ -27,3 +27,9 @@ pnpm run dev -- --open
 -   Set site name
 -   Lock auto publishing
 -   Set up environment variables (see `.env.example`)
+
+### Storyblok space
+
+-   Create space
+-   Run `pnpm run storyblok:push-components`
+-   Create stories
