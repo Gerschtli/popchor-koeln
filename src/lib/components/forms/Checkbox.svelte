@@ -9,44 +9,28 @@
     export let form: SuperForm<UnwrapEffects<T>, unknown>;
     export let field: keyof z.infer<T> | FieldPath<z.infer<T>>;
     export let name: string;
-    export let screenReaderText: string;
 
     const { value, errors } = formFieldProxy(form, field);
     $: checked = value as Writable<boolean>;
-
-    function toggleChecked() {
-        $checked = !$checked;
-    }
 </script>
 
 <label class="flex items-center gap-4">
-    <input type="checkbox" hidden {name} bind:checked={$checked} />
-
-    <button
-        type="button"
+    <input
+        type="checkbox"
+        hidden
+        {name}
+        bind:checked={$checked}
         class="
-            inline-flex w-8 flex-none cursor-pointer rounded-full p-px transition-colors duration-100 ease-in-out
+            inline-flex w-8 flex-none cursor-pointer appearance-none rounded-full bg-slate-200 p-px transition-colors duration-100 ease-in-out
+            before:h-4 before:w-4 before:translate-x-0 before:rounded-full before:bg-white before:transition before:duration-100 before:ease-in-out
+            checked:bg-accent checked:before:translate-x-3.5
             focus-within:outline-slate-500 focus-visible:outline-offset-4
         "
-        class:bg-accent={$checked}
-        class:bg-slate-200={!$checked}
         class:ring-1={$errors}
         class:ring-red-500={$errors}
         class:ring-offset-1={$errors}
-        role="switch"
-        aria-checked={$checked ? 'true' : 'false'}
         data-invalid={$errors}
-        on:click={toggleChecked}
-    >
-        <span class="sr-only">{screenReaderText}</span>
-        <span
-            aria-hidden="true"
-            class="
-                h-4 w-4 rounded-full bg-white transition duration-100 ease-in-out
-                {$checked ? 'translate-x-3.5' : 'translate-x-0'}
-            "
-        />
-    </button>
+    />
 
     <span class="text-sm" class:text-neutral-600={!$errors} class:text-red-500={$errors}>
         <slot />

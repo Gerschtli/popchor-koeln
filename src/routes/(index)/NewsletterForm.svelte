@@ -22,7 +22,7 @@
     <form class="space-y-3" method="POST" action="?/newsletter#{id}" use:form.enhance>
         <Textbox {form} field="email" name="email" type="email" label="Deine Email" />
 
-        <Checkbox {form} field="acceptTerms" name="acceptTerms" screenReaderText="Für Newsletter eintragen">
+        <Checkbox {form} field="acceptTerms" name="acceptTerms">
             Ich stimme zu, dass meine E-Mail-Adresse genutzt werden darf, um mir werbliche E-Mails und Newsletter zu
             schicken. Ich weiß, dass ich mich jederzeit vom Verteiler abmelden kann.
         </Checkbox>

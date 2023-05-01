@@ -35,7 +35,7 @@
 
         <TextboxMultiline {form} label="Deine Nachricht" field="message" name="message" />
 
-        <Checkbox {form} field="newsletter" name="newsletter" screenReaderText="Für Newsletter eintragen">
+        <Checkbox {form} field="newsletter" name="newsletter">
             Ja, bitte trage mich auch in euren Newsletter ein. Ich weiß, dass ich mich jederzeit vom Verteiler abmelden
             kann.
         </Checkbox>
