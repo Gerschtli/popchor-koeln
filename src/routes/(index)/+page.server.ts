@@ -13,7 +13,7 @@ import { FormId } from '$lib/types.js';
 import { fail } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms/server';
 
-const handleNewsletterSubscription = async (newsletter: boolean, email: string) => {
+async function handleNewsletterSubscription(newsletter: boolean, email: string) {
     if (!newsletter) {
         return 'nicht abonniert';
     }
@@ -21,10 +21,10 @@ const handleNewsletterSubscription = async (newsletter: boolean, email: string) 
     const success = await subscribeToNewsletter(email);
 
     return success ? 'abbonniert' : 'Abonnieren fehlgeschlagen';
-};
+}
 
 export const actions = {
-    contact: async ({ request }) => {
+    async contact({ request }) {
         const form = await superValidate(request, schemaContact, { id: FormId.contact });
 
         if (!form.valid) {
@@ -55,7 +55,7 @@ export const actions = {
         return { form };
     },
 
-    newsletter: async ({ request }) => {
+    async newsletter({ request }) {
         const form = await superValidate(request, schemaNewsletter, { id: FormId.newsletter });
 
         if (!form.valid) {

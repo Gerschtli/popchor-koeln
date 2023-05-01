@@ -2,11 +2,10 @@
     import Section from '$lib/components/Section.svelte';
     import { StoryblokComponent, useStoryblokBridge } from '@storyblok/svelte';
     import { onMount } from 'svelte';
-    import type { PageData } from './$types';
     import ContactForm from './ContactForm.svelte';
     import NewsletterForm from './NewsletterForm.svelte';
 
-    export let data: PageData;
+    export let data;
 
     onMount(() => {
         useStoryblokBridge(data.story.id, (newStory) => (data.story = newStory));

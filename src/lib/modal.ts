@@ -12,30 +12,30 @@ import { writable } from 'svelte/store';
  * <svelte:window on:popstate={modal.onPopstate} />
  * <svelte:body on:keydown={modal.onKeydown} />
  */
-export const modalStore = (name: string) => {
+export function modalStore(name: string) {
     const { set, subscribe } = writable({ isOpen: false });
 
-    const close = () => {
+    function close() {
         set({ isOpen: false });
 
         if (history.state === name) {
             history.back();
         }
-    };
+    }
 
-    const open = () => {
+    function open() {
         set({ isOpen: true });
 
         history.pushState(name, '', '');
-    };
+    }
 
-    const onKeydown = (e: KeyboardEvent) => {
+    function onKeydown(e: KeyboardEvent) {
         if (e.key === 'Escape') {
             close();
         }
-    };
+    }
 
     afterNavigate(close);
 
     return { open, close, subscribe, onKeydown, onPopstate: close };
-};
+}

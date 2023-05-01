@@ -1,9 +1,8 @@
 <script lang="ts">
     import { StoryblokComponent, useStoryblokBridge } from '@storyblok/svelte';
     import { onMount } from 'svelte';
-    import type { PageData } from './$types';
 
-    export let data: PageData;
+    export let data;
 
     onMount(() => {
         useStoryblokBridge(data.story.id, (newStory) => (data.story = newStory));

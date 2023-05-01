@@ -1,6 +1,6 @@
 import { MAILCHIMP_API_KEY, MAILCHIMP_AUDIENCE_ID, MAILCHIMP_MOCK, MAILCHIMP_SERVER_PREFIX } from '$env/static/private';
 
-const apiPut = async (url: string, body: Record<string, string>) => {
+async function apiPut(url: string, body: Record<string, string>) {
     const response = await fetch(`https://${MAILCHIMP_SERVER_PREFIX}.api.mailchimp.com/3.0${url}`, {
         headers: {
             Accept: 'application/json',
@@ -14,9 +14,9 @@ const apiPut = async (url: string, body: Record<string, string>) => {
     if (!response.ok) {
         throw response;
     }
-};
+}
 
-export const subscribeToNewsletter = async (email: string) => {
+export async function subscribeToNewsletter(email: string) {
     if (MAILCHIMP_MOCK) {
         console.info(`mocked subscription to newsletter. email=${email}`);
 
@@ -37,4 +37,4 @@ export const subscribeToNewsletter = async (email: string) => {
 
         return false;
     }
-};
+}

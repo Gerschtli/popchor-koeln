@@ -5,7 +5,7 @@ import type { Validation } from 'sveltekit-superforms/index';
 import type { AnyZodObject } from 'zod';
 import { z } from 'zod';
 
-export const superFormBuilder = <T extends AnyZodObject>(data: Validation<T>) => {
+export function superFormBuilder<T extends AnyZodObject>(data: Validation<T>) {
     const error = writable(false);
 
     const form = superForm(data, {
@@ -26,10 +26,15 @@ export const superFormBuilder = <T extends AnyZodObject>(data: Validation<T>) =>
     );
 
     return { form, status };
-};
+}
 
-const buildRequiredString = (message: string) => z.string({ required_error: message }).trim().min(1, { message });
-const buildRequiredEmail = (message: string) => buildRequiredString(message).email({ message });
+function buildRequiredString(message: string) {
+    return z.string({ required_error: message }).trim().min(1, { message });
+}
+
+function buildRequiredEmail(message: string) {
+    return buildRequiredString(message).email({ message });
+}
 
 export const schemaContact = z.object({
     name: buildRequiredString('Bitte trage deinen Namen ein.'),

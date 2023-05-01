@@ -11,12 +11,21 @@
     export let linkTickets: string | undefined;
 
     let expanded = false;
-    const toggle = () => (expanded = !expanded);
+    function toggle() {
+        expanded = !expanded;
+    }
 
-    const formatDateTime = (date: Date, options: Intl.DateTimeFormatOptions) =>
-        new Intl.DateTimeFormat('de-DE', options).format(date);
-    const formatDate = (date: Date) => formatDateTime(date, { year: 'numeric', month: 'long', day: 'numeric' });
-    const formatTime = (date: Date) => formatDateTime(date, { hour: 'numeric', minute: 'numeric' });
+    function formatDateTime(date: Date, options: Intl.DateTimeFormatOptions) {
+        return new Intl.DateTimeFormat('de-DE', options).format(date);
+    }
+
+    function formatDate(date: Date) {
+        return formatDateTime(date, { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+
+    function formatTime(date: Date) {
+        return formatDateTime(date, { hour: 'numeric', minute: 'numeric' });
+    }
 
     $: dateFormatted = `${formatDate(date)} um ${formatTime(date)} Uhr`;
     $: entryTimeFormatted = entryTime ? `${formatTime(entryTime)} Uhr` : undefined;

@@ -2,7 +2,7 @@ import { SMTP_HOST, SMTP_PASSWORD, SMTP_PORT, SMTP_SECURE, SMTP_USERNAME, SMTP_U
 import nodemailer from 'nodemailer';
 import type SMTPTransport from 'nodemailer/lib/smtp-transport';
 
-const buildTransportOptions = async (): Promise<SMTPTransport.Options> => {
+async function buildTransportOptions(): Promise<SMTPTransport.Options> {
     if (!SMTP_USE_TEST) {
         return {
             host: SMTP_HOST,
@@ -26,7 +26,7 @@ const buildTransportOptions = async (): Promise<SMTPTransport.Options> => {
             pass: testAccount.pass,
         },
     };
-};
+}
 
 const transporter = nodemailer.createTransport(await buildTransportOptions());
 
@@ -43,7 +43,7 @@ type SendMailRequest = {
     text: string;
 };
 
-export const sendMail = async ({ from, to, replyTo, subject, text }: SendMailRequest) => {
+export async function sendMail({ from, to, replyTo, subject, text }: SendMailRequest) {
     try {
         const info = await transporter.sendMail({
             from,
@@ -65,4 +65,4 @@ export const sendMail = async ({ from, to, replyTo, subject, text }: SendMailReq
 
         return false;
     }
-};
+}

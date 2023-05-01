@@ -13,6 +13,10 @@
 
     const { value, errors } = formFieldProxy(form, field);
     $: checked = value as Writable<boolean>;
+
+    function toggleChecked() {
+        $checked = !$checked;
+    }
 </script>
 
 <label class="flex items-center gap-4">
@@ -32,7 +36,7 @@
         role="switch"
         aria-checked={$checked ? 'true' : 'false'}
         data-invalid={$errors}
-        on:click={() => ($checked = !$checked)}
+        on:click={toggleChecked}
     >
         <span class="sr-only">{screenReaderText}</span>
         <span

@@ -3,9 +3,8 @@ import Gig from '$lib/components/storyblok/Gig.svelte';
 import Page from '$lib/components/storyblok/Page.svelte';
 import Section from '$lib/components/storyblok/Section.svelte';
 import { apiPlugin, storyblokInit, useStoryblokApi } from '@storyblok/svelte';
-import type { LayoutLoad } from './$types';
 
-export const load: LayoutLoad = async () => {
+export async function load() {
     storyblokInit({
         accessToken: PUBLIC_STORYBLOK_ACCESS_TOKEN,
         use: [apiPlugin],
@@ -23,4 +22,4 @@ export const load: LayoutLoad = async () => {
     return {
         storyblokApi,
     };
-};
+}

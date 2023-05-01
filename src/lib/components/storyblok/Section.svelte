@@ -6,6 +6,10 @@
     export let blok: SectionStoryblok;
 
     let textExpand = false;
+
+    function expand() {
+        textExpand = true;
+    }
 </script>
 
 <div use:storyblokEditable={blok}>
@@ -43,7 +47,7 @@
                         <div class="flex justify-end">
                             <button
                                 class="flex text-sm text-accent hover:text-accent-dark focus:text-accent-dark"
-                                on:click={() => (textExpand = true)}
+                                on:click={expand}
                                 >{blok.expandButtonText} <ChevronRight class="inline" size={20} /></button
                             >
                         </div>
