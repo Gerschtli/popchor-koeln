@@ -14,10 +14,25 @@ export interface GigStoryblok {
   [k: string]: any;
 }
 
+export interface GigsStoryblok {
+  list?: GigStoryblok[];
+  _uid: string;
+  component: "gigs";
+  [k: string]: any;
+}
+
+export interface GigsReferenceStoryblok {
+  showOnlyFuture?: boolean;
+  reference?: StoryblokStory<GigsStoryblok> | string;
+  _uid: string;
+  component: "gigs_reference";
+  [k: string]: any;
+}
+
 export interface PageStoryblok {
   title: string;
   description?: string;
-  body: any[];
+  body: SectionStoryblok[];
   _uid: string;
   component: "page";
   uuid?: string;
@@ -27,11 +42,11 @@ export interface PageStoryblok {
 export interface SectionStoryblok {
   id?: string;
   title: string;
+  gigs?: GigsReferenceStoryblok[];
   content?: any;
   showExpandButton?: boolean;
   expandButtonText?: string;
   contentExpand?: any;
-  gigs?: GigStoryblok[];
   _uid: string;
   component: "section";
   [k: string]: any;

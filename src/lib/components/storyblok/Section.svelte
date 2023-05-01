@@ -24,11 +24,26 @@
         </hgroup>
 
         {#if blok.gigs?.length}
-            <div class="space-y-4 px-4 sm:px-8 lg:px-16">
-                {#each blok.gigs as blokInner}
-                    <StoryblokComponent blok={blokInner} />
-                {/each}
-            </div>
+            {@const { reference, showOnlyFuture } = blok.gigs[0]}
+            {#if typeof reference !== 'string' && reference?.content.list}
+                <div class="space-y-4 px-4 sm:px-8 lg:px-16">
+                    {#each reference.content.list as blokInner}
+                        <StoryblokComponent blok={blokInner} gigsShowOnlyFuture={showOnlyFuture} />
+                    {/each}
+
+                    {#if showOnlyFuture}
+                        <div class="mt-2 flex items-center justify-end">
+                            <a
+                                class="inline-flex text-sm text-accent hover:text-accent-dark focus:text-accent-dark"
+                                href="/termine"
+                                data-sveltekit-preload-data
+                            >
+                                zu allen Terminen <ChevronRight class="inline" size={20} />
+                            </a>
+                        </div>
+                    {/if}
+                </div>
+            {/if}
         {:else}
             <div
                 class={`

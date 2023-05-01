@@ -8,6 +8,7 @@ export async function load({ parent }) {
 
     const dataStory = await storyblokApi.get('cdn/stories/home', {
         version: dev ? 'draft' : 'published',
+        resolve_relations: ['gigs_reference.reference'],
     });
 
     return {
