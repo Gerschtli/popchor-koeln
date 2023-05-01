@@ -9,10 +9,6 @@
     });
 </script>
 
-<svelte:head>
-    <title>Impressum - popCHORköln</title>
-</svelte:head>
-
 {#if data.story}
     <StoryblokComponent blok={data.story.content} />
 {/if}

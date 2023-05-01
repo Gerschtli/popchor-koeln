@@ -15,6 +15,8 @@ export interface GigStoryblok {
 }
 
 export interface PageStoryblok {
+  title: string;
+  description?: string;
   body: any[];
   _uid: string;
   component: "page";
