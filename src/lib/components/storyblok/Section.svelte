@@ -36,7 +36,6 @@
                             <a
                                 class="inline-flex text-sm text-accent hover:text-accent-dark focus:text-accent-dark"
                                 href="/termine"
-                                data-sveltekit-preload-data
                             >
                                 zu allen Terminen <ChevronRight class="inline" size={20} />
                             </a>
