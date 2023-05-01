@@ -27,7 +27,12 @@
             </div>
         {:else}
             <div
-                class="space-y-4 px-4 text-neutral-600 sm:px-8 lg:px-16 [&_h3]:font-heading [&_h3]:text-lg [&_h3]:font-bold"
+                class={`
+                    space-y-4 px-4 sm:px-8 lg:px-16
+                    [&_h3]:pt-2 [&_h3]:font-heading [&_h3]:text-2xl
+                    [&_h4]:pt-1 [&_h4]:font-heading [&_h4]:text-xl
+                    [&_p]:text-neutral-600
+                `}
             >
                 {@html renderRichText(blok.content)}
 
