@@ -36,7 +36,9 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Prepare .env
-        run: cp .env.example .env
+        run: |
+          cp .env.example .env
+          echo "PUBLIC_STORYBLOK_ACCESS_TOKEN=${{ secrets.STORYBLOK_ACCESS_TOKEN }}" >> .env
 
       - run: pnpm install
 

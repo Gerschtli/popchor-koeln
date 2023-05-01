@@ -20,6 +20,7 @@ pnpm run dev -- --open
 -   `CACHIX_AUTH_TOKEN`
 -   `NETLIFY_AUTH_TOKEN`
 -   `NETLIFY_SITE_ID`
+-   `STORYBLOK_ACCESS_TOKEN`
 
 ### Netlify project
 
