@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { SectionStoryblok } from '$lib/component-types-storyblok';
-    import { renderRichText, storyblokEditable } from '@storyblok/svelte';
+    import { StoryblokComponent, renderRichText, storyblokEditable } from '@storyblok/svelte';
     import { ChevronRight } from 'lucide-svelte';
 
     export let blok: SectionStoryblok;
@@ -19,24 +19,32 @@
             <h2 class="relative bg-white px-8 font-heading text-3xl first-letter:text-accent">{blok.title}</h2>
         </hgroup>
 
-        <div
-            class="space-y-4 px-4 text-neutral-600 sm:px-8 lg:px-16 [&_h3]:font-heading [&_h3]:text-lg [&_h3]:font-bold"
-        >
-            {@html renderRichText(blok.content)}
+        {#if blok.gigs?.length}
+            <div class="space-y-4 px-4 sm:px-8 lg:px-16">
+                {#each blok.gigs as blokInner}
+                    <StoryblokComponent blok={blokInner} />
+                {/each}
+            </div>
+        {:else}
+            <div
+                class="space-y-4 px-4 text-neutral-600 sm:px-8 lg:px-16 [&_h3]:font-heading [&_h3]:text-lg [&_h3]:font-bold"
+            >
+                {@html renderRichText(blok.content)}
 
-            {#if blok.contentExpand}
-                {#if textExpand}
-                    {@html renderRichText(blok.contentExpand)}
-                {:else}
-                    <div class="flex justify-end">
-                        <button
-                            class="flex text-sm text-accent hover:text-accent-dark focus:text-accent-dark"
-                            on:click={() => (textExpand = true)}
-                            >{blok.expandButtonText} <ChevronRight class="inline" size={20} /></button
-                        >
-                    </div>
+                {#if blok.showExpandButton}
+                    {#if textExpand}
+                        {@html renderRichText(blok.contentExpand)}
+                    {:else}
+                        <div class="flex justify-end">
+                            <button
+                                class="flex text-sm text-accent hover:text-accent-dark focus:text-accent-dark"
+                                on:click={() => (textExpand = true)}
+                                >{blok.expandButtonText} <ChevronRight class="inline" size={20} /></button
+                            >
+                        </div>
+                    {/if}
                 {/if}
-            {/if}
-        </div>
+            </div>
+        {/if}
     </section>
 </div>

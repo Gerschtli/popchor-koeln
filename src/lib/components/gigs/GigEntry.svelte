@@ -3,14 +3,25 @@
     import GigLine from './GigLine.svelte';
 
     export let title: string;
-    export let time: string;
-    export let place: string[];
+    export let date: Date;
+    export let placeShort: string;
+    export let place: string;
     export let price: string | undefined;
-    export let entryTime: string | undefined;
+    export let entryTime: Date | undefined;
     export let linkTickets: string | undefined;
 
     let expanded = false;
     const toggle = () => (expanded = !expanded);
+
+    const formatDateTime = (date: Date, options: Intl.DateTimeFormatOptions) =>
+        new Intl.DateTimeFormat('de-DE', options).format(date);
+    const formatDate = (date: Date) => formatDateTime(date, { year: 'numeric', month: 'long', day: 'numeric' });
+    const formatTime = (date: Date) => formatDateTime(date, { hour: 'numeric', minute: 'numeric' });
+
+    $: dateFormatted = `${formatDate(date)} um ${formatTime(date)} Uhr`;
+    $: entryTimeFormatted = entryTime ? `${formatTime(entryTime)} Uhr` : undefined;
+
+    $: placeList = place.split(',').map((p) => p.trim());
 </script>
 
 <div
@@ -31,15 +42,15 @@
         </h3>
 
         {#if !expanded}
-            <p class="text-sm text-neutral-600">{time} @ {place[0]}</p>
+            <p class="text-sm text-neutral-600">{dateFormatted} @ {placeShort}</p>
         {/if}
     </button>
 
     {#if expanded}
-        <GigLine label="Wann">{time}</GigLine>
+        <GigLine label="Wann">{dateFormatted}</GigLine>
         <GigLine label="Wo">
             <div>
-                {#each place as placeItem}
+                {#each placeList as placeItem}
                     <span class="block xs:inline xs:after:content-[',_'] xs:last:after:content-[]">{placeItem}</span>
                 {/each}
             </div>
@@ -48,7 +59,7 @@
             <GigLine label="Preis">{price}</GigLine>
         {/if}
         {#if entryTime}
-            <GigLine label="Einlass">{entryTime}</GigLine>
+            <GigLine label="Einlass">ab {entryTimeFormatted}</GigLine>
         {/if}
 
         <p class="mt-2 text-sm text-neutral-600"><slot /></p>
