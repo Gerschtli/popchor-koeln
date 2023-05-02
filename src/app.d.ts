@@ -7,6 +7,11 @@ declare global {
         // interface PageData {}
         // interface Platform {}
     }
+
+    declare module '*&imagetools' {
+        const out: string;
+        export default out;
+    }
 }
 
 export {};
