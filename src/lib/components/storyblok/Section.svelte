@@ -52,10 +52,12 @@
                     [&_p]:text-neutral-600
                 `}
             >
+                <!-- eslint-disable-next-line svelte/no-at-html-tags -->
                 {@html renderRichText(blok.content)}
 
                 {#if blok.showExpandButton}
                     {#if textExpand}
+                        <!-- eslint-disable-next-line svelte/no-at-html-tags -->
                         {@html renderRichText(blok.contentExpand)}
                     {:else}
                         <div class="flex justify-end">

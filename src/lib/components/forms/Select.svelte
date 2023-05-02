@@ -3,6 +3,7 @@
     import { formFieldProxy, type SuperForm } from 'sveltekit-superforms/client';
     import type { AnyZodObject, z } from 'zod';
 
+    // eslint-disable-next-line no-undef
     type T = $$Generic<AnyZodObject>;
 
     export let form: SuperForm<UnwrapEffects<T>, unknown>;
