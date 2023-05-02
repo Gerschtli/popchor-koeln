@@ -1,12 +1,12 @@
 <script lang="ts">
     import LogoDacSvg from '$lib/assets/LogoDacSvg.svelte';
     import LogoPopchorSvg from '$lib/assets/LogoPopchorSvg.svelte';
-    import imageHeader160Png from '$lib/assets/header-160px.png';
-    import imageHeader160Webp from '$lib/assets/header-160px.webp';
-    import imageHeader240Png from '$lib/assets/header-240px.png';
-    import imageHeader240Webp from '$lib/assets/header-240px.webp';
-    import imageHeader320Png from '$lib/assets/header-320px.png';
-    import imageHeader320Webp from '$lib/assets/header-320px.webp';
+    import imageHeader160Png from '$lib/assets/header.png?h=160&format=png&imagetools';
+    import imageHeader160Webp from '$lib/assets/header.png?h=160&format=webp&imagetools';
+    import imageHeader240Png from '$lib/assets/header.png?h=240&format=png&imagetools';
+    import imageHeader240Webp from '$lib/assets/header.png?h=240&format=webp&imagetools';
+    import imageHeader320Png from '$lib/assets/header.png?h=320&format=png&imagetools';
+    import imageHeader320Webp from '$lib/assets/header.png?h=320&format=webp&imagetools';
     import { Menu } from 'lucide-svelte';
 
     export let openNavigation: () => void;
