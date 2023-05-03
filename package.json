@@ -27,7 +27,7 @@
         "eslint": "^8.39.0",
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-svelte": "^2.27.2",
-        "lucide-svelte": "^0.188.0",
+        "lucide-svelte": "^0.206.0",
         "nodemailer": "^6.9.1",
         "postcss": "^8.4.23",
         "postcss-load-config": "^4.0.1",
