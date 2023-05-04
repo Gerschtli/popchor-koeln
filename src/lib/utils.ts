@@ -1,5 +1,5 @@
 export function parseDateAsUtc(date: string) {
-    return new Date(`${date} GMT`);
+    return new Date(`${date.trim()}+0000`);
 }
 
 function formatDateTime(date: Date, options: Intl.DateTimeFormatOptions) {
