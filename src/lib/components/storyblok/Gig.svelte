@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { GigStoryblok } from '$lib/component-types-storyblok';
+    import { parseDateAsUtc } from '$lib/utils';
     import { renderRichText, storyblokEditable } from '@storyblok/svelte';
     import GigEntry from '../gigs/GigEntry.svelte';
 
@@ -7,8 +8,8 @@
     export let gigsShowOnlyFuture = false;
 
     $: ({ title, place, placeShort, price, linkTickets, description } = blok);
-    $: date = new Date(`${blok.date} GMT`);
-    $: entryTime = blok.entryTime ? new Date(`${blok.entryTime} GMT`) : undefined;
+    $: date = parseDateAsUtc(blok.date);
+    $: entryTime = blok.entryTime ? parseDateAsUtc(blok.entryTime) : undefined;
 
     $: show = !gigsShowOnlyFuture || date.getTime() >= Date.now();
 </script>

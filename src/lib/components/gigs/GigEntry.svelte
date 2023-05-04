@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { formatDate, formatTime } from '$lib/utils';
     import { ChevronDown, ChevronRight, TicketIcon } from 'lucide-svelte';
     import GigLine from './GigLine.svelte';
 
@@ -13,18 +14,6 @@
     let expanded = false;
     function toggle() {
         expanded = !expanded;
-    }
-
-    function formatDateTime(date: Date, options: Intl.DateTimeFormatOptions) {
-        return new Intl.DateTimeFormat('de-DE', options).format(date);
-    }
-
-    function formatDate(date: Date) {
-        return formatDateTime(date, { year: 'numeric', month: 'long', day: 'numeric' });
-    }
-
-    function formatTime(date: Date) {
-        return formatDateTime(date, { hour: 'numeric', minute: 'numeric' });
     }
 
     $: dateFormatted = `${formatDate(date)} um ${formatTime(date)} Uhr`;
