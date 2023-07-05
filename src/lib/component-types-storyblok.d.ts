@@ -1,5 +1,14 @@
 import { StoryblokStory } from 'storyblok-generate-ts';
 
+export interface RichtextStoryblok {
+    type: string;
+    content?: RichtextStoryblok[];
+    marks?: RichtextStoryblok[];
+    attrs?: any;
+    text?: string;
+    [k: string]: any;
+}
+
 export interface GigStoryblok {
     title: string;
     date: string;
@@ -8,7 +17,7 @@ export interface GigStoryblok {
     place: string;
     price?: string;
     linkTickets?: string;
-    description?: any;
+    description?: RichtextStoryblok;
     _uid: string;
     component: 'gig';
     [k: string]: any;
@@ -43,10 +52,10 @@ export interface SectionStoryblok {
     id?: string;
     title: string;
     gigs?: GigsReferenceStoryblok[];
-    content?: any;
+    content?: RichtextStoryblok;
     showExpandButton?: boolean;
     expandButtonText?: string;
-    contentExpand?: any;
+    contentExpand?: RichtextStoryblok;
     _uid: string;
     component: 'section';
     [k: string]: any;
