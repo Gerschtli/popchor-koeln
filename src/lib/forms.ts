@@ -5,7 +5,7 @@ import { superForm } from 'sveltekit-superforms/client';
 import type { AnyZodObject } from 'zod';
 import { z } from 'zod';
 
-export function superFormBuilder<T extends AnyZodObject>(data: SuperValidated<T, any>) {
+export function superFormBuilder<T extends AnyZodObject>(data: SuperValidated<T, unknown>) {
     const error = writable(false);
 
     const form = superForm(data, {

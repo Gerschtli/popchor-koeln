@@ -10,6 +10,7 @@ export function initStoryblokApi() {
         apiOptions: {
             region: 'eu',
         },
+        // @ts-expect-error storyblok sdk does not support svelte 4 types yet
         components,
     });
 
