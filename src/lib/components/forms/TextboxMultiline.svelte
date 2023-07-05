@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { FieldPath, UnwrapEffects } from 'sveltekit-superforms';
+    import type { FormPathLeaves, UnwrapEffects } from 'sveltekit-superforms';
     import { formFieldProxy, type SuperForm } from 'sveltekit-superforms/client';
     import type { AnyZodObject, z } from 'zod';
 
@@ -7,7 +7,7 @@
     type T = $$Generic<AnyZodObject>;
 
     export let form: SuperForm<UnwrapEffects<T>, unknown>;
-    export let field: keyof z.infer<T> | FieldPath<z.infer<T>>;
+    export let field: FormPathLeaves<z.infer<T>>;
     export let name: string;
     export let label: string;
 
@@ -18,7 +18,7 @@
     <span class="text-xs font-bold uppercase tracking-wider text-neutral-600">{label}:</span>
     <textarea
         {name}
-        data-invalid={$errors}
+        aria-invalid={$errors ? 'true' : undefined}
         bind:value={$value}
         {...$constraints}
         class="

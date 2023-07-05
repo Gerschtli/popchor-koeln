@@ -1,11 +1,11 @@
 import type { FormStatus } from '$lib/types';
 import { derived, writable, type Readable } from 'svelte/store';
+import type { SuperValidated } from 'sveltekit-superforms';
 import { superForm } from 'sveltekit-superforms/client';
-import type { Validation } from 'sveltekit-superforms/index';
 import type { AnyZodObject } from 'zod';
 import { z } from 'zod';
 
-export function superFormBuilder<T extends AnyZodObject>(data: Validation<T>) {
+export function superFormBuilder<T extends AnyZodObject>(data: SuperValidated<T, any>) {
     const error = writable(false);
 
     const form = superForm(data, {
@@ -16,9 +16,9 @@ export function superFormBuilder<T extends AnyZodObject>(data: Validation<T>) {
     });
 
     const status: Readable<FormStatus> = derived(
-        [form.valid, form.empty, form.delayed, error],
-        ([$valid, $empty, $delayed, $error]) => {
-            if ($valid && !$empty) return 'success';
+        [form.allErrors, form.posted, form.delayed, error],
+        ([$allErrors, $posted, $delayed, $error]) => {
+            if (!$allErrors.length && $posted) return 'success';
             if ($error) return 'error';
             if ($delayed) return 'loading';
             return 'ready';
