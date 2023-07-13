@@ -23,7 +23,8 @@
     </p>
 
     <p class="text-neutral-600">
-        Bist du ein:e erfahrene:r Sänger:in und hast Lust auf intensive Chorarbeit? Schreib uns:
+        Bist du ein erfahrener Bass und hast Lust auf intensive Chorarbeit? Schreib uns gerne an. Alle anderen Stimmen
+        sind aktuell voll besetzt.
     </p>
 
     <form class="space-y-3" method="POST" action="?/contact#{id}" use:form.enhance>
