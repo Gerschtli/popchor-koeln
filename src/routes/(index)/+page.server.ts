@@ -9,7 +9,6 @@ import {
 import { schemaContact, schemaNewsletter } from '$lib/forms.js';
 import { sendMail } from '$lib/server/mail';
 import { subscribeToNewsletter } from '$lib/server/newsletter';
-import { FormId } from '$lib/types.js';
 import { fail } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms/server';
 
@@ -25,13 +24,13 @@ async function handleNewsletterSubscription(newsletter: boolean, email: string) 
 
 export const actions = {
     async contact({ request }) {
-        const form = await superValidate(request, schemaContact, { id: FormId.contact });
+        const formContact = await superValidate(request, schemaContact);
 
-        if (!form.valid) {
-            return fail(400, { form });
+        if (!formContact.valid) {
+            return fail(400, { formContact });
         }
 
-        const { email, message, name, newsletter, subject } = form.data;
+        const { email, message, name, newsletter, subject } = formContact.data;
 
         const newsletterResult = await handleNewsletterSubscription(newsletter, email);
 
@@ -52,22 +51,22 @@ export const actions = {
             throw new Error('contact action failed');
         }
 
-        return { form };
+        return { formContact };
     },
 
     async newsletter({ request }) {
-        const form = await superValidate(request, schemaNewsletter, { id: FormId.newsletter });
+        const formNewsletter = await superValidate(request, schemaNewsletter);
 
-        if (!form.valid) {
-            return fail(400, { form });
+        if (!formNewsletter.valid) {
+            return fail(400, { formNewsletter });
         }
 
-        const success = await subscribeToNewsletter(form.data.email);
+        const success = await subscribeToNewsletter(formNewsletter.data.email);
 
         if (!success) {
             throw new Error('newsletter action failed');
         }
 
-        return { form };
+        return { formNewsletter };
     },
 };

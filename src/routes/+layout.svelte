@@ -1,10 +1,11 @@
 <script lang="ts">
+    import { initNavigationModal } from '$lib/modal';
     import '../app.postcss';
     import Footer from './Footer.svelte';
     import Header from './Header.svelte';
     import Navigation from './Navigation.svelte';
 
-    let openNavigation: () => void;
+    initNavigationModal();
 </script>
 
 <svelte:head>
@@ -17,9 +18,9 @@
     <meta name="theme-color" content="#ffffff" />
 </svelte:head>
 
-<Header {openNavigation} />
+<Header />
 
-<Navigation bind:openNavigation />
+<Navigation />
 
 <main>
     <slot />

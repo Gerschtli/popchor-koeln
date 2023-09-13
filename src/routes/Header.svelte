@@ -8,9 +8,11 @@
     import imageHeader240Webp from '$lib/assets/header.png?h=240&format=webp&imagetools';
     import imageHeader320Png from '$lib/assets/header.png?h=320&format=png&imagetools';
     import imageHeader320Webp from '$lib/assets/header.png?h=320&format=webp&imagetools';
+    import { getNavigationModal } from '$lib/modal';
     import { Menu } from 'lucide-svelte';
 
-    export let openNavigation: () => void;
+    const navigationModal = getNavigationModal();
+    const openNavigation = navigationModal.open;
 </script>
 
 <header>

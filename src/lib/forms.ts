@@ -9,7 +9,6 @@ export function superFormBuilder<T extends AnyZodObject>(data: SuperValidated<T,
     const error = writable(false);
 
     const form = superForm(data, {
-        id: data.id,
         onError() {
             error.set(true);
         },

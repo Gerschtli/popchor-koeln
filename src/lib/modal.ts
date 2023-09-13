@@ -1,4 +1,5 @@
 import { afterNavigate } from '$app/navigation';
+import { getContext, setContext } from 'svelte';
 import { writable } from 'svelte/store';
 
 /**
@@ -12,7 +13,7 @@ import { writable } from 'svelte/store';
  * <svelte:window on:popstate={modal.onPopstate} />
  * <svelte:body on:keydown={modal.onKeydown} />
  */
-export function modalStore(name: string) {
+function modalStore(name: string) {
     const { set, subscribe } = writable({ isOpen: false });
 
     function close() {
@@ -38,4 +39,16 @@ export function modalStore(name: string) {
     afterNavigate(close);
 
     return { open, close, subscribe, onKeydown, onPopstate: close };
+}
+
+type ModalStore = ReturnType<typeof modalStore>;
+
+const contextName = 'navigation-modal';
+
+export function initNavigationModal() {
+    setContext<ModalStore>(contextName, modalStore('navigation-open'));
+}
+
+export function getNavigationModal() {
+    return getContext<ModalStore>(contextName);
 }

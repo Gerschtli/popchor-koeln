@@ -1,14 +1,12 @@
 <script lang="ts">
     import { browser } from '$app/environment';
-    import { modalStore } from '$lib/modal';
+    import { getNavigationModal } from '$lib/modal';
     import { X } from 'lucide-svelte';
     import { fly } from 'svelte/transition';
 
-    let navigationModal = modalStore('navigation-open');
+    const navigationModal = getNavigationModal();
 
     $: if (browser) document.body.classList.toggle('overflow-hidden', $navigationModal.isOpen);
-
-    export const openNavigation = navigationModal.open;
 
     const navigationItems = [
         { href: '/#chor', text: 'Chor' },
