@@ -1,6 +1,4 @@
 <script lang="ts">
-    import LogoDacSvg from '$lib/assets/LogoDacSvg.svelte';
-    import LogoPopchorSvg from '$lib/assets/LogoPopchorSvg.svelte';
     import LogoSmallPopchorSvg from '$lib/assets/LogoSmallPopchorSvg.svelte';
     import imageHeader160Png from '$lib/assets/header.png?h=160&format=png&imagetools';
     import imageHeader160Webp from '$lib/assets/header.png?h=160&format=webp&imagetools';
@@ -16,16 +14,13 @@
 </script>
 
 <header>
-    <div class="container relative mx-auto p-8 pb-4">
-        <LogoSmallPopchorSvg class="absolute left-2 h-24 xs:left-auto xs:h-36" />
-
-        <a href="/" class="relative">
-            <h1 class="flex flex-col items-center space-y-4 font-heading text-4xl font-bold">
-                <LogoDacSvg class="h-14" />
-                <small class="block text-2xl">heißt jetzt</small>
-                <LogoPopchorSvg class="h-24" />
-            </h1>
-        </a>
+    <div class="container relative mx-auto flex justify-center pt-8">
+        <h1>
+            <a href="/" class="relative">
+                <LogoSmallPopchorSvg class="h-36 xs:h-48" />
+                <div class="sr-only">popCHORköln</div>
+            </a>
+        </h1>
 
         <button
             aria-label="Menü öffnen"
