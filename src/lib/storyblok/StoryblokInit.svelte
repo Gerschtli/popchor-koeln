@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { StoryblokComponent, useStoryblokBridge } from '@storyblok/svelte';
+    import type { PageStoryblok } from '$lib/component-types-storyblok';
+    import { StoryblokComponent, useStoryblokBridge, type ISbStoryData } from '@storyblok/svelte';
     import { onMount } from 'svelte';
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    export let story: any;
+    export let story: ISbStoryData<PageStoryblok>;
 
     onMount(() => {
         useStoryblokBridge(story.id, (newStory) => (story = newStory));

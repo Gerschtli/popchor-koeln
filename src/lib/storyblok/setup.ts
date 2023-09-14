@@ -1,7 +1,8 @@
 import { dev } from '$app/environment';
 import { PUBLIC_STORYBLOK_ACCESS_TOKEN } from '$env/static/public';
+import type { PageStoryblok } from '$lib/component-types-storyblok';
 import { components } from '$lib/components/storyblok';
-import { apiPlugin, storyblokInit, useStoryblokApi } from '@storyblok/svelte';
+import { apiPlugin, storyblokInit, useStoryblokApi, type ISbStoryData } from '@storyblok/svelte';
 
 export function initStoryblokApi() {
     storyblokInit({
@@ -22,5 +23,5 @@ export async function loadStory(storyblokApi: ReturnType<typeof initStoryblokApi
         resolve_relations: ['gigs_reference.reference'],
     });
 
-    return dataStory.data.story;
+    return dataStory.data.story as ISbStoryData<PageStoryblok>;
 }
