@@ -175,14 +175,16 @@
             "name": "section",
             "display_name": "Abschnitt",
             "created_at": "2023-04-30T13:49:41.040Z",
-            "updated_at": "2023-05-02T18:57:03.569Z",
+            "updated_at": "2023-09-14T16:42:22.451Z",
             "id": 3909821,
             "schema": {
                 "id": {
                     "type": "text",
                     "pos": 0,
-                    "regex": "[a-z0-9]*",
-                    "display_name": "Sprungmarke (Bitte nicht ändern)"
+                    "regex": "[a-z0-9\\-]*",
+                    "display_name": "Sprungmarke",
+                    "description": "Am besten der Titel in Kleinbuchstaben mit Bindestrichen",
+                    "required": true
                 },
                 "title": {
                     "type": "text",

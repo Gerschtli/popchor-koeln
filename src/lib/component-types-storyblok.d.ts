@@ -49,7 +49,7 @@ export interface PageStoryblok {
 }
 
 export interface SectionStoryblok {
-    id?: string;
+    id: string;
     title: string;
     gigs?: GigsReferenceStoryblok[];
     content?: RichtextStoryblok;
