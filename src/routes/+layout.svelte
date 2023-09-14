@@ -5,6 +5,8 @@
     import Header from './Header.svelte';
     import Navigation from './Navigation.svelte';
 
+    export let data;
+
     initNavigationModal();
 </script>
 
@@ -20,7 +22,7 @@
 
 <Header />
 
-<Navigation />
+<Navigation navigationItems={data.navigationItems} />
 
 <main>
     <slot />

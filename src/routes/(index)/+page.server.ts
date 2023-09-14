@@ -22,6 +22,13 @@ async function handleNewsletterSubscription(newsletter: boolean, email: string) 
     return success ? 'abbonniert' : 'Abonnieren fehlgeschlagen';
 }
 
+export async function load() {
+    return {
+        formContact: superValidate(schemaContact),
+        formNewsletter: superValidate(schemaNewsletter),
+    };
+}
+
 export const actions = {
     async contact({ request }) {
         const formContact = await superValidate(request, schemaContact);

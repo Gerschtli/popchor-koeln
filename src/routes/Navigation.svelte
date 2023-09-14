@@ -4,16 +4,11 @@
     import { X } from 'lucide-svelte';
     import { fly } from 'svelte/transition';
 
+    export let navigationItems: { id: string; title: string }[];
+
     const navigationModal = getNavigationModal();
 
     $: if (browser) document.body.classList.toggle('overflow-hidden', $navigationModal.isOpen);
-
-    const navigationItems = [
-        { href: '/#chor', text: 'Chor' },
-        { href: '/#chorleiter', text: 'Chorleiter' },
-        { href: '/#termine', text: 'Termine' },
-        { href: '/#kontakt', text: 'Kontakt' },
-    ];
 </script>
 
 <svelte:window on:popstate={navigationModal.onPopstate} />
@@ -25,8 +20,8 @@
             <ul class="flex flex-col gap-4 p-4">
                 {#each navigationItems as item}
                     <li>
-                        <a class="text-lg hover:text-accent-dark active:text-accent-dark" href={item.href}
-                            >{item.text}</a
+                        <a class="text-lg hover:text-accent-dark active:text-accent-dark" href="/#{item.id}"
+                            >{item.title}</a
                         >
                     </li>
                 {/each}
