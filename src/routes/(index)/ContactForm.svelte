@@ -5,6 +5,7 @@
     import Textbox from '$lib/components/forms/Textbox.svelte';
     import TextboxMultiline from '$lib/components/forms/TextboxMultiline.svelte';
     import { superFormBuilder } from '$lib/forms';
+    import { renderRichText } from '@storyblok/svelte';
     import type { PageData } from './$types';
 
     export let data: PageData;
@@ -14,18 +15,11 @@
     const { form, status } = superFormBuilder(data.formContact);
 </script>
 
-<div {id} class="space-y-2">
+<div {id} class="space-y-2 [&>p]:text-neutral-600">
     <h3 class="font-heading text-lg font-bold">Kontaktformular</h3>
 
-    <p class="text-neutral-600">
-        Sei es Lob, Kritik, eine Auftrittsanfrage oder einfach so - schreibt uns einfach über unser Kontaktformular. Wir
-        freuen uns auf eure Nachrichten!
-    </p>
-
-    <p class="text-neutral-600">
-        Bist du ein erfahrener Bass und hast Lust auf intensive Chorarbeit? Schreib uns gerne an. Alle anderen Stimmen
-        sind aktuell voll besetzt.
-    </p>
+    <!-- eslint-disable-next-line svelte/no-at-html-tags -->
+    {@html renderRichText(data.storyHome.content.contactText)}
 
     <form class="space-y-3" method="POST" action="?/contact#{id}" use:form.enhance>
         <Textbox {form} field="name" name="name" type="text" label="Dein Name" />

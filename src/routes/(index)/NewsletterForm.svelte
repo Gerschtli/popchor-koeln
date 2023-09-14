@@ -3,6 +3,7 @@
     import SubmitButton from '$lib/components/forms/SubmitButton.svelte';
     import Textbox from '$lib/components/forms/Textbox.svelte';
     import { superFormBuilder } from '$lib/forms';
+    import { renderRichText } from '@storyblok/svelte';
     import type { PageData } from './$types';
 
     export let data: PageData;
@@ -11,13 +12,11 @@
     const { form, status } = superFormBuilder(data.formNewsletter);
 </script>
 
-<div {id} class="space-y-2">
+<div {id} class="space-y-2 [&>p]:text-neutral-600">
     <h3 class="font-heading text-lg font-bold">Newsletter</h3>
 
-    <p class="text-neutral-600">
-        Trage dich in unseren Newsletter ein und bleibe so immer auf dem neusten Stand zu unseren Konzerten, Videos und
-        Aktivitäten!
-    </p>
+    <!-- eslint-disable-next-line svelte/no-at-html-tags -->
+    {@html renderRichText(data.storyHome.content.newsletterText)}
 
     <form class="space-y-3" method="POST" action="?/newsletter#{id}" use:form.enhance>
         <Textbox {form} field="email" name="email" type="email" label="Deine Email" />

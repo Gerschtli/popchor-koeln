@@ -42,6 +42,8 @@ export interface PageStoryblok {
     title: string;
     description?: string;
     body: SectionStoryblok[];
+    newsletterText?: RichtextStoryblok;
+    contactText?: RichtextStoryblok;
     _uid: string;
     component: 'page';
     uuid?: string;
