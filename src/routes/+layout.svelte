@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { browser } from '$app/environment';
     import { initNavigationModal } from '$lib/modal';
     import '../app.postcss';
     import Footer from './Footer.svelte';
@@ -29,3 +30,7 @@
 </main>
 
 <Footer />
+
+{#if browser}
+    <div data-testid="js-loaded" />
+{/if}

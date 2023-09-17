@@ -5,6 +5,6 @@
 /.svelte-kit
 /build
 /node_modules
-/static/editor.html
+/test-results
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
