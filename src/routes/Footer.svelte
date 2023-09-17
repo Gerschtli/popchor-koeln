@@ -1,7 +1,7 @@
 <script lang="ts">
+    import SpotifyLogo from '$lib/assets/SpotifyLogo.svelte';
     import { Facebook, Instagram, Mail, Youtube } from 'lucide-svelte';
     import SocialLink from './SocialLink.svelte';
-    import SpotifyLogo from './SpotifyLogo.svelte';
 </script>
 
 <footer class="border-t border-slate-500">
