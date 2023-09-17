@@ -39,16 +39,23 @@
                 </div>
             {/if}
         {:else}
-            <div
-                class="
-                    space-y-4 px-4 sm:px-8
-                    [&_h3]:pt-2 [&_h3]:font-heading [&_h3]:text-2xl
-                    [&_h4]:pt-1 [&_h4]:font-heading [&_h4]:text-xl
-                    [&_p]:text-neutral-600
-                "
-            >
+            <div class="prose space-y-4 px-4 sm:px-8">
                 <RichText content={blok.content} />
             </div>
         {/if}
     </section>
 </div>
+
+<style type="postcss">
+    .prose :global(h3) {
+        @apply pt-2 font-heading text-2xl;
+    }
+
+    .prose :global(h4) {
+        @apply pt-1 font-heading text-xl;
+    }
+
+    .prose :global(p) {
+        @apply text-neutral-600;
+    }
+</style>
