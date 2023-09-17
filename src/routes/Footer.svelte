@@ -6,7 +6,7 @@
 
 <footer class="border-t border-slate-500">
     <div class="container mx-auto flex flex-col items-center justify-between gap-y-4 p-8 sm:flex-row sm:px-12 lg:px-20">
-        <div class="flex justify-center gap-4">
+        <div class="flex justify-center gap-2 xs:gap-4">
             <SocialLink label="Facebook" link="https://www.facebook.com/popchorkoeln/" icon={Facebook} />
             <SocialLink label="Email" link="mailto:hallo@popchor-koeln.de" icon={Mail} />
             <SocialLink label="Youtube" link="https://www.youtube.com/@popchorkoeln" icon={Youtube} />
@@ -22,6 +22,8 @@
             <a class="text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700" href="/impressum">Impressum</a>
         </div>
 
-        <div class="hidden sm:block sm:flex-1" />
+        <div class="flex-1 text-right">
+            <a class="text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700" href="/datenschutz">Datenschutz</a>
+        </div>
     </div>
 </footer>
