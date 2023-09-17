@@ -1,7 +1,8 @@
 <script lang="ts">
     import type { SectionStoryblok } from '$lib/component-types-storyblok';
-    import { StoryblokComponent, renderRichText, storyblokEditable } from '@storyblok/svelte';
+    import { StoryblokComponent, storyblokEditable } from '@storyblok/svelte';
     import { ChevronRight } from 'lucide-svelte';
+    import RichText from './richtext/RichText.svelte';
 
     export let blok: SectionStoryblok;
 
@@ -45,20 +46,18 @@
             {/if}
         {:else}
             <div
-                class={`
-                    space-y-4 px-4 sm:px-8 lg:px-16
+                class="
+                    space-y-4 px-4 sm:px-8
                     [&_h3]:pt-2 [&_h3]:font-heading [&_h3]:text-2xl
                     [&_h4]:pt-1 [&_h4]:font-heading [&_h4]:text-xl
                     [&_p]:text-neutral-600
-                `}
+                "
             >
-                <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-                {@html renderRichText(blok.content)}
+                <RichText content={blok.content} />
 
                 {#if blok.showExpandButton}
                     {#if textExpand}
-                        <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-                        {@html renderRichText(blok.contentExpand)}
+                        <RichText content={blok.contentExpand} />
                     {:else}
                         <div class="flex justify-end">
                             <button

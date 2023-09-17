@@ -130,6 +130,35 @@
             "icon": null
         },
         {
+            "name": "image",
+            "display_name": "Bild",
+            "created_at": "2023-09-17T11:18:56.976Z",
+            "updated_at": "2023-09-17T12:25:53.224Z",
+            "id": 4585754,
+            "schema": {
+                "image": {
+                    "type": "asset",
+                    "filetypes": ["images"],
+                    "required": true,
+                    "display_name": "Bild",
+                    "key": "images",
+                    "pos": 0
+                }
+            },
+            "image": null,
+            "preview_field": null,
+            "is_root": false,
+            "preview_tmpl": null,
+            "is_nestable": true,
+            "all_presets": [],
+            "preset_id": null,
+            "real_name": "Bild",
+            "component_group_uuid": "96276656-9ba9-4cef-8e4f-f47312584dbb",
+            "color": null,
+            "icon": null,
+            "component_group_name": "Richtext"
+        },
+        {
             "name": "page",
             "display_name": "Seite",
             "created_at": "2023-04-30T12:13:07.140Z",
@@ -185,7 +214,7 @@
             "name": "section",
             "display_name": "Abschnitt",
             "created_at": "2023-04-30T13:49:41.040Z",
-            "updated_at": "2023-09-14T16:42:22.451Z",
+            "updated_at": "2023-09-17T11:21:14.584Z",
             "id": 3909821,
             "schema": {
                 "id": {
@@ -218,8 +247,8 @@
                     "allow_target_blank": true,
                     "customize_toolbar": true,
                     "toolbar": [
+                        "blok",
                         "bold",
-                        "list",
                         "color",
                         "copy",
                         "cut",
@@ -230,6 +259,7 @@
                         "hrule",
                         "italic",
                         "link",
+                        "list",
                         "olist",
                         "paragraph",
                         "paste-action",
@@ -241,7 +271,10 @@
                         "underline",
                         "undo"
                     ],
-                    "display_name": "Inhalt"
+                    "display_name": "Inhalt",
+                    "restrict_type": "groups",
+                    "restrict_components": true,
+                    "component_group_whitelist": ["96276656-9ba9-4cef-8e4f-f47312584dbb"]
                 },
                 "showExpandButton": {
                     "type": "boolean",
@@ -261,8 +294,8 @@
                     "allow_target_blank": true,
                     "customize_toolbar": true,
                     "toolbar": [
+                        "blok",
                         "bold",
-                        "list",
                         "color",
                         "copy",
                         "cut",
@@ -273,6 +306,7 @@
                         "hrule",
                         "italic",
                         "link",
+                        "list",
                         "olist",
                         "paragraph",
                         "paste-action",
@@ -284,7 +318,10 @@
                         "underline",
                         "undo"
                     ],
-                    "display_name": "Text nach Aufklapplink"
+                    "display_name": "Text nach Aufklapplink",
+                    "restrict_type": "groups",
+                    "restrict_components": true,
+                    "component_group_whitelist": ["96276656-9ba9-4cef-8e4f-f47312584dbb"]
                 }
             },
             "image": null,
@@ -298,6 +335,43 @@
             "component_group_uuid": null,
             "color": null,
             "icon": null
+        },
+        {
+            "name": "youtube_video",
+            "display_name": "YouTube Video",
+            "created_at": "2023-09-17T10:54:59.431Z",
+            "updated_at": "2023-09-17T13:20:48.637Z",
+            "id": 4585651,
+            "schema": {
+                "title": {
+                    "type": "text",
+                    "display_name": "Titel",
+                    "required": true,
+                    "key": "title",
+                    "pos": 0
+                },
+                "code": {
+                    "type": "text",
+                    "display_name": "Video Code",
+                    "regex": "",
+                    "description": "Video Code einfügen. Z.B. bei https://youtu.be/np3OnwE-1bE ist der Code np3OnwE-1bE",
+                    "required": true,
+                    "key": "video_code",
+                    "pos": 1
+                }
+            },
+            "image": null,
+            "preview_field": "title",
+            "is_root": false,
+            "preview_tmpl": null,
+            "is_nestable": true,
+            "all_presets": [],
+            "preset_id": null,
+            "real_name": "YouTube Video",
+            "component_group_uuid": "96276656-9ba9-4cef-8e4f-f47312584dbb",
+            "color": null,
+            "icon": null,
+            "component_group_name": "Richtext"
         }
     ]
 }

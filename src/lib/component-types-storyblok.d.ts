@@ -38,6 +38,24 @@ export interface GigsReferenceStoryblok {
     [k: string]: any;
 }
 
+export interface AssetStoryblok {
+    alt?: string;
+    copyright?: string;
+    id: number;
+    filename: string;
+    name: string;
+    title?: string;
+    focus?: string;
+    [k: string]: any;
+}
+
+export interface ImageStoryblok {
+    image: AssetStoryblok;
+    _uid: string;
+    component: 'image';
+    [k: string]: any;
+}
+
 export interface PageStoryblok {
     title: string;
     description?: string;
@@ -60,5 +78,13 @@ export interface SectionStoryblok {
     contentExpand?: RichtextStoryblok;
     _uid: string;
     component: 'section';
+    [k: string]: any;
+}
+
+export interface YoutubeVideoStoryblok {
+    title: string;
+    code: string;
+    _uid: string;
+    component: 'youtube_video';
     [k: string]: any;
 }
