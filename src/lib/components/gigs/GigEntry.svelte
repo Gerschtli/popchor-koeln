@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { formatDate, formatTime } from '$lib/utils';
+    import { createDateNowMinusOneWeek, formatDate, formatTime } from '$lib/utils';
     import { ChevronDown, ChevronRight, TicketIcon } from 'lucide-svelte';
     import GigLine from './GigLine.svelte';
 
@@ -62,7 +62,7 @@
 
         <p class="mt-2 text-sm text-neutral-600"><slot /></p>
 
-        {#if linkTickets}
+        {#if linkTickets && date > createDateNowMinusOneWeek()}
             <div class="mt-2 flex justify-end">
                 <a
                     href={linkTickets}
@@ -74,9 +74,7 @@
                         hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
                         focus-visible:outline-slate-500
                     "
-                    on:click={(e) => {
-                        e.stopPropagation();
-                    }}
+                    on:click={(e) => e.stopPropagation()}
                 >
                     Tickets
                     <TicketIcon class="inline" size={20} />

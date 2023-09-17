@@ -1,3 +1,10 @@
+export function createDateNowMinusOneWeek() {
+    const date = new Date();
+    date.setDate(date.getDate() - 7);
+
+    return date;
+}
+
 export function parseDateAsUtc(date: string) {
     return new Date(`${date.trim()}+0000`);
 }
