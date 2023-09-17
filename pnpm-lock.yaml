@@ -42,8 +42,8 @@ devDependencies:
     specifier: ^2.33.1
     version: 2.33.1(eslint@8.49.0)(svelte@4.2.0)
   lucide-svelte:
-    specifier: ^0.277.0
-    version: 0.277.0(svelte@4.2.0)
+    specifier: ^0.279.0
+    version: 0.279.0(svelte@4.2.0)
   nodemailer:
     specifier: ^6.9.5
     version: 6.9.5
@@ -75,8 +75,8 @@ devDependencies:
     specifier: ^5.0.4
     version: 5.0.4(postcss-load-config@4.0.1)(postcss@8.4.29)(svelte@4.2.0)(typescript@5.2.2)
   sveltekit-superforms:
-    specifier: ^1.6.1
-    version: 1.6.1(@sveltejs/kit@1.25.0)(svelte@4.2.0)(zod@3.22.2)
+    specifier: ^1.7.0
+    version: 1.7.0(@sveltejs/kit@1.25.0)(svelte@4.2.0)(zod@3.22.2)
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
@@ -2362,8 +2362,8 @@ packages:
       es5-ext: 0.10.62
     dev: true
 
-  /lucide-svelte@0.277.0(svelte@4.2.0):
-    resolution: {integrity: sha512-HrlMk0mTOd3MVSWA2ZHR79QrCycLRV4pey4HWGnGGoVFsh0/P7zGyDCJxy/MKe2t4SJtcStLdKIybMHc5pjFSQ==}
+  /lucide-svelte@0.279.0(svelte@4.2.0):
+    resolution: {integrity: sha512-u9j8tMPxWsv5iXJvrUU/jpyML/k49flr7440UE8QM9V3u0OZt5+qaY5TMiPDTVRMdEELBg4d4ueW1+3Mo3VT4A==}
     peerDependencies:
       svelte: '>=3 <5'
     dependencies:
@@ -3314,8 +3314,8 @@ packages:
       periscopic: 3.1.0
     dev: true
 
-  /sveltekit-superforms@1.6.1(@sveltejs/kit@1.25.0)(svelte@4.2.0)(zod@3.22.2):
-    resolution: {integrity: sha512-85whZdnytMFStDY1PI3ycr5BoTb57XjkEJqZ2Mt8HT06y/CKlQBws5Cx/AxPxA3WHhGfC26yfXqLYqEQz1oGfw==}
+  /sveltekit-superforms@1.7.0(@sveltejs/kit@1.25.0)(svelte@4.2.0)(zod@3.22.2):
+    resolution: {integrity: sha512-mHfQp2sps2K55zsf3GdowgdokYDl5N4IOanHL/Ydi7F+YL5I9Ry2CrZoCIB4uPaX0/hUKW5DbAcHPLGq+sAAaQ==}
     peerDependencies:
       '@sveltejs/kit': 1.x
       svelte: 3.x || 4.x
