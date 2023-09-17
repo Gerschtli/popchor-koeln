@@ -12,28 +12,32 @@
 
     export let content: RichtextStoryblok | undefined;
 
-    function isExpandable(blok: any): blok is ExpandableStoryblok {
-        return blok.component === 'expandable';
-    }
+    type CustomBlok = ExpandableStoryblok | ImageStoryblok | YoutubeVideoStoryblok;
 
-    function isImage(blok: any): blok is ImageStoryblok {
-        return blok.component === 'image';
-    }
+    function getCustomBloks(attrs: unknown) {
+        if (
+            !attrs ||
+            typeof attrs !== 'object' ||
+            !('body' in attrs) ||
+            !Array.isArray(attrs.body) ||
+            attrs.body.length === 0
+        ) {
+            return [];
+        }
 
-    function isYouTubeVideo(blok: any): blok is YoutubeVideoStoryblok {
-        return blok.component === 'youtube_video';
+        return attrs.body.filter((x): x is CustomBlok => !!x && typeof x === 'object' && 'component' in x);
     }
 </script>
 
 {#if content?.content}
     {#each content.content as item}
         {#if item.type === 'blok'}
-            {#each item.attrs.body as blok}
-                {#if isExpandable(blok)}
+            {#each getCustomBloks(item.attrs) as blok}
+                {#if blok.component === 'expandable'}
                     <Expandable {blok} />
-                {:else if isImage(blok)}
+                {:else if blok.component === 'image'}
                     <Image {blok} />
-                {:else if isYouTubeVideo(blok)}
+                {:else if blok.component === 'youtube_video'}
                     <YouTubeVideo {blok} />
                 {/if}
             {/each}
