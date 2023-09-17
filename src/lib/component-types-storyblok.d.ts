@@ -9,6 +9,14 @@ export interface RichtextStoryblok {
     [k: string]: any;
 }
 
+export interface ExpandableStoryblok {
+    expandButtonText?: string;
+    contentExpand?: RichtextStoryblok;
+    _uid: string;
+    component: 'expandable';
+    [k: string]: any;
+}
+
 export interface GigStoryblok {
     title: string;
     date: string;

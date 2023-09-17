@@ -1,10 +1,20 @@
 <script lang="ts">
-    import type { ImageStoryblok, RichtextStoryblok, YoutubeVideoStoryblok } from '$lib/component-types-storyblok';
+    import type {
+        ExpandableStoryblok,
+        ImageStoryblok,
+        RichtextStoryblok,
+        YoutubeVideoStoryblok,
+    } from '$lib/component-types-storyblok';
     import { renderRichText } from '@storyblok/svelte';
+    import Expandable from './Expandable.svelte';
     import Image from './Image.svelte';
     import YouTubeVideo from './YouTubeVideo.svelte';
 
     export let content: RichtextStoryblok | undefined;
+
+    function isExpandable(blok: any): blok is ExpandableStoryblok {
+        return blok.component === 'expandable';
+    }
 
     function isImage(blok: any): blok is ImageStoryblok {
         return blok.component === 'image';
@@ -19,7 +29,9 @@
     {#each content.content as item}
         {#if item.type === 'blok'}
             {#each item.attrs.body as blok}
-                {#if isImage(blok)}
+                {#if isExpandable(blok)}
+                    <Expandable {blok} />
+                {:else if isImage(blok)}
                     <Image {blok} />
                 {:else if isYouTubeVideo(blok)}
                     <YouTubeVideo {blok} />

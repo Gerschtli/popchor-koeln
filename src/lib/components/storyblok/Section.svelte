@@ -5,12 +5,6 @@
     import RichText from './richtext/RichText.svelte';
 
     export let blok: SectionStoryblok;
-
-    let textExpand = false;
-
-    function expand() {
-        textExpand = true;
-    }
 </script>
 
 <div use:storyblokEditable={blok}>
@@ -54,20 +48,6 @@
                 "
             >
                 <RichText content={blok.content} />
-
-                {#if blok.showExpandButton}
-                    {#if textExpand}
-                        <RichText content={blok.contentExpand} />
-                    {:else}
-                        <div class="flex justify-end">
-                            <button
-                                class="flex text-sm text-accent hover:text-accent-dark focus:text-accent-dark"
-                                on:click={expand}
-                                >{blok.expandButtonText} <ChevronRight class="inline" size={20} /></button
-                            >
-                        </div>
-                    {/if}
-                {/if}
             </div>
         {/if}
     </section>
