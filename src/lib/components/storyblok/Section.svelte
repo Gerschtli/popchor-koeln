@@ -58,4 +58,24 @@
     .prose :global(p) {
         @apply text-neutral-600;
     }
+
+    .prose :global(ul) {
+        @apply list-disc text-neutral-600;
+    }
+
+    .prose :global(ol) {
+        @apply list-decimal text-neutral-600;
+    }
+
+    .prose :global(li) {
+        @apply ml-4;
+    }
+
+    .prose :global(a) {
+        @apply text-blue-500;
+    }
+
+    .prose :global(a):is(:hover, :focus) {
+        @apply text-blue-700;
+    }
 </style>
