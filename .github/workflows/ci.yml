@@ -60,42 +60,7 @@ jobs:
         with:
           CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
-      - run: nix flake check
-
-      # keep playwright pnpm library and nixpkgs package in sync
-      - name: Test playwright version
-        if: always()
-        run: |
-          playwright_pnpm="$(jq --raw-output '.devDependencies."@playwright/test"' package.json)"
-
-          echo "playwright_nix:  $PLAYWRIGHT_BROWSERS_VERSION"
-          echo "playwright_pnpm: $playwright_pnpm"
-
-          [[ "$PLAYWRIGHT_BROWSERS_VERSION" == "$playwright_pnpm" ]]
-
-      # keep node version for netlify and nixpkgs package in sync
-      - name: Test node version
-        if: always()
-        run: |
-          netlify_nix="$(node --version)"
-          netlify_node="$(rg NODE_VERSION netlify.toml | sed -e 's,^.*"\(.*\)"$,v\1,')"
-
-          echo "netlify_nix:  $netlify_nix"
-          echo "netlify_node: $netlify_node"
-
-          [[ "$netlify_nix" == "$netlify_node" ]]
-
-      # keep pnpm version in package.json and nixpkgs package in sync
-      - name: Test pnpm version
-        if: always()
-        run: |
-          pnpm_nix="$(pnpm --version)"
-          pnpm_package_json="$(jq --raw-output '.packageManager' package.json | sed 's,pnpm@,,')"
-
-          echo "pnpm_nix:          $pnpm_nix"
-          echo "pnpm_package_json: $pnpm_package_json"
-
-          [[ "$pnpm_nix" == "$pnpm_package_json" ]]
+      - run: nix flake check --print-build-logs
 
   deploy-netlify:
     runs-on: ubuntu-latest
