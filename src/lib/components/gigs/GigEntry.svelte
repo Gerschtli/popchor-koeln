@@ -49,7 +49,7 @@
         <GigLine label="Wo">
             <div>
                 {#each placeList as placeItem}
-                    <span class="block xs:inline xs:after:content-[',_'] xs:last:after:content-[]">{placeItem}</span>
+                    <span class="block sm:inline sm:after:content-[',_'] sm:last:after:content-[]">{placeItem}</span>
                 {/each}
             </div>
         </GigLine>
