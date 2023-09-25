@@ -46,3 +46,6 @@ export const schemaNewsletter = z.object({
     email: buildRequiredEmail('Bitte trage deine Email Adresse ein.'),
     acceptTerms: z.literal(true),
 });
+export const schemaGuestbook = z.object({
+    message: buildRequiredString('Bitte trage deinen Beitrag ein.'),
+});
