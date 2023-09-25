@@ -5,10 +5,11 @@ export async function load() {
     const storyblokApi = initStoryblokApi();
 
     const storyHome = await loadStory(storyblokApi, 'home');
-    const navigationItems = storyHome.content.body.map((x) => ({
-        id: x.id,
-        title: x.title,
-    }));
+    const navigationItems =
+        storyHome.content.body?.map((x) => ({
+            id: x.id,
+            title: x.title,
+        })) ?? [];
     navigationItems.push(contact);
 
     return {

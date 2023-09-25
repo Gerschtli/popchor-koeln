@@ -225,7 +225,7 @@
             "name": "page",
             "display_name": "Seite",
             "created_at": "2023-04-30T12:13:07.140Z",
-            "updated_at": "2023-09-14T17:42:24.277Z",
+            "updated_at": "2023-09-25T20:57:06.055Z",
             "id": 3909729,
             "schema": {
                 "title": {
@@ -243,8 +243,7 @@
                 "body": {
                     "type": "bloks",
                     "pos": 2,
-                    "required": true,
-                    "minimum": 1,
+                    "required": false,
                     "restrict_type": "",
                     "restrict_components": true,
                     "component_whitelist": ["section"],

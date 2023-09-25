@@ -14,8 +14,10 @@
 
 {#key blok}
     <div use:storyblokEditable={blok}>
-        {#each blok.body as blokInner}
-            <StoryblokComponent blok={blokInner} />
-        {/each}
+        {#if blok.body}
+            {#each blok.body as blokInner}
+                <StoryblokComponent blok={blokInner} />
+            {/each}
+        {/if}
     </div>
 {/key}
