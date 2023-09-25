@@ -28,7 +28,7 @@ test.describe('index page', () => {
         await expect(page.getByTestId('js-loaded')).toHaveCount(1);
 
         const locatorButton = page.getByRole('button', { name: /ZEHN - Das Jubiläumskonzert!/ });
-        const locatorText = page.getByText(/Save the date/);
+        const locatorText = page.getByText(/Der popCHORköln feiert Geburtstag/);
 
         await expect(locatorText).toBeHidden();
 
