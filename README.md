@@ -8,6 +8,10 @@ cp .env.example .env
 
 pnpm install
 
+# start and setup database
+docker compose up -d
+pnpm drizzle-kit push:pg
+
 pnpm run dev
 # or start the server and open the app in a new browser tab
 pnpm run dev -- --open
@@ -33,3 +37,8 @@ pnpm run dev -- --open
 -   Create space
 -   Run `pnpm run storyblok:push-components`
 -   Create stories
+
+### Supabase project
+
+-   Create database
+-   Set up `.env` with `DATABASE_URL` pointing to supabase and run `pnpm drizzle-kit push:pg`
