@@ -25,9 +25,9 @@
             bind:value={$value}
             {...$constraints}
             class="
-        block w-full rounded-md border border-transparent bg-slate-100 px-3 py-2 outline-none
-        focus:border-slate-500 focus:bg-white
-    "
+                block w-full rounded-md border border-transparent bg-slate-100 px-3 py-2 outline-none
+                focus:border-slate-500 focus:bg-white
+            "
             class:border-red-600={$errors}
             class:focus:border-red-600={$errors}
         />
@@ -39,9 +39,9 @@
             bind:value={$value}
             {...$constraints}
             class="
-            block w-full rounded-md border border-transparent bg-slate-100 px-3 py-2 outline-none
-            focus:border-slate-500 focus:bg-white
-        "
+                block w-full rounded-md border border-transparent bg-slate-100 px-3 py-2 outline-none
+                focus:border-slate-500 focus:bg-white
+            "
             class:border-red-600={$errors}
             class:focus:border-red-600={$errors}
         />
