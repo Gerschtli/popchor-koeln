@@ -3,16 +3,18 @@
         ExpandableStoryblok,
         ImageStoryblok,
         RichtextStoryblok,
+        YoutubeVideoSliderStoryblok,
         YoutubeVideoStoryblok,
     } from '$lib/component-types-storyblok';
     import { renderRichText } from '@storyblok/svelte';
     import Expandable from './Expandable.svelte';
     import Image from './Image.svelte';
     import YouTubeVideo from './YouTubeVideo.svelte';
+    import YouTubeVideoSlider from './YouTubeVideoSlider.svelte';
 
     export let content: RichtextStoryblok | undefined;
 
-    type CustomBlok = ExpandableStoryblok | ImageStoryblok | YoutubeVideoStoryblok;
+    type CustomBlok = ExpandableStoryblok | ImageStoryblok | YoutubeVideoStoryblok | YoutubeVideoSliderStoryblok;
 
     function getCustomBloks(attrs: unknown) {
         if (
@@ -39,6 +41,8 @@
                     <Image {blok} />
                 {:else if blok.component === 'youtube_video'}
                     <YouTubeVideo {blok} />
+                {:else if blok.component === 'youtube_video_slider'}
+                    <YouTubeVideoSlider {blok} />
                 {/if}
             {/each}
         {:else}

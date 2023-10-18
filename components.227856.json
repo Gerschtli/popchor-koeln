@@ -434,6 +434,37 @@
             "color": null,
             "icon": null,
             "component_group_name": "Richtext"
+        },
+        {
+            "name": "youtube_video_slider",
+            "display_name": "YouTube Video Slider",
+            "created_at": "2023-10-18T19:19:55.440Z",
+            "updated_at": "2023-10-18T19:48:35.508Z",
+            "id": 4749798,
+            "schema": {
+                "videos": {
+                    "type": "bloks",
+                    "use_uuid": true,
+                    "restrict_type": "",
+                    "restrict_components": true,
+                    "component_whitelist": ["youtube_video"],
+                    "display_name": "Videos",
+                    "minimum": 2,
+                    "required": true
+                }
+            },
+            "image": null,
+            "preview_field": "videos",
+            "is_root": false,
+            "preview_tmpl": "{{each(options.videos)}}\n{{if(@index !== 0)}}, {{/if}}\n{{@this.title}}\n{{/each}}",
+            "is_nestable": true,
+            "all_presets": [],
+            "preset_id": null,
+            "real_name": "YouTube Video Slider",
+            "component_group_uuid": "96276656-9ba9-4cef-8e4f-f47312584dbb",
+            "color": null,
+            "icon": null,
+            "component_group_name": "Richtext"
         }
     ]
 }

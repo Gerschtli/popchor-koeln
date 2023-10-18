@@ -96,3 +96,10 @@ export interface YoutubeVideoStoryblok {
     component: 'youtube_video';
     [k: string]: any;
 }
+
+export interface YoutubeVideoSliderStoryblok {
+    videos: YoutubeVideoStoryblok[];
+    _uid: string;
+    component: 'youtube_video_slider';
+    [k: string]: any;
+}
