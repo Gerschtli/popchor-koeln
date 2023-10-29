@@ -3,7 +3,6 @@
     import { initNavigationModal } from '$lib/modal';
     import '../app.postcss';
     import Footer from './Footer.svelte';
-    import GigPopup from './GigPopup.svelte';
     import Header from './Header.svelte';
     import Navigation from './Navigation.svelte';
 
@@ -21,8 +20,6 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
 </svelte:head>
-
-<GigPopup />
 
 <Header />
 
