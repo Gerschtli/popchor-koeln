@@ -1,3 +1,5 @@
+const timeZone = 'Europe/Berlin';
+
 export function createDateNowMinusOneWeek() {
     const date = new Date();
     date.setDate(date.getDate() - 7);
@@ -14,9 +16,9 @@ function formatDateTime(date: Date, options: Intl.DateTimeFormatOptions) {
 }
 
 export function formatDate(date: Date) {
-    return formatDateTime(date, { year: 'numeric', month: 'long', day: 'numeric' });
+    return formatDateTime(date, { year: 'numeric', month: 'long', day: 'numeric', timeZone });
 }
 
 export function formatTime(date: Date) {
-    return formatDateTime(date, { hour: 'numeric', minute: 'numeric' });
+    return formatDateTime(date, { hour: 'numeric', minute: 'numeric', timeZone });
 }
