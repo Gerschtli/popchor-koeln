@@ -54,8 +54,8 @@ devDependencies:
     specifier: ^2.34.0
     version: 2.34.0(eslint@8.51.0)(svelte@4.2.1)
   lucide-svelte:
-    specifier: ^0.287.0
-    version: 0.287.0(svelte@4.2.1)
+    specifier: ^0.292.0
+    version: 0.292.0(svelte@4.2.1)
   nodemailer:
     specifier: ^6.9.6
     version: 6.9.6
@@ -2611,8 +2611,8 @@ packages:
       es5-ext: 0.10.62
     dev: true
 
-  /lucide-svelte@0.287.0(svelte@4.2.1):
-    resolution: {integrity: sha512-z1EAdTPDnZ8lrS0hgIrrMdV02D6xq346Xmw7wtFqQddBqeI4jyvHevjtrMJqz4nI5tALv1SDTflh7cyqjZJK1w==}
+  /lucide-svelte@0.292.0(svelte@4.2.1):
+    resolution: {integrity: sha512-bnTpg9pbm6pQDc+YiLK2yxtRFk2Cc+hbzwjAPaV85k56x10CJ9LsXjon6wRrlNTSdxJR7GOsRjz0A5ZNu3Z7dg==}
     peerDependencies:
       svelte: '>=3 <5'
     dependencies:

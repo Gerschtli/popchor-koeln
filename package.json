@@ -32,7 +32,7 @@
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-playwright": "^0.17.0",
         "eslint-plugin-svelte": "^2.34.0",
-        "lucide-svelte": "^0.287.0",
+        "lucide-svelte": "^0.292.0",
         "nodemailer": "^6.9.6",
         "pg": "^8.11.3",
         "postcss": "^8.4.31",
