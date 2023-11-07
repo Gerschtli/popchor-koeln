@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { anchorRel } from '$lib/anchorRel';
     import type { SectionStoryblok } from '$lib/component-types-storyblok';
     import { StoryblokComponent, storyblokEditable } from '@storyblok/svelte';
     import { ChevronRight } from 'lucide-svelte';
@@ -39,7 +40,7 @@
                 </div>
             {/if}
         {:else}
-            <div class="prose px-4 sm:px-8 lg:px-16">
+            <div class="prose px-4 sm:px-8 lg:px-16" use:anchorRel>
                 <RichText content={blok.content} />
             </div>
         {/if}
