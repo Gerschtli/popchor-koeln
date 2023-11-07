@@ -3,10 +3,10 @@
     import Section from '$lib/components/Section.svelte';
     import SubmitButton from '$lib/components/forms/SubmitButton.svelte';
     import TextboxMultiline from '$lib/components/forms/TextboxMultiline.svelte';
+    import RichTextSimple from '$lib/components/storyblok/richtext/RichTextSimple.svelte';
     import { superFormBuilder } from '$lib/forms';
     import StoryblokInit from '$lib/storyblok/StoryblokInit.svelte';
     import { formatDate } from '$lib/utils';
-    import { renderRichText } from '@storyblok/svelte';
     import Pagination from './Pagination.svelte';
 
     export let data;
@@ -21,8 +21,7 @@
         <div class="space-y-2 [&>p]:text-neutral-600">
             <h3 class="font-heading text-lg font-bold">Neuen Eintrag verfassen</h3>
 
-            <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-            {@html renderRichText(data.story.content.contactText)}
+            <RichTextSimple content={data.story.content.contactText} />
 
             <form class="space-y-3" method="POST" use:enhance>
                 <TextboxMultiline form={formData} label="Dein Eintrag" field="message" name="message" class="h-48" />

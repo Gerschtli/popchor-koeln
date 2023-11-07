@@ -17,6 +17,44 @@
     }
 }
 
+@layer components {
+    .prose {
+        @apply space-y-4;
+    }
+
+    .prose h3 {
+        @apply pt-2 font-heading text-2xl;
+    }
+
+    .prose h4 {
+        @apply pt-1 font-heading text-xl;
+    }
+
+    .prose p {
+        @apply text-neutral-600;
+    }
+
+    .prose ul {
+        @apply list-disc text-neutral-600;
+    }
+
+    .prose ol {
+        @apply list-decimal text-neutral-600;
+    }
+
+    .prose li {
+        @apply ml-4;
+    }
+
+    .prose a {
+        @apply text-blue-500;
+    }
+
+    .prose a:is(:hover, :focus) {
+        @apply text-blue-700;
+    }
+}
+
 @layer utilities {
     .text-balance {
         text-wrap: balance;
