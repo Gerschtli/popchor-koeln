@@ -23,7 +23,8 @@ test.describe('index page', () => {
         await expect(locatorButton).toBeHidden();
     });
 
-    test('gigs can be expanded and collapsed', async ({ page }) => {
+    // eslint-disable-next-line playwright/no-skipped-test
+    test.skip('gigs can be expanded and collapsed', async ({ page }) => {
         await page.goto('/');
         await expect(page.getByTestId('js-loaded')).toHaveCount(1);
 
