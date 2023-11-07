@@ -35,6 +35,7 @@ pnpm run dev -- --open
 ### Storyblok space
 
 -   Create space
+-   Login with `pnpx storyblok login`
 -   Run `pnpm run storyblok:push-components`
 -   Create stories
 
