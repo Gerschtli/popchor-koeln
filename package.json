@@ -19,7 +19,7 @@
         "@playwright/test": "1.39.0",
         "@storyblok/svelte": "^3.1.6",
         "@sveltejs/adapter-netlify": "^2.0.8",
-        "@sveltejs/kit": "^1.27.3",
+        "@sveltejs/kit": "^2.0.0",
         "@types/nodemailer": "^6.4.13",
         "@typescript-eslint/eslint-plugin": "^6.10.0",
         "@typescript-eslint/parser": "^6.10.0",
