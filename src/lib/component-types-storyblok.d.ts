@@ -81,9 +81,6 @@ export interface SectionStoryblok {
     title: string;
     gigs?: GigsReferenceStoryblok[];
     content?: RichtextStoryblok;
-    showExpandButton?: boolean;
-    expandButtonText?: string;
-    contentExpand?: RichtextStoryblok;
     _uid: string;
     component: 'section';
     [k: string]: any;
