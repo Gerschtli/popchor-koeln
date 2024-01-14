@@ -23,10 +23,12 @@ async function handleNewsletterSubscription(newsletter: boolean, email: string) 
 }
 
 export async function load() {
-    return {
-        formContact: superValidate(schemaContact),
-        formNewsletter: superValidate(schemaNewsletter),
-    };
+    const [formContact, formNewsletter] = await Promise.all([
+        superValidate(schemaContact),
+        superValidate(schemaNewsletter),
+    ]);
+
+    return { formContact, formNewsletter };
 }
 
 export const actions = {

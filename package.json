@@ -20,6 +20,7 @@
         "@storyblok/svelte": "^4.0.2",
         "@sveltejs/adapter-netlify": "^3.0.1",
         "@sveltejs/kit": "^2.3.2",
+        "@sveltejs/vite-plugin-svelte": "^3.0.0",
         "@types/nodemailer": "^6.4.14",
         "@typescript-eslint/eslint-plugin": "^6.18.1",
         "@typescript-eslint/parser": "^6.18.1",

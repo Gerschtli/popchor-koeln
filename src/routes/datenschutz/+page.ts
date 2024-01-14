@@ -4,6 +4,6 @@ export async function load({ parent }) {
     const { storyblokApi } = await parent();
 
     return {
-        story: loadStory(storyblokApi, 'privacy'),
+        story: await loadStory(storyblokApi, 'privacy'),
     };
 }

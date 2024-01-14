@@ -14,7 +14,7 @@ function getPageIndex(url: URL) {
 
     const pageValue = Number(url.searchParams.get(pageParam));
 
-    if (Number.isNaN(pageValue) || pageValue < 1) throw redirect(302, '/gaestebuch');
+    if (Number.isNaN(pageValue) || pageValue < 1) redirect(302, '/gaestebuch');
 
     return pageValue - 1;
 }
@@ -22,26 +22,32 @@ function getPageIndex(url: URL) {
 export async function load({ url }) {
     const pagesIndex = getPageIndex(url);
 
+    async function getEntries() {
+        return db
+            .select()
+            .from(guestbookEntries)
+            .limit(pageSize)
+            .offset(pagesIndex * pageSize)
+            .orderBy(desc(guestbookEntries.timestamp));
+    }
+
     async function getPagesTotal() {
         const [{ count }] = await db.select({ count: sql<number>`count(*)::int` }).from(guestbookEntries);
 
         const pagesTotal = Math.ceil(count / pageSize);
 
-        if (count !== 0 && pagesIndex + 1 > pagesTotal) throw redirect(302, '/gaestebuch');
+        if (count !== 0 && pagesIndex + 1 > pagesTotal) redirect(302, '/gaestebuch');
 
         return pagesTotal;
     }
 
+    const [entries, pagesTotal] = await Promise.all([getEntries(), getPagesTotal()]);
+
     return {
-        entries: db
-            .select()
-            .from(guestbookEntries)
-            .limit(pageSize)
-            .offset(pagesIndex * pageSize)
-            .orderBy(desc(guestbookEntries.timestamp)),
+        entries,
         pageParam,
         paginationAnchor,
-        pagesTotal: getPagesTotal(),
+        pagesTotal,
         pagesCurrent: pagesIndex + 1,
     };
 }
