@@ -12,8 +12,8 @@ devDependencies:
     specifier: ^4.0.2
     version: 4.0.2(svelte@4.2.8)
   '@sveltejs/adapter-netlify':
-    specifier: ^3.0.1
-    version: 3.0.1(@sveltejs/kit@2.3.2)
+    specifier: ^4.0.0
+    version: 4.0.0(@sveltejs/kit@2.3.2)
   '@sveltejs/kit':
     specifier: ^2.3.2
     version: 2.3.2(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.11)
@@ -1260,10 +1260,10 @@ packages:
       svelte: 4.2.8
     dev: true
 
-  /@sveltejs/adapter-netlify@3.0.1(@sveltejs/kit@2.3.2):
-    resolution: {integrity: sha512-3UktBZaouSZEqhxiOJVNBMCD9SalTUEuJxVeyqZe1VsZmDZplu87jOdeH8kNKoBshKo5A9cDf46PSQ6DtxGnjQ==}
+  /@sveltejs/adapter-netlify@4.0.0(@sveltejs/kit@2.3.2):
+    resolution: {integrity: sha512-Xzc6hQoCQSYHLipr+edK3PldgrqylNT/PPAbPTKFOq8NuyxPgKg1HqRW0DyyOG/GTbHWGU8Fzuig3BBBiM8yVg==}
     peerDependencies:
-      '@sveltejs/kit': ^2.0.0
+      '@sveltejs/kit': ^2.4.0
     dependencies:
       '@iarna/toml': 2.2.5
       '@sveltejs/kit': 2.3.2(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.11)
