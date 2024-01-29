@@ -1,5 +1,5 @@
 [build.environment]
-NODE_VERSION = "21.5.0"
+NODE_VERSION = "21.6.1"
 
 [build]
 command = "pnpm run build"
