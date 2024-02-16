@@ -10,7 +10,8 @@ import { schemaContact, schemaNewsletter } from '$lib/forms.js';
 import { sendMail } from '$lib/server/mail';
 import { subscribeToNewsletter } from '$lib/server/newsletter';
 import { fail } from '@sveltejs/kit';
-import { superValidate } from 'sveltekit-superforms/server';
+import { superValidate } from 'sveltekit-superforms';
+import { zod } from 'sveltekit-superforms/adapters';
 
 async function handleNewsletterSubscription(newsletter: boolean, email: string) {
     if (!newsletter) {
@@ -24,8 +25,8 @@ async function handleNewsletterSubscription(newsletter: boolean, email: string) 
 
 export async function load() {
     const [formContact, formNewsletter] = await Promise.all([
-        superValidate(schemaContact),
-        superValidate(schemaNewsletter),
+        superValidate(zod(schemaContact)),
+        superValidate(zod(schemaNewsletter)),
     ]);
 
     return { formContact, formNewsletter };
@@ -33,7 +34,7 @@ export async function load() {
 
 export const actions = {
     async contact({ request }) {
-        const formContact = await superValidate(request, schemaContact);
+        const formContact = await superValidate(request, zod(schemaContact));
 
         if (!formContact.valid) {
             return fail(400, { formContact });
@@ -64,7 +65,7 @@ export const actions = {
     },
 
     async newsletter({ request }) {
-        const formNewsletter = await superValidate(request, schemaNewsletter);
+        const formNewsletter = await superValidate(request, zod(schemaNewsletter));
 
         if (!formNewsletter.valid) {
             return fail(400, { formNewsletter });

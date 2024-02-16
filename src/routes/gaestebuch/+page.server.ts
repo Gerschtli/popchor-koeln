@@ -3,7 +3,8 @@ import { db } from '$lib/server/drizzle';
 import { guestbookEntries } from '$lib/server/schema';
 import { fail, redirect } from '@sveltejs/kit';
 import { desc, sql } from 'drizzle-orm';
-import { superValidate } from 'sveltekit-superforms/server';
+import { superValidate } from 'sveltekit-superforms';
+import { zod } from 'sveltekit-superforms/adapters';
 
 const pageParam = 'seite';
 const paginationAnchor = 'eintraege';
@@ -54,7 +55,7 @@ export async function load({ url }) {
 
 export const actions = {
     async default({ request }) {
-        const form = await superValidate(request, schemaGuestbook);
+        const form = await superValidate(request, zod(schemaGuestbook));
 
         if (!form.valid) return fail(400, { form });
 

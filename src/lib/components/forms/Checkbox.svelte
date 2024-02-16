@@ -1,14 +1,14 @@
-<script lang="ts">
+<script lang="ts" context="module">
+    type T = Record<string, unknown>;
+</script>
+
+<script lang="ts" generics="T extends Record<string, unknown>">
     import type { Writable } from 'svelte/store';
-    import type { FormPathLeaves, UnwrapEffects } from 'sveltekit-superforms';
-    import { formFieldProxy, type SuperForm } from 'sveltekit-superforms/client';
-    import type { AnyZodObject, z } from 'zod';
+    import type { FormPathLeaves } from 'sveltekit-superforms';
+    import { formFieldProxy, type SuperForm } from 'sveltekit-superforms';
 
-    // eslint-disable-next-line no-undef
-    type T = $$Generic<AnyZodObject>;
-
-    export let form: SuperForm<UnwrapEffects<T>, unknown>;
-    export let field: FormPathLeaves<z.infer<T>>;
+    export let form: SuperForm<T>;
+    export let field: FormPathLeaves<T>;
     export let name: string;
 
     const { value, errors } = formFieldProxy(form, field);

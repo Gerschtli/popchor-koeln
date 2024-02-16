@@ -1,14 +1,14 @@
 import type { FormStatus } from '$lib/types';
 import { derived, writable, type Readable } from 'svelte/store';
 import type { SuperValidated } from 'sveltekit-superforms';
-import { superForm } from 'sveltekit-superforms/client';
-import type { AnyZodObject } from 'zod';
+import { superForm } from 'sveltekit-superforms';
 import { z } from 'zod';
 
-export function superFormBuilder<T extends AnyZodObject>(data: SuperValidated<T, unknown>) {
+export function superFormBuilder<T extends Record<string, unknown>>(data: SuperValidated<T>) {
     const error = writable(false);
 
     const form = superForm(data, {
+        resetForm: false,
         onError() {
             error.set(true);
         },

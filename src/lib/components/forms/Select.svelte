@@ -1,13 +1,13 @@
-<script lang="ts">
-    import type { FormPathLeaves, UnwrapEffects } from 'sveltekit-superforms';
-    import { formFieldProxy, type SuperForm } from 'sveltekit-superforms/client';
-    import type { AnyZodObject, z } from 'zod';
+<script lang="ts" context="module">
+    type T = Record<string, unknown>;
+</script>
 
-    // eslint-disable-next-line no-undef
-    type T = $$Generic<AnyZodObject>;
+<script lang="ts" generics="T extends Record<string, unknown>">
+    import type { FormPathLeaves } from 'sveltekit-superforms';
+    import { formFieldProxy, type SuperForm } from 'sveltekit-superforms';
 
-    export let form: SuperForm<UnwrapEffects<T>, unknown>;
-    export let field: FormPathLeaves<z.infer<T>>;
+    export let form: SuperForm<T>;
+    export let field: FormPathLeaves<T>;
     export let name: string;
     export let label: string;
     export let options: string[];
