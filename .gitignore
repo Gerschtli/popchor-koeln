@@ -4,6 +4,7 @@
 /.netlify
 /.svelte-kit
 /build
+/static/editor.html
 /node_modules
 /test-results
 vite.config.js.timestamp-*
