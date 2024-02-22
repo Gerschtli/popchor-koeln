@@ -42,10 +42,6 @@ jobs:
 
       - run: pnpm install
 
-      - run: docker compose up -d
-
-      - run: pnpm drizzle-kit push:pg
-
       - run: pnpm run lint
 
       - run: pnpm run check

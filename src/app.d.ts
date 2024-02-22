@@ -1,5 +1,3 @@
-import type { Sql } from 'postgres';
-
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 declare global {
@@ -14,9 +12,6 @@ declare global {
         const out: string;
         export default out;
     }
-
-    // eslint-disable-next-line no-var
-    var postgresClientCached: Sql;
 }
 
 export {};
