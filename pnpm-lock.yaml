@@ -10,7 +10,7 @@ devDependencies:
     version: 1.42.1
   '@storyblok/svelte':
     specifier: ^4.0.4
-    version: 4.0.4(svelte@4.2.12)
+    version: 4.0.5(svelte@4.2.12)
   '@sveltejs/adapter-netlify':
     specifier: ^4.1.0
     version: 4.1.0(@sveltejs/kit@2.5.2)
@@ -1311,18 +1311,18 @@ packages:
     dev: true
     optional: true
 
-  /@storyblok/js@3.0.6:
-    resolution: {integrity: sha512-Kbz5D1pcKWgjqecF+rz1bq5742YpCZe7+B8Zrtp979QOXFpAurHm2BrmzVZy75G2BevWR5CcsK9MzLnyief1Kw==}
+  /@storyblok/js@3.0.7:
+    resolution: {integrity: sha512-m6MpUhjEpDWMKftyjJhTkthd/I6LZ9xhuT/Wxa1e99Cf4niVC5jgMVPQ5tOsUgn3D8BKNL+6PI3hEj5dGKB9xw==}
     dependencies:
-      storyblok-js-client: 6.6.5
+      storyblok-js-client: 6.7.1
     dev: true
 
-  /@storyblok/svelte@4.0.4(svelte@4.2.12):
-    resolution: {integrity: sha512-g5LVZdCapbMcUhEmx29Db0xmciKbO/M77xfi6xWQdFWYgZTB47aXq2jvgwEQHfyoh4a7nOviGv0Z4trKJlOXwg==}
+  /@storyblok/svelte@4.0.5(svelte@4.2.12):
+    resolution: {integrity: sha512-RQ/6pXv7z/bGGeWu2hEzoX4kkjQXDXq49NtczcYvEvS38J/x0SUGgobQJXiD/inEEw1/JLF0JmT0DumKFeB28g==}
     peerDependencies:
       svelte: ^3.0.0 || ^4.0.0
     dependencies:
-      '@storyblok/js': 3.0.6
+      '@storyblok/js': 3.0.7
       svelte: 4.2.12
     dev: true
 
@@ -3730,8 +3730,8 @@ packages:
       - typescript
     dev: true
 
-  /storyblok-js-client@6.6.5:
-    resolution: {integrity: sha512-ZO2jn63ZBIbpvQ/XBJHnXt+drwJ45z057xNRLWPusRIv34+uC2JF3UutOvxmyslOXMcd2kuKc9Nf+mrp3v92hA==}
+  /storyblok-js-client@6.7.1:
+    resolution: {integrity: sha512-VOobZkor6BESji2MJUuO5jTIZeCWMUMR2LZtdSEEAtUDUfKwA88lGqDVMQqtWZ8nD7NzhZ6S7qvdv5Or9HZXRw==}
     dev: true
 
   /string-format@2.0.0:
@@ -3955,23 +3955,6 @@ packages:
     peerDependencies:
       '@sveltejs/kit': 1.x || 2.x
       svelte: 3.x || 4.x || >=5.0.0-next.51
-    peerDependenciesMeta:
-      '@sinclair/typebox':
-        optional: true
-      '@vinejs/vine':
-        optional: true
-      arktype:
-        optional: true
-      joi:
-        optional: true
-      superstruct:
-        optional: true
-      valibot:
-        optional: true
-      yup:
-        optional: true
-      zod:
-        optional: true
     dependencies:
       '@sveltejs/kit': 2.5.2(@sveltejs/vite-plugin-svelte@3.0.2)(svelte@4.2.12)(vite@5.1.4)
       devalue: 4.3.2
