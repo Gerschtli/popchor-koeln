@@ -22,7 +22,7 @@ devDependencies:
     version: 3.1.0(svelte@4.2.15)(vite@5.2.10)
   '@types/nodemailer':
     specifier: ^6.4.14
-    version: 6.4.14
+    version: 6.4.15
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.7.1
     version: 7.7.1(@typescript-eslint/parser@7.7.1)(eslint@8.57.0)(typescript@5.4.5)
@@ -1090,8 +1090,8 @@ packages:
     dev: true
     optional: true
 
-  /@sinclair/typebox@0.32.23:
-    resolution: {integrity: sha512-NiMhEgFo5nDlg39HDEvETDdXmURfyd8ougIjynebGebZti/gZ4LxoCcbVS6jgfNF8Sf7ZvPVl/fV0YsJIW4ltg==}
+  /@sinclair/typebox@0.32.27:
+    resolution: {integrity: sha512-JHRrubCKiXi6VKlbBTpTQnExkUFasPMIaXCJYJhqVBGLliQVt1yBZZgiZo3/uSmvAdXlIIdGoTAT6RB09L0QqA==}
     requiresBuild: true
     dev: true
     optional: true
@@ -1203,7 +1203,7 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.12.7
+      '@types/node': 20.12.8
     dev: true
 
   /@types/json-schema@7.0.15:
@@ -1218,22 +1218,16 @@ packages:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
     dev: true
 
-  /@types/node@20.11.0:
-    resolution: {integrity: sha512-o9bjXmDNcF7GbM4CNQpmi+TutCgap/K3w1JyKgxAjqx41zp9qlIAVFi0IhCNsJcXolEqLWhbFbEeL0PvYm4pcQ==}
+  /@types/node@20.12.8:
+    resolution: {integrity: sha512-NU0rJLJnshZWdE/097cdCBbyW1h4hEg0xpovcoAQYHl8dnEyp/NAOiE45pvc+Bd1Dt+2r94v2eGFpQJ4R7g+2w==}
     dependencies:
       undici-types: 5.26.5
     dev: true
 
-  /@types/node@20.12.7:
-    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
+  /@types/nodemailer@6.4.15:
+    resolution: {integrity: sha512-0EBJxawVNjPkng1zm2vopRctuWVCxk34JcIlRuXSf54habUWdz1FB7wHDqOqvDa8Mtpt0Q3LTXQkAs2LNyK5jQ==}
     dependencies:
-      undici-types: 5.26.5
-    dev: true
-
-  /@types/nodemailer@6.4.14:
-    resolution: {integrity: sha512-fUWthHO9k9DSdPCSPRqcu6TWhYyxTBg382vlNIttSe9M7XfsT06y0f24KHXtbnijPGGRIcVvdKHTNikOI6qiHA==}
-    dependencies:
-      '@types/node': 20.11.0
+      '@types/node': 20.12.8
     dev: true
 
   /@types/prettier@2.7.3:
@@ -2553,8 +2547,8 @@ packages:
     hasBin: true
     dev: true
 
-  /joi@17.13.0:
-    resolution: {integrity: sha512-9qcrTyoBmFZRNHeVP4edKqIUEgFzq7MHvTNSDuHSqkpOPtiBkgNgcmTSqmiw1kw9tdKaiddvIDv/eCJDxmqWCA==}
+  /joi@17.13.1:
+    resolution: {integrity: sha512-vaBlIKCyo4FCUtCm7Eu4QZd/q02bWcxfUO6YSXAZOWF6gzcLBeba8kwotUdYJjDLW8Cz8RywsSOqiNJZW0mNvg==}
     requiresBuild: true
     dependencies:
       '@hapi/hoek': 9.3.0
@@ -3708,11 +3702,11 @@ packages:
       ts-deepmerge: 7.0.0
     optionalDependencies:
       '@gcornut/valibot-json-schema': 0.0.27(@types/json-schema@7.0.15)(esbuild-runner@2.2.2)(esbuild@0.20.2)(valibot@0.30.0)
-      '@sinclair/typebox': 0.32.23
+      '@sinclair/typebox': 0.32.27
       '@sodaru/yup-to-json-schema': 2.0.1
       '@vinejs/vine': 1.8.0
       arktype: 1.0.29-alpha
-      joi: 17.13.0
+      joi: 17.13.1
       superstruct: 1.0.4
       valibot: 0.30.0
       yup: 1.4.0
