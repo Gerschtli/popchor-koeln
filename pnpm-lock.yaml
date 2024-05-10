@@ -32,6 +32,9 @@ devDependencies:
   autoprefixer:
     specifier: ^10.4.19
     version: 10.4.19(postcss@8.4.38)
+  bigger-picture:
+    specifier: ^1.1.16
+    version: 1.1.16
   dotenv:
     specifier: ^16.4.5
     version: 16.4.5
@@ -1753,6 +1756,10 @@ packages:
 
   /balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+    dev: true
+
+  /bigger-picture@1.1.16:
+    resolution: {integrity: sha512-dLy5K0NFgvknqU21HektQTdP7ZlLNVJ7BFPRvB0/XqZ0qfLAntIT0Pa78HvXLl2M9H/x7t74HlNRJdgb7NtEgA==}
     dev: true
 
   /binary-extensions@2.3.0:

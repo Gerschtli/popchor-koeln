@@ -1,6 +1,7 @@
 <script lang="ts">
     import type {
         ExpandableStoryblok,
+        ImageSliderStoryblok,
         ImageStoryblok,
         RichtextStoryblok,
         YoutubeVideoSliderStoryblok,
@@ -9,12 +10,18 @@
     import { renderRichText } from '@storyblok/svelte';
     import Expandable from './Expandable.svelte';
     import Image from './Image.svelte';
+    import ImageSlider from './ImageSlider.svelte';
     import YouTubeVideo from './YouTubeVideo.svelte';
     import YouTubeVideoSlider from './YouTubeVideoSlider.svelte';
 
     export let content: RichtextStoryblok | undefined;
 
-    type CustomBlok = ExpandableStoryblok | ImageStoryblok | YoutubeVideoStoryblok | YoutubeVideoSliderStoryblok;
+    type CustomBlok =
+        | ExpandableStoryblok
+        | ImageStoryblok
+        | ImageSliderStoryblok
+        | YoutubeVideoStoryblok
+        | YoutubeVideoSliderStoryblok;
 
     function getCustomBloks(attrs: unknown) {
         if (
@@ -39,6 +46,8 @@
                     <Expandable {blok} />
                 {:else if blok.component === 'image'}
                     <Image {blok} />
+                {:else if blok.component === 'image_slider'}
+                    <ImageSlider {blok} />
                 {:else if blok.component === 'youtube_video'}
                     <YouTubeVideo {blok} />
                 {:else if blok.component === 'youtube_video_slider'}

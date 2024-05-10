@@ -25,6 +25,7 @@
         "@typescript-eslint/eslint-plugin": "^7.8.0",
         "@typescript-eslint/parser": "^7.8.0",
         "autoprefixer": "^10.4.19",
+        "bigger-picture": "^1.1.16",
         "dotenv": "^16.4.5",
         "eslint": "^8.57.0",
         "eslint-config-prettier": "^9.1.0",
