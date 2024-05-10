@@ -1,14 +1,13 @@
 <script lang="ts">
     import type { ImageStoryblok } from '$lib/component-types-storyblok';
+    import { getDimensionsOfImageUrl } from '$lib/storyblok/util';
 
     export let blok: ImageStoryblok;
 
     function getAspectRatio(filename: string) {
-        const result = filename.match('^https://a\\.storyblok\\.com/f/\\d+/(\\d+)x(\\d+)/');
+        const dimensions = getDimensionsOfImageUrl(filename);
 
-        if (result?.length !== 3) return 'auto';
-
-        return `${result[1]} / ${result[2]}`;
+        return `${dimensions.width} / ${dimensions.height}`;
     }
 </script>
 
