@@ -60,21 +60,11 @@
         class="scrollbar-none flex snap-x snap-mandatory gap-4 overflow-x-scroll scroll-smooth"
     >
         {#each items as item}
-            <slot baseClass="flex-shrink-0 snap-center" {item} />
-        {/each}
-    </div>
-
-    <div class="flex place-content-center p-1">
-        {#each items as _, i}
-            {@const isCurrent = currentIndex === i}
-            <button
-                class="p-2 {isCurrent
-                    ? 'cursor-default text-accent'
-                    : 'text-neutral-600 hover:text-neutral-900 focus:text-neutral-900'}"
-                on:click={() => (currentIndex = i)}
-            >
-                <Circle fill={isCurrent ? 'currentColor' : 'none'} size={10} />
-            </button>
+            <slot baseClass="grid place-content-center flex-shrink-0 snap-center" {item} />
         {/each}
     </div>
 </div>
+    <div class="flex place-content-center p-1">
+        <p>{currentIndex + 1}/{items.length}</p>
+    </div>
+
