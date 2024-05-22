@@ -5,12 +5,12 @@
     import BiggerPicture, { type BiggerPictureInstance } from 'bigger-picture';
     import 'bigger-picture/css';
     import { onMount } from 'svelte';
-    import { twMerge } from 'tailwind-merge';
 
     export let blok: ImageSliderStoryblok;
 
     let container: HTMLDivElement;
     let bp: BiggerPictureInstance;
+    let currentIndex: number;
 
     onMount(() => {
         bp = BiggerPicture({
@@ -19,8 +19,10 @@
     });
 
     function openGallery(e: Event) {
+        const items = container.querySelectorAll('a');
+
         bp.open({
-            items: container.querySelectorAll('a'),
+            items,
             el: e.currentTarget ?? undefined,
         });
     }
@@ -31,13 +33,11 @@
         labelPrevious="Zu vorherigem Video wechseln"
         labelNext="Zu nächstem Video wechseln"
         items={blok.images}
-        let:baseClass
         let:item={image}
     >
         {@const dimensions = getDimensionsOfImageUrl(image.image.filename)}
         <a
             on:click|preventDefault={openGallery}
-            class={twMerge('aspect-video w-full', baseClass)}
             href={image.image.filename}
             data-img={image.image.filename}
             data-thumb={image.image.filename}
