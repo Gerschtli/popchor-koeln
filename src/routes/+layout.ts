@@ -1,10 +1,11 @@
 import { contact } from '$lib/sectionHeader';
-import { initStoryblokApi, loadStory } from '$lib/storyblok/setup';
+import { getCacheVersion, initStoryblokApi, loadStory } from '$lib/storyblok/setup';
 
 export async function load() {
     const storyblokApi = initStoryblokApi();
+    const storyblokCacheVersion = await getCacheVersion(storyblokApi);
 
-    const storyHome = await loadStory(storyblokApi, 'home');
+    const storyHome = await loadStory(storyblokApi, storyblokCacheVersion, 'home');
     const navigationItems =
         storyHome.content.body?.map((x) => ({
             id: x.id,
@@ -14,6 +15,7 @@ export async function load() {
 
     return {
         storyblokApi,
+        storyblokCacheVersion,
         storyHome,
         navigationItems,
     };
