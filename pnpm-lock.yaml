@@ -82,7 +82,7 @@ devDependencies:
     version: 6.0.1(postcss-load-config@5.1.0)(postcss@8.4.38)(svelte@4.2.18)(typescript@5.5.2)
   sveltekit-superforms:
     specifier: ^2.15.1
-    version: 2.15.1(@sveltejs/kit@2.5.17)(svelte@4.2.18)
+    version: 2.15.2(@sveltejs/kit@2.5.17)(svelte@4.2.18)
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0
@@ -4030,9 +4030,8 @@ packages:
       periscopic: 3.1.0
     dev: true
 
-  /sveltekit-superforms@2.15.1(@sveltejs/kit@2.5.17)(svelte@4.2.18):
-    resolution: {integrity: sha512-rLzcJTGEzt2oFC1fNYn+ddM25uoCawudHBU7qoLo5gp/JLMRNhtX9gbBMt8imMLo4VcB8339VtxBRcWiMV1faQ==}
-    requiresBuild: true
+  /sveltekit-superforms@2.15.2(@sveltejs/kit@2.5.17)(svelte@4.2.18):
+    resolution: {integrity: sha512-8mraZXhTL43z2H7mqmkpfqMvIGmV9mtRabHIYM2B6I3ZmEvWESS9tQPhHFY8uIEFKL6oG6BP9Tvi/aP4QKdcyg==}
     peerDependencies:
       '@sveltejs/kit': 1.x || 2.x
       svelte: 3.x || 4.x || >=5.0.0-next.51
@@ -4053,7 +4052,7 @@ packages:
       joi: 17.13.3
       json-schema-to-ts: 3.1.0
       superstruct: 1.0.4
-      valibot: 0.31.1
+      valibot: 0.35.0
       yup: 1.4.0
       zod: 3.23.8
       zod-to-json-schema: 3.23.1(zod@3.23.8)
@@ -4319,6 +4318,12 @@ packages:
 
   /valibot@0.31.1:
     resolution: {integrity: sha512-2YYIhPrnVSz/gfT2/iXVTrSj92HwchCt9Cga/6hX4B26iCz9zkIsGTS0HjDYTZfTi1Un0X6aRvhBi1cfqs/i0Q==}
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /valibot@0.35.0:
+    resolution: {integrity: sha512-+i2aCRkReTrd5KBN/dW2BrPOvFnU5LXTV2xjZnjnqUIO8YUx6P2+MgRrkwF2FhkexgyKq/NIZdPdknhHf5A/Ww==}
     requiresBuild: true
     dev: true
     optional: true
