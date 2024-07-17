@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    playwright.url = "github:pietdevries94/playwright-web-flake/1.44.0";
+    playwright.url = "github:pietdevries94/playwright-web-flake/1.45.2";
   };
 
   outputs = { self, nixpkgs, playwright }:
@@ -20,7 +20,7 @@
         ];
       };
 
-      nodejs = pkgs.nodejs_latest;
+      nodejs = pkgs.nodejs_20;
     in
     {
       devShells.${system}.default = pkgs.mkShell {
