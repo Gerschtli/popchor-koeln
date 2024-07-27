@@ -18,7 +18,9 @@
             />
         </div>
     </div>
-    <div class="container mx-auto flex flex-col items-center justify-center text-center gap-y-4 p-4 sm:flex-row sm:px-12 lg:px-20">
+    <div
+        class="container mx-auto flex flex-col items-center justify-center gap-y-4 p-4 text-center sm:flex-row sm:px-12 lg:px-20"
+    >
         <div class="flex-1 sm:-order-1">
             <a class="text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700" href="/impressum">Impressum</a>
         </div>
