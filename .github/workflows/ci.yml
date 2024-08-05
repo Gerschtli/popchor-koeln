@@ -85,7 +85,7 @@ jobs:
             | jq --raw-output '.[] | select(.commit_ref == "${{ github.sha }}") | .id')"
 
           echo "deploy id is $deploy_id"
-          echo "deploy-id=$deploy_id" >> $GITHUB_OUTPUT
+          echo "deploy-id=$deploy_id" >> "$GITHUB_OUTPUT"
 
       - name: Wait for deployment
         env:
