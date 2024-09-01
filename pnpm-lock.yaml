@@ -13,7 +13,7 @@ importers:
         version: 1.45.2
       '@storyblok/svelte':
         specifier: ^4.0.6
-        version: 4.0.6(svelte@4.2.18)
+        version: 4.0.9(svelte@4.2.18)
       '@sveltejs/adapter-netlify':
         specifier: ^4.3.1
         version: 4.3.1(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.4(@types/node@20.12.11)))(svelte@4.2.18)(vite@5.3.4(@types/node@20.12.11)))
@@ -587,6 +587,7 @@ packages:
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -594,6 +595,7 @@ packages:
 
   '@humanwhocodes/object-schema@2.0.3':
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
+    deprecated: Use @eslint/object-schema instead
 
   '@iarna/toml@2.2.5':
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
@@ -871,11 +873,14 @@ packages:
   '@sodaru/yup-to-json-schema@2.0.1':
     resolution: {integrity: sha512-lWb0Wiz8KZ9ip/dY1eUqt7fhTPmL24p6Hmv5Fd9pzlzAdw/YNcWZr+tiCT4oZ4Zyxzi9+1X4zv82o7jYvcFxYA==}
 
-  '@storyblok/js@3.0.8':
-    resolution: {integrity: sha512-JY+abbswBId84Ubr0yRwNpq5Klf9546Ia2Qs1pn6en5Trz8o6EcBJIwxvR6evjJ0Vp2cLKT7MV1yfGLAtnzycA==}
+  '@storyblok/js@3.1.1':
+    resolution: {integrity: sha512-aWdkFUWlzxCfUWXbnVCuqop8mdQ6RlmQcgi+vIbUlqdRODaSKR1j+Pv1RGugNX9OFo8Z2fbl5Ztnd9lF2nwpLg==}
 
-  '@storyblok/svelte@4.0.6':
-    resolution: {integrity: sha512-Q1HZo/2+NFZDnRyj2V19er+oae0KC8WNtug86joD4WMKXxQQFwgWp1N9JWTHYzAucRLdrd7buF1Ca5e6nIhEXg==}
+  '@storyblok/richtext@2.0.0':
+    resolution: {integrity: sha512-yJm5BgWrCRGUdwZtviPgGno3rLXcnEvjK1bL1Ut4GmU1UOEVLC42m543EtrrOBVGDZdRPD9dK8ObgyHp6zNwqw==}
+
+  '@storyblok/svelte@4.0.9':
+    resolution: {integrity: sha512-Rr25TvZ+FFhb+u4IZNxJAMyr/fL02t0gMJ+ssHb8ewI+L7j5AsqNOL7/kS4msxY1uxpT5vg5z9WZHoyyhDDh2Q==}
     peerDependencies:
       svelte: ^3.0.0 || ^4.0.0
 
@@ -1211,6 +1216,10 @@ packages:
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
+  consola@3.2.3:
+    resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+
   cookie@0.6.0:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
@@ -1542,6 +1551,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   globals@13.24.0:
     resolution: {integrity: sha512-AhO5QUcj8llrbG09iWhPU2B204J1xnPeL8kQmVorSsy+Sjj1sk8gIyh6cUocGmH4L0UuhAJy+hJMRA4mgA4mFQ==}
@@ -1600,6 +1610,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -2138,6 +2149,7 @@ packages:
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rollup@3.29.4:
@@ -2221,8 +2233,8 @@ packages:
     resolution: {integrity: sha512-ANjV0Nq/H9aG2jShT1UYgus/UfpUh9bVHJB1GiYDEHX4TTxD2R/FbH46LyjWRZ7hhS4NppMd7jQ5GJNH1cCMFA==}
     hasBin: true
 
-  storyblok-js-client@6.7.3:
-    resolution: {integrity: sha512-fBBxtyju6xtFYgAgoWBaU7WagB8M6wN+N+A3UAhZtAPW8yZmlbr3nZu26ErYIbSLaeueyFlcNrI4Kag+Kszsdw==}
+  storyblok-js-client@6.9.1:
+    resolution: {integrity: sha512-mXCSNIr7tvFzH+TibM7hbq+xNAeDWnrfQwh8HS4fLskVHwQ2HaCQG9BkdbT1zWUFav3HWB+B8kqi3+KjRG1CUg==}
 
   string-format@2.0.0:
     resolution: {integrity: sha512-bbEs3scLeYNXLecRRuk6uJxdXUSj6le/8rNPHChIJTn2V79aXVTR1EH2OH5zLKKoz0V02fOUKZZcw01pLUShZA==}
@@ -3121,13 +3133,18 @@ snapshots:
   '@sodaru/yup-to-json-schema@2.0.1':
     optional: true
 
-  '@storyblok/js@3.0.8':
+  '@storyblok/js@3.1.1':
     dependencies:
-      storyblok-js-client: 6.7.3
+      '@storyblok/richtext': 2.0.0
+      storyblok-js-client: 6.9.1
 
-  '@storyblok/svelte@4.0.6(svelte@4.2.18)':
+  '@storyblok/richtext@2.0.0':
     dependencies:
-      '@storyblok/js': 3.0.8
+      consola: 3.2.3
+
+  '@storyblok/svelte@4.0.9(svelte@4.2.18)':
+    dependencies:
+      '@storyblok/js': 3.1.1
       svelte: 4.2.18
 
   '@sveltejs/adapter-netlify@4.3.1(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.4(@types/node@20.12.11)))(svelte@4.2.18)(vite@5.3.4(@types/node@20.12.11)))':
@@ -3511,6 +3528,8 @@ snapshots:
   commander@4.1.1: {}
 
   concat-map@0.0.1: {}
+
+  consola@3.2.3: {}
 
   cookie@0.6.0: {}
 
@@ -4519,7 +4538,7 @@ snapshots:
       - ts-node
       - typescript
 
-  storyblok-js-client@6.7.3: {}
+  storyblok-js-client@6.9.1: {}
 
   string-format@2.0.0: {}
 
