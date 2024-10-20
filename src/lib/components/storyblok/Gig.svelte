@@ -19,7 +19,11 @@
     const gigSeparator = getGigSeparator();
 
     $: showSeparator = $gigSeparator !== undefined && !Array.from($gigSeparator?.values()).includes(year);
-    $: show ? $gigSeparator?.set(id, year) : $gigSeparator?.delete(id);
+    $: if (show) {
+        $gigSeparator?.set(id, year);
+    } else {
+        $gigSeparator?.delete(id);
+    }
 </script>
 
 {#if show}
