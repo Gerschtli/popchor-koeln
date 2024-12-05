@@ -31,7 +31,7 @@
         "eslint-plugin-playwright": "^1.8.0",
         "eslint-plugin-svelte": "^2.45.1",
         "globals": "^15.11.0",
-        "lucide-svelte": "^0.453.0",
+        "lucide-svelte": "^0.468.0",
         "nodemailer": "^6.9.15",
         "postcss": "^8.4.47",
         "postcss-load-config": "^6.0.1",
