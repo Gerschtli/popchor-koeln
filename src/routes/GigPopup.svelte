@@ -5,7 +5,7 @@
     import ticket240Webp from '$lib/assets/ticket.png?h=240&format=webp&imagetools';
     import ticket320Png from '$lib/assets/ticket.png?h=320&format=png&imagetools';
     import ticket320Webp from '$lib/assets/ticket.png?h=320&format=webp&imagetools';
-    import { onMount } from "svelte";
+    import { onMount } from 'svelte';
     import { browser } from '$app/environment';
     import { X } from 'lucide-svelte';
     import { fade } from 'svelte/transition';
@@ -22,6 +22,7 @@
         mounted = true;
     });
 </script>
+
 {#if !closed && mounted}
     <div
         transition:fade
@@ -31,25 +32,21 @@
             <X class="hover:text-slate-500" size={32} />
         </button>
         <div>
-            <a
-                href="https://popchorkoeln.ticket.io/97njwxm6/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
+            <a href="https://popchorkoeln.ticket.io/97njwxm6/" target="_blank" rel="noopener noreferrer">
                 <picture>
                     <source
-                    media="(max-width: 639px)"
-                    srcset="{ticket160Webp} 1x, {ticket320Webp} 2x"
-                    type="image/webp"
-                />
-                    <source media="(min-width: 640px) and (max-width: 767px)" srcset={ticket240Webp} type="image/webp" />
+                        media="(max-width: 639px)"
+                        srcset="{ticket160Webp} 1x, {ticket320Webp} 2x"
+                        type="image/webp"
+                    />
+                    <source
+                        media="(min-width: 640px) and (max-width: 767px)"
+                        srcset={ticket240Webp}
+                        type="image/webp"
+                    />
                     <source media="(min-width: 768px)" srcset={ticket320Webp} type="image/webp" />
 
-                    <source
-                        media="(max-width: 639px)"
-                        srcset="{ticket160Png} 1x, {ticket320Png} 2x"
-                        type="image/png"
-                    />
+                    <source media="(max-width: 639px)" srcset="{ticket160Png} 1x, {ticket320Png} 2x" type="image/png" />
                     <source media="(min-width: 640px) and (max-width: 767px)" srcset={ticket240Png} type="image/png" />
                     <source media="(min-width: 768px)" srcset={ticket320Png} type="image/png" />
 
