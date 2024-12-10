@@ -9,7 +9,7 @@
     import { browser } from '$app/environment';
     import { X } from 'lucide-svelte';
     import { fade } from 'svelte/transition';
-    const localStorageKey = 'gigPopupClosed';
+    const localStorageKey = 'gigTwPckPopupClosed';
     const hideAfterDate = new Date('2025-05-17T20:00:00+0100');
     $: closed = !browser || localStorage.getItem(localStorageKey) || new Date() > hideAfterDate;
     function close() {
