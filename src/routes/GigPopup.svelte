@@ -1,10 +1,10 @@
 <script lang="ts">
-    import ticket160Png from '$lib/assets/ticket.png?h=180&format=png&imagetools'; //171
-    import ticket160Webp from '$lib/assets/ticket.png?h=180&format=webp&imagetools';
-    import ticket240Png from '$lib/assets/ticket.png?h=200&format=png&imagetools'; //204
-    import ticket240Webp from '$lib/assets/ticket.png?h=200&format=webp&imagetools';
-    import ticket320Png from '$lib/assets/ticket.png?h=260&format=png&imagetools'; //307
-    import ticket320Webp from '$lib/assets/ticket.png?h=260&format=webp&imagetools';
+    import ticket180Png from '$lib/assets/ticket.png?h=180&format=png&imagetools'; //171
+    import ticket180Webp from '$lib/assets/ticket.png?h=180&format=webp&imagetools';
+    import ticket220Png from '$lib/assets/ticket.png?h=220&format=png&imagetools'; //204
+    import ticket220Webp from '$lib/assets/ticket.png?h=220&format=webp&imagetools';
+    import ticket260Png from '$lib/assets/ticket.png?h=260&format=png&imagetools'; //307
+    import ticket260Webp from '$lib/assets/ticket.png?h=260&format=webp&imagetools';
     import { onMount } from 'svelte';
     import { browser } from '$app/environment';
     import { X } from 'lucide-svelte';
@@ -36,21 +36,21 @@
                 <picture>
                     <source
                         media="(max-width: 639px)"
-                        srcset="{ticket160Webp} 1x, {ticket320Webp} 2x"
+                        srcset="{ticket180Webp} 1x, {ticket260Webp} 2x"
                         type="image/webp"
                     />
                     <source
                         media="(min-width: 640px) and (max-width: 767px)"
-                        srcset={ticket240Webp}
+                        srcset={ticket220Webp}
                         type="image/webp"
                     />
-                    <source media="(min-width: 768px)" srcset={ticket320Webp} type="image/webp" />
+                    <source media="(min-width: 768px)" srcset={ticket260Webp} type="image/webp" />
 
-                    <source media="(max-width: 639px)" srcset="{ticket160Png} 1x, {ticket320Png} 2x" type="image/png" />
-                    <source media="(min-width: 640px) and (max-width: 767px)" srcset={ticket240Png} type="image/png" />
-                    <source media="(min-width: 768px)" srcset={ticket320Png} type="image/png" />
+                    <source media="(max-width: 639px)" srcset="{ticket180Png} 1x, {ticket260Png} 2x" type="image/png" />
+                    <source media="(min-width: 640px) and (max-width: 767px)" srcset={ticket220Png} type="image/png" />
+                    <source media="(min-width: 768px)" srcset={ticket260Png} type="image/png" />
 
-                    <img src={ticket320Png} alt="Ticket" class="h-full object-cover" />
+                    <img src={ticket260Png} alt="Ticket" class="h-full object-cover" />
                 </picture>
             </a>
         </div>
