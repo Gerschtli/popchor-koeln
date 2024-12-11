@@ -1,10 +1,10 @@
 <script lang="ts">
-    import ticket160Png from '$lib/assets/ticket.png?h=160&format=png&imagetools';
-    import ticket160Webp from '$lib/assets/ticket.png?h=160&format=webp&imagetools';
-    import ticket240Png from '$lib/assets/ticket.png?h=240&format=png&imagetools';
-    import ticket240Webp from '$lib/assets/ticket.png?h=240&format=webp&imagetools';
-    import ticket320Png from '$lib/assets/ticket.png?h=320&format=png&imagetools';
-    import ticket320Webp from '$lib/assets/ticket.png?h=320&format=webp&imagetools';
+    import ticket160Png from '$lib/assets/ticket.png?h=180&format=png&imagetools'; //171
+    import ticket160Webp from '$lib/assets/ticket.png?h=180&format=webp&imagetools';
+    import ticket240Png from '$lib/assets/ticket.png?h=200&format=png&imagetools'; //204
+    import ticket240Webp from '$lib/assets/ticket.png?h=200&format=webp&imagetools';
+    import ticket320Png from '$lib/assets/ticket.png?h=260&format=png&imagetools'; //307
+    import ticket320Webp from '$lib/assets/ticket.png?h=260&format=webp&imagetools';
     import { onMount } from 'svelte';
     import { browser } from '$app/environment';
     import { X } from 'lucide-svelte';
