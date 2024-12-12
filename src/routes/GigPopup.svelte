@@ -9,8 +9,8 @@
     import ticket360Webp from '$lib/assets/ticket.png?h=360&format=webp&imagetools';
     import ticket440Png from '$lib/assets/ticket.png?h=440&format=png&imagetools';
     import ticket440Webp from '$lib/assets/ticket.png?h=440&format=webp&imagetools';
-    import ticket520Png from '$lib/assets/ticket.png?h=360&format=png&imagetools';
-    import ticket520Webp from '$lib/assets/ticket.png?h=360&format=webp&imagetools';
+    import ticket520Png from '$lib/assets/ticket.png?h=520&format=png&imagetools';
+    import ticket520Webp from '$lib/assets/ticket.png?h=520&format=webp&imagetools';
 
     import { onMount } from 'svelte';
     import { browser } from '$app/environment';
