@@ -51,10 +51,18 @@
                         srcset="{ticket220Webp} 1x, {ticket440Webp} 2x"
                         type="image/webp"
                     />
-                    <source media="(min-width: 768px)" srcset="{ticket260Webp} 1x, {ticket520Webp} 2x" type="image/webp" />
+                    <source
+                        media="(min-width: 768px)"
+                        srcset="{ticket260Webp} 1x, {ticket520Webp} 2x"
+                        type="image/webp"
+                    />
 
                     <source media="(max-width: 639px)" srcset="{ticket180Png} 1x, {ticket360Png} 2x" type="image/png" />
-                    <source media="(min-width: 640px) and (max-width: 767px)" srcset="{ticket220Png} 1x, {ticket440Png} 2x" type="image/png" />
+                    <source
+                        media="(min-width: 640px) and (max-width: 767px)"
+                        srcset="{ticket220Png} 1x, {ticket440Png} 2x"
+                        type="image/png"
+                    />
                     <source media="(min-width: 768px)" srcset="{ticket260Png} 1x, {ticket520Png} 2x" type="image/png" />
 
                     <img src={ticket260Png} alt="Ticket" class="h-full object-cover" />
