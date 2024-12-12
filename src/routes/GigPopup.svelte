@@ -1,10 +1,17 @@
 <script lang="ts">
-    import ticket180Png from '$lib/assets/ticket.png?h=180&format=png&imagetools'; //171
+    import ticket180Png from '$lib/assets/ticket.png?h=180&format=png&imagetools';
     import ticket180Webp from '$lib/assets/ticket.png?h=180&format=webp&imagetools';
-    import ticket220Png from '$lib/assets/ticket.png?h=220&format=png&imagetools'; //204
+    import ticket220Png from '$lib/assets/ticket.png?h=220&format=png&imagetools';
     import ticket220Webp from '$lib/assets/ticket.png?h=220&format=webp&imagetools';
-    import ticket260Png from '$lib/assets/ticket.png?h=260&format=png&imagetools'; //307
+    import ticket260Png from '$lib/assets/ticket.png?h=260&format=png&imagetools';
     import ticket260Webp from '$lib/assets/ticket.png?h=260&format=webp&imagetools';
+    import ticket360Png from '$lib/assets/ticket.png?h=360&format=png&imagetools';
+    import ticket360Webp from '$lib/assets/ticket.png?h=360&format=webp&imagetools';
+    import ticket440Png from '$lib/assets/ticket.png?h=440&format=png&imagetools';
+    import ticket440Webp from '$lib/assets/ticket.png?h=440&format=webp&imagetools';
+    import ticket520Png from '$lib/assets/ticket.png?h=360&format=png&imagetools';
+    import ticket520Webp from '$lib/assets/ticket.png?h=360&format=webp&imagetools';
+
     import { onMount } from 'svelte';
     import { browser } from '$app/environment';
     import { X } from 'lucide-svelte';
@@ -36,19 +43,19 @@
                 <picture>
                     <source
                         media="(max-width: 639px)"
-                        srcset="{ticket180Webp} 1x, {ticket260Webp} 2x"
+                        srcset="{ticket180Webp} 1x, {ticket360Webp} 2x"
                         type="image/webp"
                     />
                     <source
                         media="(min-width: 640px) and (max-width: 767px)"
-                        srcset={ticket220Webp}
+                        srcset="{ticket220Webp} 1x, {ticket440Webp} 2x"
                         type="image/webp"
                     />
-                    <source media="(min-width: 768px)" srcset={ticket260Webp} type="image/webp" />
+                    <source media="(min-width: 768px)" srcset="{ticket260Webp} 1x, {ticket520Webp} 2x" type="image/webp" />
 
-                    <source media="(max-width: 639px)" srcset="{ticket180Png} 1x, {ticket260Png} 2x" type="image/png" />
-                    <source media="(min-width: 640px) and (max-width: 767px)" srcset={ticket220Png} type="image/png" />
-                    <source media="(min-width: 768px)" srcset={ticket260Png} type="image/png" />
+                    <source media="(max-width: 639px)" srcset="{ticket180Png} 1x, {ticket360Png} 2x" type="image/png" />
+                    <source media="(min-width: 640px) and (max-width: 767px)" srcset="{ticket220Png} 1x, {ticket440Png} 2x" type="image/png" />
+                    <source media="(min-width: 768px)" srcset="{ticket260Png} 1x, {ticket520Png} 2x" type="image/png" />
 
                     <img src={ticket260Png} alt="Ticket" class="h-full object-cover" />
                 </picture>
