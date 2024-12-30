@@ -16,7 +16,7 @@
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
-    />
+    ></iframe>
 {:else}
     <button class={twMerge('relative block aspect-video w-full', $$props.class)} on:click={() => (enabled = true)}>
         <span class="absolute left-1/2 top-1/2 w-12 -translate-x-1/2 -translate-y-1/2"><YouTubeIcon /></span>
