@@ -4,6 +4,7 @@
     import '../app.postcss';
     import GigPopup from './GigPopup.svelte';
     import Footer from './Footer.svelte';
+    import GigPopup from './GigPopup.svelte';
     import Header from './Header.svelte';
     import Navigation from './Navigation.svelte';
 
@@ -35,5 +36,5 @@
 <Footer />
 
 {#if browser}
-    <div data-testid="js-loaded" />
+    <div data-testid="js-loaded"></div>
 {/if}
