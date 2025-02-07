@@ -2,7 +2,6 @@
     import { browser } from '$app/environment';
     import { initNavigationModal } from '$lib/modal';
     import '../app.postcss';
-    import GigPopup from './GigPopup.svelte';
     import Footer from './Footer.svelte';
     import GigPopup from './GigPopup.svelte';
     import Header from './Header.svelte';
