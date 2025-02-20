@@ -5,7 +5,7 @@
 </script>
 
 <footer class="border-t border-slate-500">
-    <div class="container mx-auto flex flex-col items-center justify-between gap-y-4 p-8 sm:flex-row sm:px-12 lg:px-20">
+    <div class="container mx-auto flex flex-col items-center justify-center gap-y-4 p-4 sm:flex-row sm:px-12 lg:px-20">
         <div class="flex justify-center gap-2 xs:gap-4">
             <SocialLink label="Facebook" link="https://www.facebook.com/popchorkoeln/" icon={Facebook} />
             <SocialLink label="Email" link="mailto:hallo@popchor-koeln.de" icon={Mail} />
@@ -17,12 +17,19 @@
                 icon={SpotifyLogo}
             />
         </div>
-
+    </div>
+    <div
+        class="container mx-auto flex flex-col items-center justify-center gap-y-4 p-4 text-center sm:flex-row sm:px-12 lg:px-20"
+    >
         <div class="flex-1 sm:-order-1">
             <a class="text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700" href="/impressum">Impressum</a>
         </div>
 
-        <div class="flex-1 text-right">
+        <div class="flex-1 sm:-order-2">
+            <a class="text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700" href="/satzung">Satzung</a>
+        </div>
+
+        <div class="flex-1 sm:-order-3">
             <a class="text-sm text-blue-500 hover:text-blue-700 focus:text-blue-700" href="/datenschutz">Datenschutz</a>
         </div>
     </div>

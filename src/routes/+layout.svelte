@@ -3,6 +3,7 @@
     import { initNavigationModal } from '$lib/modal';
     import '../app.postcss';
     import Footer from './Footer.svelte';
+    import GigPopup from './GigPopup.svelte';
     import Header from './Header.svelte';
     import Navigation from './Navigation.svelte';
 
@@ -21,6 +22,8 @@
     <meta name="theme-color" content="#ffffff" />
 </svelte:head>
 
+<GigPopup />
+
 <Header />
 
 <Navigation navigationItems={data.navigationItems} />
@@ -32,5 +35,5 @@
 <Footer />
 
 {#if browser}
-    <div data-testid="js-loaded" />
+    <div data-testid="js-loaded"></div>
 {/if}

@@ -67,20 +67,20 @@ pnpm run storyblok:pull-components
 
 ### Github Actions Secrets
 
--   `CACHIX_AUTH_TOKEN`
--   `NETLIFY_AUTH_TOKEN`
--   `NETLIFY_SITE_ID`
--   `STORYBLOK_ACCESS_TOKEN`
+- `CACHIX_AUTH_TOKEN`
+- `NETLIFY_AUTH_TOKEN`
+- `NETLIFY_SITE_ID`
+- `STORYBLOK_ACCESS_TOKEN`
 
 ### Netlify project
 
--   Set site name
--   Lock auto publishing
--   Set up environment variables (see `.env.example`)
+- Set site name
+- Lock auto publishing
+- Set up environment variables (see `.env.example`)
 
 ### Storyblok space
 
--   Create space
--   Login with `pnpx storyblok login`
--   Run `pnpm run storyblok:push-components`
--   Create stories
+- Create space
+- Login with `pnpx storyblok login`
+- Run `pnpm run storyblok:push-components`
+- Create stories
