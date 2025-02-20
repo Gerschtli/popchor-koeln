@@ -8,7 +8,7 @@
     export let labelPrevious: string;
     export let labelNext: string;
     export let items: T[];
-    export let currentIndex = 0 
+    export let currentIndex = 0;
 
     let sliderElement: HTMLDivElement;
 

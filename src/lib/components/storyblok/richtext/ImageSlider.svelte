@@ -10,7 +10,7 @@
 
     let container: HTMLDivElement;
     let bp: BiggerPictureInstance;
-    let currentIndex = 0; 
+    let currentIndex = 0;
 
     onMount(() => {
         bp = BiggerPicture({
@@ -21,24 +21,25 @@
     function openGallery(e: Event) {
         bp.open({
             onClose(container, activeItem) {
-                currentIndex = activeItem?.i
+                currentIndex = activeItem?.i;
             },
             items: container.querySelectorAll('a'),
             el: e.currentTarget ?? undefined,
-            intro: "fadeup"
+            intro: 'fadeup',
         });
     }
 </script>
 
 <div bind:this={container}>
-    <Slider bind:currentIndex
+    <Slider
+        bind:currentIndex
         labelPrevious="Zu vorherigem Bild wechseln"
         labelNext="Zu nächstem Bild wechseln"
         items={blok.images}
         let:item={image}
     >
         {@const dimensions = getDimensionsOfImageUrl(image.image.filename)}
-        <a  
+        <a
             class="justify-self-center"
             on:click|preventDefault={openGallery}
             href={image.image.filename}
