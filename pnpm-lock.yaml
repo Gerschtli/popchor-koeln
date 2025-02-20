@@ -113,6 +113,9 @@ importers:
       vite-imagetools:
         specifier: ^7.0.5
         version: 7.0.5(rollup@4.29.1)
+      vite-plugin-svelte:^3:
+        specifier: link:@sveltejs/vite-plugin-svelte:^3
+        version: link:@sveltejs/vite-plugin-svelte:^3
       zod:
         specifier: ^3.24.1
         version: 3.24.1
