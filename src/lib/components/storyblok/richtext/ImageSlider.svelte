@@ -11,6 +11,7 @@
 
     let container: HTMLDivElement;
     let bp: BiggerPictureInstance;
+    let currentIndex = 0; 
 
     onMount(() => {
         bp = BiggerPicture({
@@ -20,16 +21,20 @@
 
     function openGallery(e: Event) {
         bp.open({
+            onClose(container, activeItem) {
+                currentIndex = activeItem?.i
+            },
             items: container.querySelectorAll('a'),
             el: e.currentTarget ?? undefined,
+            intro: "fadeup"
         });
     }
 </script>
 
 <div bind:this={container}>
-    <Slider
-        labelPrevious="Zu vorherigem Video wechseln"
-        labelNext="Zu nächstem Video wechseln"
+    <Slider bind:currentIndex
+        labelPrevious="Zu vorherigem Bild wechseln"
+        labelNext="Zu nächstem Bild wechseln"
         items={blok.images}
         let:baseClass
         let:item={image}

@@ -8,10 +8,10 @@
     export let labelPrevious: string;
     export let labelNext: string;
     export let items: T[];
+    export let currentIndex = 0 
 
     let sliderElement: HTMLDivElement;
 
-    let currentIndex = 0;
     $: hasPrev = currentIndex > 0;
     $: hasNext = currentIndex < items.length - 1;
 
