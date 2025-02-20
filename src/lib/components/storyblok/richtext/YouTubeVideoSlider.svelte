@@ -10,8 +10,7 @@
     labelPrevious="Zu vorherigem Video wechseln"
     labelNext="Zu nächstem Video wechseln"
     items={blok.videos}
-    let:baseClass
     let:item
 >
-    <YouTubeVideo class={baseClass} blok={item} />
+    <YouTubeVideo blok={item} />
 </Slider>

@@ -5,7 +5,6 @@
     import BiggerPicture, { type BiggerPictureInstance } from 'bigger-picture';
     import 'bigger-picture/css';
     import { onMount } from 'svelte';
-    import { twMerge } from 'tailwind-merge';
 
     export let blok: ImageSliderStoryblok;
 
@@ -36,13 +35,12 @@
         labelPrevious="Zu vorherigem Bild wechseln"
         labelNext="Zu nächstem Bild wechseln"
         items={blok.images}
-        let:baseClass
         let:item={image}
     >
         {@const dimensions = getDimensionsOfImageUrl(image.image.filename)}
-        <a
+        <a  
+            class="justify-self-center"
             on:click|preventDefault={openGallery}
-            class={twMerge('aspect-video w-full', baseClass)}
             href={image.image.filename}
             data-img={image.image.filename}
             data-thumb={image.image.filename}
