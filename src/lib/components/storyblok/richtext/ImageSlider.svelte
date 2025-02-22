@@ -52,26 +52,45 @@
             <picture>
                 <source
                     media="(max-width: 639px)"
-                    srcset="{image.image.filename}/m/558x0/filters:no_upscale() 1x, 
-                        {image.image.filename}/m/1116x0/filters:no_upscale() 2x"
+                    srcset="{image.image.filename}/m/558x0/filters:no_upscale():format(webp) 1x, 
+                        {image.image.filename}/m/1116x0/filters:no_upscale():format(webp) 2x"
                     type="image/png"
                 />
                 <source
                     media="(min-width: 640px) and (max-width: 767px)"
-                    srcset="{image.image.filename}/m/544x0/filters:no_upscale() 1x,
-                        {image.image.filename}/m/1088x0/filters:no_upscale() 2x"
+                    srcset="{image.image.filename}/m/544x0/filters:no_upscale():format(webp) 1x,
+                        {image.image.filename}/m/1088x0/filters:no_upscale():format(webp) 2x"
                     type="image/png"
                 />
                 <source
                     media="(min-width: 768px)"
-                    srcset="{image.image.filename}/m/608x0/filters:no_upscale() 1x,
-                        {image.image.filename}/m/1216x0/filters:no_upscale() 2x"
+                    srcset="{image.image.filename}/m/608x0/filters:no_upscale():format(webp) 1x,
+                        {image.image.filename}/m/1216x0/filters:no_upscale():format(webp) 2x"
+                    type="image/png"
+                />
+
+                <source
+                    media="(max-width: 639px)"
+                    srcset="{image.image.filename}/m/558x0/filters:no_upscale():format(png) 1x, 
+                        {image.image.filename}/m/1116x0/filters:no_upscale():format(png) 2x"
+                    type="image/png"
+                />
+                <source
+                    media="(min-width: 640px) and (max-width: 767px)"
+                    srcset="{image.image.filename}/m/544x0/filters:no_upscale():format(png) 1x,
+                        {image.image.filename}/m/1088x0/filters:no_upscale():format(png) 2x"
+                    type="image/png"
+                />
+                <source
+                    media="(min-width: 768px)"
+                    srcset="{image.image.filename}/m/608x0/filters:no_upscale():format(png) 1x,
+                        {image.image.filename}/m/1216x0/filters:no_upscale():format(png) 2x"
                     type="image/png"
                 />
                 <img
                     class="max-h-[20rem]"
                     loading="lazy"
-                    src="{image.image.filename}/m/608x0/filters:no_upscale()"
+                    src="{image.image.filename}/m/608x0/filters:no_upscale():format(png)"
                     alt={image.image.alt}
                 />
             </picture>
