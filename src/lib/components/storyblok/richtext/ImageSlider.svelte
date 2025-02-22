@@ -54,19 +54,19 @@
                     media="(max-width: 639px)"
                     srcset="{image.image.filename}/m/558x0/filters:no_upscale():format(webp) 1x, 
                         {image.image.filename}/m/1116x0/filters:no_upscale():format(webp) 2x"
-                    type="image/png"
+                    type="image/webp"
                 />
                 <source
                     media="(min-width: 640px) and (max-width: 767px)"
                     srcset="{image.image.filename}/m/544x0/filters:no_upscale():format(webp) 1x,
                         {image.image.filename}/m/1088x0/filters:no_upscale():format(webp) 2x"
-                    type="image/png"
+                    type="image/webp"
                 />
                 <source
                     media="(min-width: 768px)"
                     srcset="{image.image.filename}/m/608x0/filters:no_upscale():format(webp) 1x,
                         {image.image.filename}/m/1216x0/filters:no_upscale():format(webp) 2x"
-                    type="image/png"
+                    type="image/webp"
                 />
 
                 <source
