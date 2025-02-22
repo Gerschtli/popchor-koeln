@@ -58,12 +58,14 @@
                 />
                 <source
                     media="(min-width: 640px) and (max-width: 767px)"
-                    srcset="{image.image.filename}/m/544x0/filters:no_upscale()"
+                    srcset="{image.image.filename}/m/544x0/filters:no_upscale() 1x,
+                        {image.image.filename}/m/1088x0/filters:no_upscale() 2x" 
                     type="image/png"
                 />
                 <source
                     media="(min-width: 768px)"
-                    srcset="{image.image.filename}/m/608x0/filters:no_upscale()"
+                    srcset="{image.image.filename}/m/608x0/filters:no_upscale() 1x,
+                        {image.image.filename}/m/1216x0/filters:no_upscale() 2x"
                     type="image/png"
                 />
                 <img
