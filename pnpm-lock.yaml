@@ -35,6 +35,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
+      bigger-picture:
+        specifier: ^1.1.16
+        version: 1.1.19
       dotenv:
         specifier: ^16.4.7
         version: 16.4.7
@@ -1004,6 +1007,9 @@ packages:
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+
+  bigger-picture@1.1.19:
+    resolution: {integrity: sha512-LhBPJ3z7YcNsK5lo/4i2KGbMqTMgpl7cI9If5F52VPKLcTUD5+dLr7m0G7np1yVuLlOWr28BK9yb/C8CBlKbOw==}
 
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
@@ -3251,6 +3257,8 @@ snapshots:
   axobject-query@4.1.0: {}
 
   balanced-match@1.0.2: {}
+
+  bigger-picture@1.1.19: {}
 
   binary-extensions@2.3.0: {}
 
