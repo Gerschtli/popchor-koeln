@@ -29,7 +29,7 @@
         class:border-red-600={$errors}
         class:focus:border-red-600={$errors}
     >
-        {#each options as option}
+        {#each options as option (option)}
             <option value={option} selected={$value === option}>{option}</option>
         {/each}
     </select>

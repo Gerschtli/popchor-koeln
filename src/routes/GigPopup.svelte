@@ -18,7 +18,8 @@
     import { fade } from 'svelte/transition';
     const localStorageKey = 'gigTwPckPopupClosed';
     const hideAfterDate = new Date('2025-05-17T20:00:00+0100');
-    $: closed = !browser || localStorage.getItem(localStorageKey) || new Date() > hideAfterDate;
+    let closed = !browser || localStorage.getItem(localStorageKey) || new Date() > hideAfterDate;
+
     function close() {
         closed = true;
         localStorage.setItem(localStorageKey, 'true');

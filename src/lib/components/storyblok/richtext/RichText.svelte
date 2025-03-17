@@ -39,9 +39,9 @@
 </script>
 
 {#if content?.content}
-    {#each content.content as item}
+    {#each content.content as item, i (i)}
         {#if item.type === 'blok'}
-            {#each getCustomBloks(item.attrs) as blok}
+            {#each getCustomBloks(item.attrs) as blok (blok._uid)}
                 {#if blok.component === 'expandable'}
                     <Expandable {blok} />
                 {:else if blok.component === 'image'}

@@ -12,7 +12,7 @@
     export let name: string;
 
     const { value, errors } = formFieldProxy(form, field);
-    $: checked = value as Writable<boolean>;
+    const checked = value as Writable<boolean>;
 </script>
 
 <label class="flex items-center gap-4">

@@ -18,7 +18,7 @@
     <nav class="fixed inset-0 z-10 bg-white/90" transition:fly={{ y: '100%', duration: 200 }}>
         <div class="container relative mx-auto p-8">
             <ul class="flex flex-col gap-4 p-4">
-                {#each navigationItems as item}
+                {#each navigationItems as item (item.id)}
                     <li>
                         <a class="text-lg hover:text-accent-dark active:text-accent-dark" href="/#{item.id}"
                             >{item.title}</a

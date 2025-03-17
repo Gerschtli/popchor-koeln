@@ -48,7 +48,7 @@
         <GigLine label="Wann">{dateFormatted}</GigLine>
         <GigLine label="Wo">
             <div>
-                {#each placeList as placeItem}
+                {#each placeList as placeItem, i (i)}
                     <span class="block sm:inline sm:after:content-[',_'] sm:last:after:content-[]">{placeItem}</span>
                 {/each}
             </div>

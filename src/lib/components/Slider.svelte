@@ -70,7 +70,7 @@
             class="scrollbar-none flex snap-x snap-mandatory gap-4 overflow-x-scroll scroll-smooth"
             on:scrollend={setCurrentIndex}
         >
-            {#each items as item}
+            {#each items as item, i (i)}
                 <div class="grid aspect-video w-full flex-shrink-0 snap-center content-center">
                     <slot {item} />
                 </div>

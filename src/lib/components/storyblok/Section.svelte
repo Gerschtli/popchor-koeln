@@ -23,7 +23,7 @@
             {@const { reference, showOnlyFuture } = blok.gigs[0]}
             {#if typeof reference !== 'string' && reference?.content.list}
                 <div class="space-y-4 px-4 sm:px-8 lg:px-16">
-                    {#each reference.content.list as blokInner}
+                    {#each reference.content.list as blokInner (blokInner._uid)}
                         <StoryblokComponent blok={blokInner} gigsShowOnlyFuture={showOnlyFuture} />
                     {/each}
 

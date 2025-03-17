@@ -15,7 +15,7 @@
 {#key blok}
     <div use:storyblokEditable={blok}>
         {#if blok.body}
-            {#each blok.body as blokInner}
+            {#each blok.body as blokInner (blokInner._uid)}
                 <StoryblokComponent blok={blokInner} />
             {/each}
         {/if}
