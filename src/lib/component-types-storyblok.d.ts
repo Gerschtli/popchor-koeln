@@ -39,7 +39,7 @@ export interface GigsStoryblok {
 }
 
 export interface GigsReferenceStoryblok {
-    showOnlyFuture?: boolean;
+    showOnlyFuture: boolean;
     reference?: StoryblokStory<GigsStoryblok> | string;
     _uid: string;
     component: 'gigs_reference';
@@ -48,14 +48,14 @@ export interface GigsReferenceStoryblok {
 
 export interface AssetStoryblok {
     _uid?: string;
-    id: number;
-    alt?: string;
+    id: number | null;
+    alt: string | null;
     name: string;
-    focus?: string;
-    source?: string;
-    title?: string;
+    focus: string | null;
+    source: string | null;
+    title: string | null;
     filename: string;
-    copyright?: string;
+    copyright: string | null;
     fieldtype?: string;
     meta_data?: null | {
         [k: string]: any;
@@ -79,11 +79,12 @@ export interface ImageSliderStoryblok {
 }
 
 export interface PageStoryblok {
+    id?: string;
     title: string;
-    description?: string;
-    body?: SectionStoryblok[];
     newsletterText?: RichtextStoryblok;
     contactText?: RichtextStoryblok;
+    description?: string;
+    body?: SectionStoryblok[];
     _uid: string;
     component: 'page';
     uuid?: string;

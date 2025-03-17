@@ -3,6 +3,7 @@
         {
             "name": "expandable",
             "display_name": "Aufklapptext",
+            "description": null,
             "created_at": "2023-09-17T13:18:04.394Z",
             "updated_at": "2023-09-17T13:25:21.426Z",
             "id": 4585895,
@@ -69,6 +70,7 @@
         {
             "name": "gig",
             "display_name": "Termin",
+            "description": null,
             "created_at": "2023-04-30T16:15:49.530Z",
             "updated_at": "2023-05-01T14:23:21.394Z",
             "id": 3909952,
@@ -138,6 +140,7 @@
         {
             "name": "gigs",
             "display_name": "Terminliste",
+            "description": null,
             "created_at": "2023-05-01T13:16:14.909Z",
             "updated_at": "2023-05-01T14:22:10.542Z",
             "id": 3911489,
@@ -168,6 +171,7 @@
         {
             "name": "gigs_reference",
             "display_name": "Referenz zu Terminliste",
+            "description": null,
             "created_at": "2023-05-01T11:42:01.814Z",
             "updated_at": "2023-05-01T14:25:05.404Z",
             "id": 3911279,
@@ -207,6 +211,7 @@
         {
             "name": "image",
             "display_name": "Bild",
+            "description": null,
             "created_at": "2023-09-17T11:18:56.976Z",
             "updated_at": "2023-09-17T12:25:53.224Z",
             "id": 4585754,
@@ -239,6 +244,7 @@
         {
             "name": "image_slider",
             "display_name": "Image Slider",
+            "description": null,
             "created_at": "2024-05-10T18:11:17.503Z",
             "updated_at": "2024-05-10T18:14:10.487Z",
             "id": 5779795,
@@ -272,40 +278,49 @@
         {
             "name": "page",
             "display_name": "Seite",
+            "description": null,
             "created_at": "2023-04-30T12:13:07.140Z",
-            "updated_at": "2023-09-25T20:57:06.055Z",
+            "updated_at": "2024-07-24T09:19:33.305Z",
             "id": 3909729,
             "schema": {
-                "title": {
+                "id": {
                     "type": "text",
                     "pos": 0,
+                    "display_name": "Sprungmarke",
+                    "regex": "[a-z0-9\\-]*"
+                },
+                "title": {
+                    "type": "text",
+                    "pos": 1,
                     "required": true,
-                    "display_name": "Seitentitel"
+                    "display_name": "Titel"
+                },
+                "newsletterText": {
+                    "type": "richtext",
+                    "description": "Wird nur auf Startseite angezeigt.",
+                    "display_name": "Text für Newsletter",
+                    "pos": 2
+                },
+                "contactText": {
+                    "type": "richtext",
+                    "description": "Wird nur auf Startseite angezeigt.",
+                    "display_name": "Text für Kontaktformular",
+                    "pos": 3
                 },
                 "description": {
                     "type": "textarea",
-                    "pos": 1,
+                    "pos": 4,
                     "required": false,
                     "display_name": "Seitenbeschreibung"
                 },
                 "body": {
                     "type": "bloks",
-                    "pos": 2,
+                    "pos": 5,
                     "required": false,
                     "restrict_type": "",
                     "restrict_components": true,
                     "component_whitelist": ["section"],
                     "display_name": "Inhalt"
-                },
-                "newsletterText": {
-                    "type": "richtext",
-                    "description": "Wird nur auf Startseite angezeigt.",
-                    "display_name": "Text für Newsletter"
-                },
-                "contactText": {
-                    "type": "richtext",
-                    "description": "Wird nur auf Startseite angezeigt.",
-                    "display_name": "Text für Kontaktformular"
                 }
             },
             "image": null,
@@ -326,6 +341,7 @@
         {
             "name": "section",
             "display_name": "Abschnitt",
+            "description": null,
             "created_at": "2023-04-30T13:49:41.040Z",
             "updated_at": "2024-01-14T17:06:28.495Z",
             "id": 3909821,
@@ -408,6 +424,7 @@
         {
             "name": "youtube_video",
             "display_name": "YouTube Video",
+            "description": null,
             "created_at": "2023-09-17T10:54:59.431Z",
             "updated_at": "2023-09-17T13:20:48.637Z",
             "id": 4585651,
@@ -448,6 +465,7 @@
         {
             "name": "youtube_video_slider",
             "display_name": "YouTube Video Slider",
+            "description": null,
             "created_at": "2023-10-18T19:19:55.440Z",
             "updated_at": "2023-10-18T19:48:35.508Z",
             "id": 4749798,
@@ -478,6 +496,15 @@
             "internal_tag_ids": [],
             "content_type_asset_preview": null,
             "component_group_name": "Richtext"
+        }
+    ],
+    "component_groups": [
+        {
+            "name": "Richtext",
+            "id": 206497,
+            "uuid": "96276656-9ba9-4cef-8e4f-f47312584dbb",
+            "parent_id": null,
+            "parent_uuid": "96276656-9ba9-4cef-8e4f-f47312584dbb"
         }
     ]
 }
