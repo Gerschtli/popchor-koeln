@@ -12,8 +12,8 @@ importers:
         specifier: 1.49.1
         version: 1.49.1
       '@storyblok/svelte':
-        specifier: ^4.0.11
-        version: 4.0.11(svelte@5.23.1)
+        specifier: ^5.0.0
+        version: 5.0.1(svelte@5.23.1)
       '@sveltejs/adapter-netlify':
         specifier: ^4.4.2
         version: 4.4.2(@sveltejs/kit@2.20.0(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.23.1)(vite@6.2.2(@types/node@22.13.10)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.23.1)(vite@6.2.2(@types/node@22.13.10)(jiti@2.3.3)(yaml@2.6.1)))
@@ -937,16 +937,16 @@ packages:
   '@standard-schema/spec@1.0.0':
     resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
 
-  '@storyblok/js@3.2.1':
-    resolution: {integrity: sha512-oi6vynMfCrCQQYZohNLS7YT00izFaXC7VIuQmHfqJx8nu9dUUYtiStPE9b1OjxlbX+TDpzuxTGxK1lhfFbBRyw==}
+  '@storyblok/js@3.3.1':
+    resolution: {integrity: sha512-pMsH/J3yIDLShQePb0XcWrM1tZoPwlPqs0j+34jc4KEoDkpHhXCiROA4jvxWzHz+WVZKQe3FZ//C2Lork0aoeQ==}
 
-  '@storyblok/richtext@3.0.2':
-    resolution: {integrity: sha512-KBLx9ycNVMyVnNyPiwBH5g9uWmiJpMzp9YvpnnADXlPLoksusrwI56BusSM8HaIgJgcnB5RR0LvhySkPFdC8Zg==}
+  '@storyblok/richtext@3.1.0':
+    resolution: {integrity: sha512-QtH5G+F7w3YuGGnHAFldo71vPpBT5prndZWFPDihlIsWaW0rEWyE9iX+6fp2f4XDgbhi0vyF1HqajFplGOtFVg==}
 
-  '@storyblok/svelte@4.0.11':
-    resolution: {integrity: sha512-xYfJWv+W3txMyjYAESG50pHqd8LPxRH807JrTFdJr07ULGNkCOlFmGqvNMldHkAZ92aCqQxqxkTYmGcRTkuXYQ==}
+  '@storyblok/svelte@5.0.1':
+    resolution: {integrity: sha512-R3JQErpgWLcXmlSqpS8RrGjte/piuvoKEAENUaTR5lA3+sXbUxyoRx6EreEqcVVFovwX67AWb0Y0C1XB+pi8BA==}
     peerDependencies:
-      svelte: ^3.0.0 || ^4.0.0
+      svelte: ^5.0.0
 
   '@sveltejs/acorn-typescript@1.0.5':
     resolution: {integrity: sha512-IwQk4yfwLdibDlrXVE04jTZYlLnwsTT2PIOQQGNLWfjavGifnk1JD1LcZjZaBTRcxZu2FfPfNLOE04DSu9lqtQ==}
@@ -2298,8 +2298,8 @@ packages:
     resolution: {integrity: sha512-ugnfbykj9Pu9+u1K+4eKTZ0PuWNIEL4a/7AubLt27H5LqHgIbDFD9p8ejKPkDjOIOw4lavDefqF+JWCREgiZCw==}
     hasBin: true
 
-  storyblok-js-client@6.10.6:
-    resolution: {integrity: sha512-4n/n6tkLu3kmZwb2aSZgwqGta8DodbQbGjuclWY+A6xsmrVWrRBytUs+5lvJVTGkshLflVPhufeO4j/1zvVSPQ==}
+  storyblok-js-client@6.10.11:
+    resolution: {integrity: sha512-4FuGbQ93X7Ok1hvTRvMy/p4bfX/3C+Uw/m7Mv+wGZyX22IGdCe01qdwgD3CP1F9l5C0lEFCsWxc2PloiM9NutA==}
 
   string-format@2.0.0:
     resolution: {integrity: sha512-bbEs3scLeYNXLecRRuk6uJxdXUSj6le/8rNPHChIJTn2V79aXVTR1EH2OH5zLKKoz0V02fOUKZZcw01pLUShZA==}
@@ -3219,16 +3219,16 @@ snapshots:
   '@standard-schema/spec@1.0.0':
     optional: true
 
-  '@storyblok/js@3.2.1':
+  '@storyblok/js@3.3.1':
     dependencies:
-      '@storyblok/richtext': 3.0.2
-      storyblok-js-client: 6.10.6
+      '@storyblok/richtext': 3.1.0
+      storyblok-js-client: 6.10.11
 
-  '@storyblok/richtext@3.0.2': {}
+  '@storyblok/richtext@3.1.0': {}
 
-  '@storyblok/svelte@4.0.11(svelte@5.23.1)':
+  '@storyblok/svelte@5.0.1(svelte@5.23.1)':
     dependencies:
-      '@storyblok/js': 3.2.1
+      '@storyblok/js': 3.3.1
       svelte: 5.23.1
 
   '@sveltejs/acorn-typescript@1.0.5(acorn@8.14.1)':
@@ -4619,7 +4619,7 @@ snapshots:
       - ts-node
       - typescript
 
-  storyblok-js-client@6.10.6: {}
+  storyblok-js-client@6.10.11: {}
 
   string-format@2.0.0: {}
 
