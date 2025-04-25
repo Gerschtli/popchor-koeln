@@ -13,7 +13,7 @@ pnpm run dev
 pnpm run dev -- --open
 ```
 
-**Note:** pnpm with v8 and nodejs with v20 need to be installed.
+**Note:** pnpm with v8 and nodejs with v22 need to be installed.
 
 ### Storyblok
 
