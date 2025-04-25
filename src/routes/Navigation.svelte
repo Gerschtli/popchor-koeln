@@ -20,9 +20,9 @@
             <ul class="flex flex-col gap-4 p-4">
                 {#each navigationItems as item (item.id)}
                     <li>
-                        <a class="hover:text-accent-dark active:text-accent-dark text-lg" href="/#{item.id}"
-                            >{item.title}</a
-                        >
+                        <a class="hover:text-accent-dark active:text-accent-dark text-lg" href="/#{item.id}">
+                            {item.title}
+                        </a>
                     </li>
                 {/each}
             </ul>

@@ -11,6 +11,7 @@
 </svelte:head>
 
 <Section {title}>
+    <!-- prettier-ignore -->
     <p class="text-neutral-600">
         {#if isNotFoundError}
             Diese Seite haben wir nicht gefunden, vielleicht findest du, was du gesucht hast, auf
@@ -18,9 +19,9 @@
         {:else}
             Leider ist ein unerwarteter Fehler aufgetreten, das tut uns leid! Bitte versuche es später noch einmal. Wenn
             das Problem weiterhin besteht, kontaktiere uns gerne unter
-            <a href="mailto:technik@popchor-koeln.de" class="text-blue-500 hover:text-blue-700 focus:text-blue-700"
-                >technik@popchor-koeln.de</a
-            >.
+            <a href="mailto:technik@popchor-koeln.de" class="text-blue-500 hover:text-blue-700 focus:text-blue-700">
+                technik@popchor-koeln.de
+            </a>.
         {/if}
     </p>
 </Section>

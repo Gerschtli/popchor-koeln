@@ -23,7 +23,8 @@
         <button class={twMerge('relative block aspect-video w-full', $$props.class)} on:click={() => (enabled = true)}>
             <span class="absolute top-1/2 left-1/2 w-12 -translate-x-1/2 -translate-y-1/2"><YouTubeIcon /></span>
             <span class="absolute top-0 right-0 left-0 bg-black/80 px-5 py-3 text-left text-white">
-                <strong>{blok.title}</strong> <small>auf YouTube</small>
+                <strong>{blok.title}</strong>
+                <small>auf YouTube</small>
             </span>
             <img class="" src="https://img.youtube.com/vi/{blok.code}/maxresdefault.jpg" alt={blok.title} />
         </button>

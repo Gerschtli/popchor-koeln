@@ -1,6 +1,6 @@
 <svg class={$$props.class} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 984.92 976.28">
     <defs>
-        <clipPath id="clip-path"> <rect class="cls-1" x="27.05" y="43.91" width="930.81" height="930.81" /> </clipPath>
+        <clipPath id="clip-path"><rect class="cls-1" x="27.05" y="43.91" width="930.81" height="930.81" /></clipPath>
     </defs>
     <g class="cls-2">
         <path
@@ -57,7 +57,8 @@
             class="cls-3"
             d="M561.34,655c-10.29,0-15.61,6.21-17.76,12.94V655h-8.69V790.84h8.69v-99.1c0-25.27,9.87-28.82,17.76-28.82s16.19,3.55,16.19,28.82v99.1h8.69v-99.1c0-27.63-10.66-36.72-24.88-36.72"
         />
-    </g> <rect class="cls-3" x="517.36" y="594.22" width="9.08" height="196.61" />
+    </g>
+    <rect class="cls-3" x="517.36" y="594.22" width="9.08" height="196.61" />
     <g class="cls-2">
         <path class="cls-3" d="M475.35,622.26a4.74,4.74,0,1,0-4.74-4.74,4.56,4.56,0,0,0,4.74,4.74" />
         <path class="cls-3" d="M491.14,622.26a4.74,4.74,0,1,0-4.74-4.74,4.56,4.56,0,0,0,4.74,4.74" />
