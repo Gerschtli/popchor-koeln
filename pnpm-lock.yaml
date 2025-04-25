@@ -11,6 +11,9 @@ importers:
       '@eslint/compat':
         specifier: ^1.2.8
         version: 1.2.8(eslint@9.25.1(jiti@2.4.2))
+      '@storyblok/richtext':
+        specifier: ^3.2.0
+        version: 3.2.0
       '@storyblok/svelte':
         specifier: ^5.0.2
         version: 5.0.2(svelte@5.28.2)
