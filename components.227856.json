@@ -65,6 +65,7 @@
             "internal_tags_list": [],
             "internal_tag_ids": [],
             "content_type_asset_preview": null,
+            "metadata": {},
             "component_group_name": "Richtext"
         },
         {
@@ -135,7 +136,8 @@
             "icon": "",
             "internal_tags_list": [],
             "internal_tag_ids": [],
-            "content_type_asset_preview": null
+            "content_type_asset_preview": null,
+            "metadata": {}
         },
         {
             "name": "gigs",
@@ -166,7 +168,8 @@
             "icon": null,
             "internal_tags_list": [],
             "internal_tag_ids": [],
-            "content_type_asset_preview": null
+            "content_type_asset_preview": null,
+            "metadata": {}
         },
         {
             "name": "gigs_reference",
@@ -206,7 +209,8 @@
             "icon": null,
             "internal_tags_list": [],
             "internal_tag_ids": [],
-            "content_type_asset_preview": null
+            "content_type_asset_preview": null,
+            "metadata": {}
         },
         {
             "name": "image",
@@ -239,6 +243,7 @@
             "internal_tags_list": [],
             "internal_tag_ids": [],
             "content_type_asset_preview": null,
+            "metadata": {},
             "component_group_name": "Richtext"
         },
         {
@@ -273,6 +278,7 @@
             "internal_tags_list": [],
             "internal_tag_ids": [],
             "content_type_asset_preview": null,
+            "metadata": {},
             "component_group_name": "Richtext"
         },
         {
@@ -336,7 +342,8 @@
             "icon": null,
             "internal_tags_list": [],
             "internal_tag_ids": [],
-            "content_type_asset_preview": null
+            "content_type_asset_preview": null,
+            "metadata": {}
         },
         {
             "name": "section",
@@ -419,7 +426,8 @@
             "icon": null,
             "internal_tags_list": [],
             "internal_tag_ids": [],
-            "content_type_asset_preview": null
+            "content_type_asset_preview": null,
+            "metadata": {}
         },
         {
             "name": "youtube_video",
@@ -460,6 +468,7 @@
             "internal_tags_list": [],
             "internal_tag_ids": [],
             "content_type_asset_preview": null,
+            "metadata": {},
             "component_group_name": "Richtext"
         },
         {
@@ -495,6 +504,7 @@
             "internal_tags_list": [],
             "internal_tag_ids": [],
             "content_type_asset_preview": null,
+            "metadata": {},
             "component_group_name": "Richtext"
         }
     ],

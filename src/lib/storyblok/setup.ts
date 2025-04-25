@@ -13,6 +13,7 @@ export function initStoryblokApi() {
         apiOptions: {
             region: 'eu',
         },
+        // @ts-expect-error wrong type definition in storyblok sdk
         components,
         bridge: true,
     });

@@ -9,10 +9,10 @@
         "preview": "vite preview",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-        "lint": "prettier --plugin prettier-plugin-svelte --plugin prettier-plugin-tailwindcss --check . && eslint .",
-        "format": "prettier --plugin prettier-plugin-svelte --plugin prettier-plugin-tailwindcss --write .",
-        "storyblok:pull-components": "pnpx storyblok pull-components --space 227856 && storyblok-generate-ts source=./components.227856.json target=./src/lib/component-types-storyblok && pnpm run format",
-        "storyblok:push-components": "pnpx storyblok push-components --space 227856 components.227856.json"
+        "lint": "prettier --check . && eslint --max-warnings=0 .",
+        "format": "prettier --write .",
+        "storyblok:pull-components": "pnpm storyblok pull-components --space 227856 && storyblok generate-typescript-typedefs --sourceFilePaths ./components.227856.json --destinationFilePath ./src/lib/component-types-storyblok.d.ts && pnpm run format",
+        "storyblok:push-components": "pnpm storyblok push-components --space 227856 components.227856.json"
     },
     "devDependencies": {
         "@eslint/compat": "^1.2.8",
@@ -34,7 +34,7 @@
         "prettier": "^3.5.3",
         "prettier-plugin-svelte": "^3.3.3",
         "prettier-plugin-tailwindcss": "^0.6.11",
-        "storyblok-generate-ts": "^2.2.0",
+        "storyblok": "^3.36.0",
         "svelte": "^5.28.2",
         "svelte-check": "^4.1.6",
         "sveltekit-superforms": "^2.24.1",

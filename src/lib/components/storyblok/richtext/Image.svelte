@@ -1,11 +1,11 @@
 <script lang="ts">
-    import type { ImageStoryblok } from '$lib/component-types-storyblok';
+    import type { AssetStoryblok, ImageStoryblok } from '$lib/component-types-storyblok';
     import { getDimensionsOfImageUrl } from '$lib/storyblok/util';
 
     export let blok: ImageStoryblok;
 
-    function getAspectRatio(filename: string) {
-        const dimensions = getDimensionsOfImageUrl(filename);
+    function getAspectRatio(asset: AssetStoryblok) {
+        const dimensions = getDimensionsOfImageUrl(asset);
 
         return `${dimensions.width} / ${dimensions.height}`;
     }
@@ -41,7 +41,7 @@
         <img
             class="max-h-[20rem]"
             src={blok.image.filename}
-            style:aspect-ratio={getAspectRatio(blok.image.filename)}
+            style:aspect-ratio={getAspectRatio(blok.image)}
             loading="lazy"
             alt={blok.image.alt}
         />

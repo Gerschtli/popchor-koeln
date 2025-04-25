@@ -38,7 +38,7 @@
         items={blok.images}
         let:item={image}
     >
-        {@const dimensions = getDimensionsOfImageUrl(image.image.filename)}
+        {@const dimensions = getDimensionsOfImageUrl(image.image)}
         <a
             class="justify-self-center"
             on:click|preventDefault={openGallery}
