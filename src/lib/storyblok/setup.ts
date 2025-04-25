@@ -26,9 +26,13 @@ export function initStoryblokApi() {
     return useStoryblokApi();
 }
 
-export async function loadStory(storyblokApi: ReturnType<typeof initStoryblokApi>, story: string) {
+export async function loadStory(
+    storyblokApi: ReturnType<typeof initStoryblokApi>,
+    storyblokVisualEditor: boolean,
+    story: string,
+) {
     const dataStory = await storyblokApi.get(`cdn/stories/${story}`, {
-        version: dev ? 'draft' : 'published',
+        version: dev || storyblokVisualEditor ? 'draft' : 'published',
         resolve_relations: resolveRelations,
         cv: 1, // disable cache
     });

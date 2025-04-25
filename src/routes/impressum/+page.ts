@@ -1,9 +1,9 @@
 import { loadStory } from '$lib/storyblok/setup';
 
 export async function load({ parent }) {
-    const { storyblokApi } = await parent();
+    const { storyblokApi, storyblokVisualEditor } = await parent();
 
     return {
-        story: await loadStory(storyblokApi, 'imprint'),
+        story: await loadStory(storyblokApi, storyblokVisualEditor, 'imprint'),
     };
 }
