@@ -2,6 +2,7 @@
     import type { ImageSliderStoryblok } from '$lib/component-types-storyblok';
     import Slider from '$lib/components/Slider.svelte';
     import { getDimensionsOfImageUrl } from '$lib/storyblok/util';
+    import { storyblokEditable } from '@storyblok/svelte';
     import BiggerPicture, { type BiggerPictureInstance } from 'bigger-picture';
     import 'bigger-picture/css';
     import { onMount } from 'svelte';
@@ -30,7 +31,7 @@
     }
 </script>
 
-<div bind:this={container}>
+<div bind:this={container} use:storyblokEditable={blok}>
     <Slider
         bind:currentIndex
         labelPrevious="Zu vorherigem Bild wechseln"

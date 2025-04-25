@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { AssetStoryblok, ImageStoryblok } from '$lib/component-types-storyblok';
     import { getDimensionsOfImageUrl } from '$lib/storyblok/util';
+    import { storyblokEditable } from '@storyblok/svelte';
 
     export let blok: ImageStoryblok;
 
@@ -11,7 +12,7 @@
     }
 </script>
 
-<figure class="flex flex-col items-center gap-1">
+<figure class="flex flex-col items-center gap-1" use:storyblokEditable={blok}>
     <picture>
         <source
             media="(max-width: 425px)"
