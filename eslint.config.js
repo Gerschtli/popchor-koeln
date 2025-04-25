@@ -1,6 +1,5 @@
 import js from '@eslint/js';
 import prettier from 'eslint-config-prettier';
-import playwright from 'eslint-plugin-playwright';
 import svelte from 'eslint-plugin-svelte';
 import globals from 'globals';
 import ts from 'typescript-eslint';
@@ -29,22 +28,11 @@ export default [
         },
     },
     {
-        ...playwright.configs['flat/recommended'],
-        files: ['tests/**'],
-    },
-    {
         rules: {
             '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
         },
     },
     {
-        ignores: [
-            '.svelte-kit/',
-            '.netlify/',
-            'build/',
-            'coverage/',
-            'playwright-report/',
-            'src/lib/component-types-storyblok.d.ts',
-        ],
+        ignores: ['.svelte-kit/', '.netlify/', 'build/', 'coverage/', 'src/lib/component-types-storyblok.d.ts'],
     },
 ];

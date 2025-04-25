@@ -3,22 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    playwright.url = "github:pietdevries94/playwright-web-flake/1.49.1";
   };
 
-  outputs = { self, nixpkgs, playwright }:
+  outputs = { self, nixpkgs }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [
-          (final: prev: {
-            inherit (playwright.packages.${system})
-              playwright-driver
-              playwright-test;
-          })
-        ];
-      };
+      pkgs = nixpkgs.legacyPackages.${system};
 
       nodejs = pkgs.nodejs_20;
     in
@@ -29,10 +19,6 @@
           nodejs
           nodejs.pkgs.pnpm
         ];
-
-        PLAYWRIGHT_BROWSERS_PATH = pkgs.playwright-driver.browsers;
-        PLAYWRIGHT_BROWSERS_VERSION = pkgs.playwright-driver.version;
-        PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "true";
       };
 
       checks.${system} =
@@ -55,10 +41,6 @@
           node = checker "node" "node version for netlify" nodejs ''
             ${getExe pkgs.gnugrep} NODE_VERSION ${./netlify.toml} \
               | ${getExe pkgs.gnused} -e 's,^.*"\(.*\)"$,\1,'
-          '';
-
-          playwright = checker "playwright" "npm package @playwright/test" pkgs.playwright-driver ''
-            ${getExe pkgs.jq} --raw-output '.devDependencies."@playwright/test"' ${./package.json}
           '';
 
           pnpm = checker "pnpm" "pnpm version in package.json" nodejs.pkgs.pnpm ''
