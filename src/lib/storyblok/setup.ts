@@ -11,6 +11,11 @@ export function initStoryblokApi() {
         accessToken: PUBLIC_STORYBLOK_ACCESS_TOKEN,
         use: [apiPlugin],
         apiOptions: {
+            https: true,
+            cache: {
+                clear: 'auto',
+                type: 'none',
+            },
             region: 'eu',
         },
         // @ts-expect-error wrong type definition in storyblok sdk
@@ -21,25 +26,11 @@ export function initStoryblokApi() {
     return useStoryblokApi();
 }
 
-export async function getCacheVersion(storyblokApi: ReturnType<typeof initStoryblokApi>) {
-    const response = await storyblokApi.get('cdn/spaces/me');
-
-    if (!response.data?.space?.version) {
-        return undefined;
-    }
-
-    return Number(response.data.space.version);
-}
-
-export async function loadStory(
-    storyblokApi: ReturnType<typeof initStoryblokApi>,
-    cacheVersion: undefined | number,
-    story: string,
-) {
+export async function loadStory(storyblokApi: ReturnType<typeof initStoryblokApi>, story: string) {
     const dataStory = await storyblokApi.get(`cdn/stories/${story}`, {
         version: dev ? 'draft' : 'published',
         resolve_relations: resolveRelations,
-        cv: cacheVersion,
+        cv: 1, // disable cache
     });
 
     return dataStory.data.story as ISbStoryData<PageStoryblok>;
