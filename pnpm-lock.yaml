@@ -12,11 +12,11 @@ importers:
         specifier: ^1.2.8
         version: 1.2.8(eslint@9.25.1(jiti@2.4.2))
       '@storyblok/svelte':
-        specifier: ^4.0.11
-        version: 4.0.11(svelte@5.28.2)
+        specifier: ^5.0.2
+        version: 5.0.2(svelte@5.28.2)
       '@sveltejs/adapter-netlify':
-        specifier: ^4.4.2
-        version: 4.4.2(@sveltejs/kit@2.20.7(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))
+        specifier: ^5.0.0
+        version: 5.0.0(@sveltejs/kit@2.20.7(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))
       '@sveltejs/kit':
         specifier: ^2.20.7
         version: 2.20.7(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1))
@@ -791,27 +791,27 @@ packages:
   '@standard-schema/spec@1.0.0':
     resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
 
-  '@storyblok/js@3.2.1':
-    resolution: {integrity: sha512-oi6vynMfCrCQQYZohNLS7YT00izFaXC7VIuQmHfqJx8nu9dUUYtiStPE9b1OjxlbX+TDpzuxTGxK1lhfFbBRyw==}
+  '@storyblok/js@3.4.0':
+    resolution: {integrity: sha512-naOamqsJREFPgM8bTVg3ycc78NBPSkDhnQMf/3G4w8qD1qN5yhInI3q2OEr0gPp3+NT8FyfLB78sOyHdNnwvsA==}
 
   '@storyblok/region-helper@1.1.0':
     resolution: {integrity: sha512-2NU/GHeaS9vFtkZJk/mNH6E5HvrV3vT3AN/Wrl44L3lwLIfcK4E0orjgCi7gvl0N3Ul5E+y6vJAVjD3bmjSZVg==}
 
-  '@storyblok/richtext@3.0.2':
-    resolution: {integrity: sha512-KBLx9ycNVMyVnNyPiwBH5g9uWmiJpMzp9YvpnnADXlPLoksusrwI56BusSM8HaIgJgcnB5RR0LvhySkPFdC8Zg==}
+  '@storyblok/richtext@3.2.0':
+    resolution: {integrity: sha512-koVGDv1HtiI5vymE5fzRB1VO1PNguj+RSfHI4zCy2+90pRoqZbsUCR8V2TaNl7Pg8R1oOkFZnbAxdt9Z4xoxDg==}
 
-  '@storyblok/svelte@4.0.11':
-    resolution: {integrity: sha512-xYfJWv+W3txMyjYAESG50pHqd8LPxRH807JrTFdJr07ULGNkCOlFmGqvNMldHkAZ92aCqQxqxkTYmGcRTkuXYQ==}
+  '@storyblok/svelte@5.0.2':
+    resolution: {integrity: sha512-lDr/Lq611jnkS7sXOlAbdwDyTyB+UkxtfpQoNOT2YUQZoBY2pgrZ4/l7Csd5qT5t28wxFIbNUJjKHA4K8NasXQ==}
     peerDependencies:
-      svelte: ^3.0.0 || ^4.0.0
+      svelte: ^5.0.0
 
   '@sveltejs/acorn-typescript@1.0.5':
     resolution: {integrity: sha512-IwQk4yfwLdibDlrXVE04jTZYlLnwsTT2PIOQQGNLWfjavGifnk1JD1LcZjZaBTRcxZu2FfPfNLOE04DSu9lqtQ==}
     peerDependencies:
       acorn: ^8.9.0
 
-  '@sveltejs/adapter-netlify@4.4.2':
-    resolution: {integrity: sha512-APMX6rrRNnYJTexn1NttHwBOUmcWIc8hMb8bNjJeIa8tfvlPo68DZOYGCfi80yfH9AfEc27g3cwIrV9C9kZKMQ==}
+  '@sveltejs/adapter-netlify@5.0.0':
+    resolution: {integrity: sha512-if2JvVHuQWRG9V2A3P8CrbB+qo0qLFvpIu2Nb/sbMqoejDL+4kuzT4WPA7dUgruAF0Hj/AAGpxaJedgNd6ZENw==}
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
@@ -2355,11 +2355,11 @@ packages:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
 
+  storyblok-js-client@6.10.11:
+    resolution: {integrity: sha512-4FuGbQ93X7Ok1hvTRvMy/p4bfX/3C+Uw/m7Mv+wGZyX22IGdCe01qdwgD3CP1F9l5C0lEFCsWxc2PloiM9NutA==}
+
   storyblok-js-client@6.10.3:
     resolution: {integrity: sha512-q6YK/f+F8PAJLsKR7jzlTRO9yIUXWLON2Fy02QjywYaSYwyS9ETzIuOtmCSstLrDAP5I+Vnw9PzEU30roxS15g==}
-
-  storyblok-js-client@6.10.6:
-    resolution: {integrity: sha512-4n/n6tkLu3kmZwb2aSZgwqGta8DodbQbGjuclWY+A6xsmrVWrRBytUs+5lvJVTGkshLflVPhufeO4j/1zvVSPQ==}
 
   storyblok@3.36.0:
     resolution: {integrity: sha512-tXorWLx6IcrYhG86GfIjZfNwLMvn3wjmvK4I0c6rVkUfQr206a0QCc7T9qoUxzHknjViOO/Id24YrrDa6kw0tg==}
@@ -3160,25 +3160,25 @@ snapshots:
   '@standard-schema/spec@1.0.0':
     optional: true
 
-  '@storyblok/js@3.2.1':
+  '@storyblok/js@3.4.0':
     dependencies:
-      '@storyblok/richtext': 3.0.2
-      storyblok-js-client: 6.10.6
+      '@storyblok/richtext': 3.2.0
+      storyblok-js-client: 6.10.11
 
   '@storyblok/region-helper@1.1.0': {}
 
-  '@storyblok/richtext@3.0.2': {}
+  '@storyblok/richtext@3.2.0': {}
 
-  '@storyblok/svelte@4.0.11(svelte@5.28.2)':
+  '@storyblok/svelte@5.0.2(svelte@5.28.2)':
     dependencies:
-      '@storyblok/js': 3.2.1
+      '@storyblok/js': 3.4.0
       svelte: 5.28.2
 
   '@sveltejs/acorn-typescript@1.0.5(acorn@8.14.1)':
     dependencies:
       acorn: 8.14.1
 
-  '@sveltejs/adapter-netlify@4.4.2(@sveltejs/kit@2.20.7(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))':
+  '@sveltejs/adapter-netlify@5.0.0(@sveltejs/kit@2.20.7(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))':
     dependencies:
       '@iarna/toml': 2.2.5
       '@sveltejs/kit': 2.20.7(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1)))(svelte@5.28.2)(vite@6.3.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.6.1))
@@ -4734,9 +4734,9 @@ snapshots:
   source-map@0.6.1:
     optional: true
 
-  storyblok-js-client@6.10.3: {}
+  storyblok-js-client@6.10.11: {}
 
-  storyblok-js-client@6.10.6: {}
+  storyblok-js-client@6.10.3: {}
 
   storyblok@3.36.0:
     dependencies:

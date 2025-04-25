@@ -16,8 +16,8 @@
     },
     "devDependencies": {
         "@eslint/compat": "^1.2.8",
-        "@storyblok/svelte": "^4.0.11",
-        "@sveltejs/adapter-netlify": "^4.4.2",
+        "@storyblok/svelte": "^5.0.2",
+        "@sveltejs/adapter-netlify": "^5.0.0",
         "@sveltejs/kit": "^2.20.7",
         "@sveltejs/vite-plugin-svelte": "^5.0.3",
         "@tailwindcss/vite": "^4.1.4",
