@@ -48,11 +48,15 @@
         <GigLine label="Wann">{dateFormatted}</GigLine>
         <GigLine label="Wo">
             <div>
-                {#each placeList as placeItem, i (i)}
-                    <span class="sm:last:after:content-[] block sm:inline sm:after:content-[',_']">
-                        {placeItem}
-                    </span>
-                {/each}
+                {#if placeList.length === 1}
+                    {placeList[0]}
+                {:else}
+                    {#each placeList as placeItem, i (i)}
+                        <span class="sm:last:after:content-[] block sm:inline sm:after:content-[',_']">
+                            {placeItem}
+                        </span>
+                    {/each}
+                {/if}
             </div>
         </GigLine>
         {#if price}
