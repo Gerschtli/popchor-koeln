@@ -25,7 +25,7 @@
 <div
     class="
         border-accent focus-within:border-accent-dark hover:border-accent-dark border-l-2
-        py-1 pl-2 focus-within:outline focus-within:outline-2 focus-within:outline-offset-2
+        py-1 pl-2 focus-within:outline-2 focus-within:outline-offset-2
         focus-within:outline-slate-500
     "
 >
@@ -77,7 +77,7 @@
                     class="
                         bg-accent hover:bg-accent-dark flex gap-2 rounded-md px-4 py-2 text-center text-sm
                         font-semibold text-white shadow-sm transition-colors duration-100
-                        ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                        ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2
                         focus-visible:outline-slate-500
                     "
                     on:click={(e) => e.stopPropagation()}
