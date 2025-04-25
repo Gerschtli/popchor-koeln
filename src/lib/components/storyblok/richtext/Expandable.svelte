@@ -13,7 +13,7 @@
 {:else}
     <div class="flex justify-end">
         <button
-            class="flex text-sm text-accent hover:text-accent-dark focus:text-accent-dark"
+            class="text-accent hover:text-accent-dark focus:text-accent-dark flex text-sm"
             on:click={() => (isExpanded = true)}
         >
             {blok.expandButtonText}

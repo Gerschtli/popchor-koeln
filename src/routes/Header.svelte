@@ -14,17 +14,17 @@
 </script>
 
 <header>
-    <div class="container relative mx-auto flex justify-center pt-8">
+    <div class="relative container mx-auto flex justify-center pt-8">
         <h1>
             <a href="/" class="relative">
-                <LogoSmallPopchorSvg class="h-36 xs:h-48" />
+                <LogoSmallPopchorSvg class="xs:h-48 h-36" />
                 <div class="sr-only">popCHORköln</div>
             </a>
         </h1>
 
         <button
             aria-label="Menü öffnen"
-            class="absolute right-6 top-6 p-2 text-accent focus-within:text-accent-dark hover:text-accent-dark"
+            class="text-accent focus-within:text-accent-dark hover:text-accent-dark absolute top-6 right-6 p-2"
             on:click={openNavigation}
         >
             <Menu size={32} />

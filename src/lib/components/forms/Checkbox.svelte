@@ -18,13 +18,12 @@
 <label class="flex items-center gap-4">
     <input
         type="checkbox"
-        hidden
         {name}
         bind:checked={$checked}
         class="
-            inline-flex w-8 flex-none cursor-pointer appearance-none rounded-full bg-slate-200 p-px transition-colors duration-100 ease-in-out
-            before:h-4 before:w-4 before:translate-x-0 before:rounded-full before:bg-white before:transition before:duration-100 before:ease-in-out
-            checked:bg-accent checked:before:translate-x-3.5
+            checked:bg-accent inline-flex w-8 flex-none cursor-pointer appearance-none rounded-full bg-slate-200 p-px transition-colors duration-100
+            ease-in-out before:h-4 before:w-4 before:translate-x-0 before:rounded-full before:bg-white before:transition before:duration-100
+            before:ease-in-out checked:before:translate-x-3.5
             focus-within:outline-slate-500 focus-visible:outline-offset-4
         "
         class:ring-1={$errors}

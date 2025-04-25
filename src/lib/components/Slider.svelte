@@ -45,7 +45,7 @@
     <div class="relative">
         {#if hasPrev}
             <button
-                class="absolute -left-8 top-1/2 -translate-y-1/2 py-2 text-neutral-600 hover:text-neutral-900 focus:text-neutral-900"
+                class="absolute top-1/2 -left-8 -translate-y-1/2 py-2 text-neutral-600 hover:text-neutral-900 focus:text-neutral-900"
                 aria-label={labelPrevious}
                 title={labelPrevious}
                 on:click={showPrev}
@@ -56,7 +56,7 @@
 
         {#if hasNext}
             <button
-                class="absolute -right-8 top-1/2 -translate-y-1/2 py-2 text-neutral-600 hover:text-neutral-900 focus:text-neutral-900"
+                class="absolute top-1/2 -right-8 -translate-y-1/2 py-2 text-neutral-600 hover:text-neutral-900 focus:text-neutral-900"
                 aria-label={labelNext}
                 title={labelNext}
                 on:click={showNext}
@@ -71,7 +71,7 @@
             on:scrollend={setCurrentIndex}
         >
             {#each items as item, i (i)}
-                <div class="grid aspect-video w-full flex-shrink-0 snap-center content-center">
+                <div class="grid aspect-video w-full shrink-0 snap-center content-center">
                     <slot {item} />
                 </div>
             {/each}
@@ -80,7 +80,7 @@
 
     <div class="grid place-content-center p-2">
         <p>
-            <span class="text-lg text-accent">{currentIndex + 1}</span>
+            <span class="text-accent text-lg">{currentIndex + 1}</span>
             <small class="align-middle text-sm">/ {items.length}</small>
         </p>
     </div>

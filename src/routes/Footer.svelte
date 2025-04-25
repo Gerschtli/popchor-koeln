@@ -6,7 +6,7 @@
 
 <footer class="border-t border-slate-500">
     <div class="container mx-auto flex flex-col items-center justify-center gap-y-4 p-4 sm:flex-row sm:px-12 lg:px-20">
-        <div class="flex justify-center gap-2 xs:gap-4">
+        <div class="xs:gap-4 flex justify-center gap-2">
             <SocialLink label="Facebook" link="https://www.facebook.com/popchorkoeln/" icon={Facebook} />
             <SocialLink label="Email" link="mailto:hallo@popchor-koeln.de" icon={Mail} />
             <SocialLink label="Youtube" link="https://www.youtube.com/@popchorkoeln" icon={Youtube} />

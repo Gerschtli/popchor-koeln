@@ -1,6 +1,6 @@
 <script lang="ts">
     import { initNavigationModal } from '$lib/modal';
-    import '../app.postcss';
+    import '../app.css';
     import Footer from './Footer.svelte';
     import GigPopup from './GigPopup.svelte';
     import Header from './Header.svelte';

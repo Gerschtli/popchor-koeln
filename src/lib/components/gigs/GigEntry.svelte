@@ -24,17 +24,17 @@
 
 <div
     class="
-        border-l-2 border-accent py-1 pl-2
-        focus-within:border-accent-dark focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-slate-500
-        hover:border-accent-dark
+        border-accent focus-within:border-accent-dark hover:border-accent-dark border-l-2
+        py-1 pl-2 focus-within:outline focus-within:outline-2 focus-within:outline-offset-2
+        focus-within:outline-slate-500
     "
 >
-    <button on:click={toggle} class="text-left focus:outline-none">
-        <h3 class="flex items-start font-heading font-bold" class:mb-2={expanded}>
+    <button on:click={toggle} class="text-left focus:outline-hidden">
+        <h3 class="font-heading flex items-start font-bold" class:mb-2={expanded}>
             {#if expanded}
-                <ChevronDown class="-ml-1 inline-block flex-shrink-0" size={20} />
+                <ChevronDown class="-ml-1 inline-block shrink-0" size={20} />
             {:else}
-                <ChevronRight class="-ml-1 inline-block flex-shrink-0" size={20} />
+                <ChevronRight class="-ml-1 inline-block shrink-0" size={20} />
             {/if}
             {title}
         </h3>
@@ -49,7 +49,7 @@
         <GigLine label="Wo">
             <div>
                 {#each placeList as placeItem, i (i)}
-                    <span class="block sm:inline sm:after:content-[',_'] sm:last:after:content-[]">{placeItem}</span>
+                    <span class="sm:last:after:content-[] block sm:inline sm:after:content-[',_']">{placeItem}</span>
                 {/each}
             </div>
         </GigLine>
@@ -69,9 +69,9 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="
-                        flex gap-2 rounded-md bg-accent px-4 py-2 text-center text-sm font-semibold
-                        text-white shadow-sm transition-colors duration-100 ease-in-out
-                        hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                        bg-accent hover:bg-accent-dark flex gap-2 rounded-md px-4 py-2 text-center text-sm
+                        font-semibold text-white shadow-sm transition-colors duration-100
+                        ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
                         focus-visible:outline-slate-500
                     "
                     on:click={(e) => e.stopPropagation()}

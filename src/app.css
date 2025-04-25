@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-sans: Avenir, Arial;
+    --font-heading: AvenirBook, Arial;
+
+    --breakpoint-xs: 480px;
+
+    --color-accent: #d57e56;
+    --color-accent-dark: #ab542b;
+}
+
+@layer base {
+    @font-face {
+        font-family: Avenir;
+        src: url('/fonts/AvenirLTStd-Roman.otf') format('opentype');
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: AvenirBook;
+        src: url('/fonts/AvenirLTStd-Book.otf') format('opentype');
+        font-display: swap;
+    }
+
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+@utility container {
+    max-width: 100%;
+
+    @media (min-width: theme(--breakpoint-sm)) {
+        max-width: var(--breakpoint-sm);
+    }
+
+    @media (min-width: theme(--breakpoint-md)) {
+        max-width: var(--breakpoint-md);
+    }
+}
+
+@utility prose {
+    @apply space-y-4;
+
+    & h3 {
+        @apply font-heading pt-2 text-2xl;
+    }
+
+    & h4 {
+        @apply font-heading pt-1 text-xl;
+    }
+
+    & p {
+        @apply text-neutral-600;
+    }
+
+    & ul {
+        @apply list-disc text-neutral-600;
+    }
+
+    & ol {
+        @apply list-decimal text-neutral-600;
+    }
+
+    & li {
+        @apply ml-4;
+    }
+
+    & a {
+        @apply text-blue-500;
+    }
+
+    & a:is(:hover, :focus) {
+        @apply text-blue-700;
+    }
+}
+
+@utility scrollbar-none {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

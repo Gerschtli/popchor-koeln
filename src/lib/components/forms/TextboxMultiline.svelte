@@ -15,14 +15,14 @@
 </script>
 
 <label class="block space-y-1">
-    <span class="text-xs font-bold uppercase tracking-wider text-neutral-600">{label}:</span>
+    <span class="text-xs font-bold tracking-wider text-neutral-600 uppercase">{label}:</span>
     <textarea
         {name}
         aria-invalid={$errors ? 'true' : undefined}
         bind:value={$value}
         {...$constraints}
         class="
-            block w-full rounded-md border border-transparent bg-slate-100 px-3 py-2 outline-none
+            block w-full rounded-md border border-transparent bg-slate-100 px-3 py-2 outline-hidden
             focus:border-slate-500 focus:bg-white {$$props.class}
         "
         class:border-red-600={$errors}

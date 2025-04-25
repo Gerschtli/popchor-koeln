@@ -34,7 +34,7 @@
 {#if !closed && mounted}
     <div
         transition:fade
-        class="fixed bottom-2 left-2 right-2 z-20 flex flex-col items-center bg-white/75 p-1 text-neutral-600 shadow-lg shadow-neutral-400 sm:left-auto sm:max-w-lg"
+        class="fixed right-2 bottom-2 left-2 z-20 flex flex-col items-center bg-white/75 p-1 text-neutral-600 shadow-lg shadow-neutral-400 sm:left-auto sm:max-w-lg"
     >
         <button aria-label="Popup schließen" class="self-end" on:click={close}>
             <X class="hover:text-slate-500" size={32} />
