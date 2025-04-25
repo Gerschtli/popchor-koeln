@@ -20,7 +20,7 @@
 
     function openGallery(e: Event) {
         bp.open({
-            onClose(container, activeItem) {
+            onClose(_container, activeItem) {
                 currentIndex = activeItem?.i;
             },
             items: container.querySelectorAll('a'),
@@ -52,7 +52,7 @@
             <picture>
                 <source
                     media="(max-width: 639px)"
-                    srcset="{image.image.filename}/m/558x0/filters:no_upscale():format(webp) 1x, 
+                    srcset="{image.image.filename}/m/558x0/filters:no_upscale():format(webp) 1x,
                         {image.image.filename}/m/1116x0/filters:no_upscale():format(webp) 2x"
                     type="image/webp"
                 />
@@ -71,7 +71,7 @@
 
                 <source
                     media="(max-width: 639px)"
-                    srcset="{image.image.filename}/m/558x0/filters:no_upscale():format(png) 1x, 
+                    srcset="{image.image.filename}/m/558x0/filters:no_upscale():format(png) 1x,
                         {image.image.filename}/m/1116x0/filters:no_upscale():format(png) 2x"
                     type="image/png"
                 />

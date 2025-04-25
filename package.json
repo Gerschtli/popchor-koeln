@@ -15,6 +15,7 @@
         "storyblok:push-components": "pnpx storyblok push-components --space 227856 components.227856.json"
     },
     "devDependencies": {
+        "@eslint/compat": "^1.2.8",
         "@storyblok/svelte": "^4.0.11",
         "@sveltejs/adapter-netlify": "^4.4.2",
         "@sveltejs/kit": "^2.20.7",
