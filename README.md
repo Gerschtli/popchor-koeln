@@ -13,30 +13,12 @@ pnpm run dev
 pnpm run dev -- --open
 ```
 
-**Note:** pnpm with v8 and nodejs with v21 need to be installed.
+**Note:** pnpm with v8 and nodejs with v20 need to be installed.
 
 ### Storyblok
 
-For easier development, create `static/editor.html` with the following content:
-
-```html
-<!doctype html>
-<html>
-    <head>
-        <title>Storyblok Admin</title>
-    </head>
-    <body>
-        <div id="app"></div>
-        <script type="text/javascript">
-            STORYBLOK_PREVIEW_URL = 'http://localhost:5173/';
-        </script>
-        <script src="https://app.storyblok.com/f/app-latest.js" type="text/javascript"></script>
-    </body>
-</html>
-```
-
-When the dev server is running (`pnpm run dev`), open <http://localhost:5173/editor.html> and log in with the usual
-credentials.
+Start the dev server with `pnpm run dev` and log into [Storyblok](https://app.storyblok.com/). Make sure to select the
+Dev Preview in the visual editor.
 
 To pull the component configuration into this project (this automatically regenerates the typescript type definitions):
 
