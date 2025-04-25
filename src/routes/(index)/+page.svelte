@@ -8,7 +8,7 @@
     export let data;
 </script>
 
-<StoryblokInit story={data.storyHome} />
+<StoryblokInit story={data.storyHome} visualEditor={data.storyblokVisualEditor} />
 
 <Section {...contact}>
     <NewsletterForm {data} />

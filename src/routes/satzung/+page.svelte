@@ -4,4 +4,4 @@
     export let data;
 </script>
 
-<StoryblokInit story={data.story} />
+<StoryblokInit story={data.story} visualEditor={data.storyblokVisualEditor} />
