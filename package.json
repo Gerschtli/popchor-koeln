@@ -51,7 +51,6 @@
         "typescript-eslint": "^8.26.1",
         "vite": "^6.2.2",
         "vite-imagetools": "^7.0.5",
-        "vite-plugin-svelte:^3": "link:@sveltejs/vite-plugin-svelte:^3",
         "zod": "^3.24.2"
     },
     "type": "module"
