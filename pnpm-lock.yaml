@@ -63,8 +63,8 @@ importers:
         specifier: ^0.525.0
         version: 0.525.0(svelte@5.34.9)
       nodemailer:
-        specifier: ^6.10.1
-        version: 6.10.1
+        specifier: ^7.0.0
+        version: 7.0.4
       prettier:
         specifier: ^3.5.3
         version: 3.6.2
@@ -1919,8 +1919,8 @@ packages:
   next-tick@1.1.0:
     resolution: {integrity: sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==}
 
-  nodemailer@6.10.1:
-    resolution: {integrity: sha512-Z+iLaBGVaSjbIzQ4pX6XV41HrooLsQ10ZWPUehGmuantvzWoDVBnmsdUcOIDM1t+yPor5pDhVlDESgOMEGxhHA==}
+  nodemailer@7.0.4:
+    resolution: {integrity: sha512-9O00Vh89/Ld2EcVCqJ/etd7u20UhME0f/NToPfArwPEe1Don1zy4mAIz6ariRr7mJ2RDxtaDzN0WJVdVXPtZaw==}
     engines: {node: '>=6.0.0'}
 
   normalize-url@4.5.1:
@@ -4315,7 +4315,7 @@ snapshots:
 
   next-tick@1.1.0: {}
 
-  nodemailer@6.10.1: {}
+  nodemailer@7.0.4: {}
 
   normalize-url@4.5.1: {}
 
