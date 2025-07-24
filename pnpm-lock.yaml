@@ -22,16 +22,16 @@ importers:
         version: 5.1.2(svelte@5.35.2)
       '@sveltejs/adapter-netlify':
         specifier: ^5.0.0
-        version: 5.0.2(@sveltejs/kit@2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))
+        version: 5.0.2(@sveltejs/kit@2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))
       '@sveltejs/kit':
         specifier: ^2.20.7
-        version: 2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
+        version: 2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
       '@sveltejs/vite-plugin-svelte':
         specifier: ^5.0.3
-        version: 5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
+        version: 5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
       '@tailwindcss/vite':
         specifier: ^4.1.4
-        version: 4.1.11(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
+        version: 4.1.11(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
       '@types/nodemailer':
         specifier: ^6.4.17
         version: 6.4.17
@@ -43,7 +43,7 @@ importers:
         version: 8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3)
       '@vitejs/plugin-basic-ssl':
         specifier: ^2.0.0
-        version: 2.1.0(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
+        version: 2.1.0(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
       bigger-picture:
         specifier: ^1.1.16
         version: 1.1.19
@@ -82,10 +82,10 @@ importers:
         version: 5.35.2
       svelte-check:
         specifier: ^4.1.6
-        version: 4.2.2(picomatch@4.0.2)(svelte@5.35.2)(typescript@5.8.3)
+        version: 4.2.2(picomatch@4.0.3)(svelte@5.35.2)(typescript@5.8.3)
       sveltekit-superforms:
         specifier: ^2.24.1
-        version: 2.27.1(@sveltejs/kit@2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(@types/json-schema@7.0.15)(esbuild@0.25.5)(svelte@5.35.2)(typescript@5.8.3)
+        version: 2.27.1(@sveltejs/kit@2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(@types/json-schema@7.0.15)(esbuild@0.25.5)(svelte@5.35.2)(typescript@5.8.3)
       tailwind-merge:
         specifier: ^3.2.0
         version: 3.3.1
@@ -102,8 +102,8 @@ importers:
         specifier: ^8.31.0
         version: 8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3)
       vite:
-        specifier: ^6.3.3
-        version: 6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
+        specifier: ^7.0.0
+        version: 7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
       vite-imagetools:
         specifier: ^7.0.5
         version: 7.1.0(rollup@4.41.1)
@@ -1346,14 +1346,6 @@ packages:
   fastq@1.19.1:
     resolution: {integrity: sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==}
 
-  fdir@6.4.5:
-    resolution: {integrity: sha512-4BG7puHpVsIYxZUbiUE3RqGloLaSSwzYie5jvasC4LWuBWzZawynvYouhjbQKw2JuIGYdm0DzIxl8iVidKlUEw==}
-    peerDependencies:
-      picomatch: ^3 || ^4
-    peerDependenciesMeta:
-      picomatch:
-        optional: true
-
   fdir@6.4.6:
     resolution: {integrity: sha512-hiFoqpyZcfNm1yc4u8oWCf9A2c4D3QjCrks3zmoVKVxpQRzmPNar1hUJcBG2RQHvEVGDN+Jm81ZheVLAQMK6+w==}
     peerDependencies:
@@ -1744,6 +1736,10 @@ packages:
     resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
     engines: {node: '>=12'}
 
+  picomatch@4.0.3:
+    resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
+    engines: {node: '>=12'}
+
   postcss-load-config@3.1.4:
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
     engines: {node: '>= 10'}
@@ -1771,10 +1767,6 @@ packages:
   postcss-selector-parser@7.1.0:
     resolution: {integrity: sha512-8sLjZwK0R+JlxlYcTuVnyT2v+htpdrjDOKuMcOVdYjt52Lh8hWRYpxBPoKx/Zg+bcjc3wx6fmQevMmUztS/ccA==}
     engines: {node: '>=4'}
-
-  postcss@8.5.4:
-    resolution: {integrity: sha512-QSa9EBe+uwlGTFmHsPKokv3B/oEMQZxfqW0QqNCyhpa6mB1afzulwn8hihglqAb2pOw+BJgNlmXQ8la2VeHB7w==}
-    engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.6:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
@@ -2143,19 +2135,19 @@ packages:
     resolution: {integrity: sha512-Mqh1uUY2DEMuBOogFz5Rd7cAs70VP6wsdQh2IShrJ+qGk5f7yQa4pN8w0YMLlGIKYW1JfM8oXrznUwVkhG+qxg==}
     engines: {node: '>=18.0.0'}
 
-  vite@6.3.5:
-    resolution: {integrity: sha512-cZn6NDFE7wdTpINgs++ZJ4N49W2vRp8LCKrn3Ob1kYNtOo21vfDoaV5GzBfLU4MovSAB8uNRm4jgzVQZ+mBzPQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
+  vite@7.0.6:
+    resolution: {integrity: sha512-MHFiOENNBd+Bd9uvc8GEsIzdkn1JxMmEeYX35tI3fv0sJBUTfW5tQsoaOwuY4KhBI09A3dUJ/DXf2yxPVPUceg==}
+    engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
-      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
+      '@types/node': ^20.19.0 || >=22.12.0
       jiti: '>=1.21.0'
-      less: '*'
+      less: ^4.0.0
       lightningcss: ^1.21.0
-      sass: '*'
-      sass-embedded: '*'
-      stylus: '*'
-      sugarss: '*'
+      sass: ^1.70.0
+      sass-embedded: ^1.70.0
+      stylus: '>=0.54.8'
+      sugarss: ^5.0.0
       terser: ^5.16.0
       tsx: ^4.8.1
       yaml: ^2.4.2
@@ -2788,17 +2780,17 @@ snapshots:
     dependencies:
       acorn: 8.15.0
 
-  '@sveltejs/adapter-netlify@5.0.2(@sveltejs/kit@2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))':
+  '@sveltejs/adapter-netlify@5.0.2(@sveltejs/kit@2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))':
     dependencies:
       '@iarna/toml': 2.2.5
-      '@sveltejs/kit': 2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
+      '@sveltejs/kit': 2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
       esbuild: 0.25.5
       set-cookie-parser: 2.7.1
 
-  '@sveltejs/kit@2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))':
+  '@sveltejs/kit@2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))':
     dependencies:
       '@sveltejs/acorn-typescript': 1.0.5(acorn@8.15.0)
-      '@sveltejs/vite-plugin-svelte': 5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
+      '@sveltejs/vite-plugin-svelte': 5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
       '@types/cookie': 0.6.0
       acorn: 8.15.0
       cookie: 0.6.0
@@ -2811,28 +2803,28 @@ snapshots:
       set-cookie-parser: 2.7.1
       sirv: 3.0.1
       svelte: 5.35.2
-      vite: 6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
-      vitefu: 1.0.7(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
+      vite: 7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
+      vitefu: 1.0.7(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
 
-  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))':
+  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
+      '@sveltejs/vite-plugin-svelte': 5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
       debug: 4.4.1
       svelte: 5.35.2
-      vite: 6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
+      vite: 7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))':
+  '@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
+      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
       debug: 4.4.1
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.17
       svelte: 5.35.2
-      vite: 6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
-      vitefu: 1.0.7(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
+      vite: 7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
+      vitefu: 1.0.7(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
     transitivePeerDependencies:
       - supports-color
 
@@ -2900,12 +2892,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.11
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.11
 
-  '@tailwindcss/vite@4.1.11(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))':
+  '@tailwindcss/vite@4.1.11(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))':
     dependencies:
       '@tailwindcss/node': 4.1.11
       '@tailwindcss/oxide': 4.1.11
       tailwindcss: 4.1.11
-      vite: 6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
+      vite: 7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
 
   '@topcli/spinner@2.1.2':
     dependencies:
@@ -3067,9 +3059,9 @@ snapshots:
       validator: 13.15.15
     optional: true
 
-  '@vitejs/plugin-basic-ssl@2.1.0(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))':
+  '@vitejs/plugin-basic-ssl@2.1.0(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))':
     dependencies:
-      vite: 6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
+      vite: 7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -3393,13 +3385,9 @@ snapshots:
     dependencies:
       reusify: 1.1.0
 
-  fdir@6.4.5(picomatch@4.0.2):
+  fdir@6.4.6(picomatch@4.0.3):
     optionalDependencies:
-      picomatch: 4.0.2
-
-  fdir@6.4.6(picomatch@4.0.2):
-    optionalDependencies:
-      picomatch: 4.0.2
+      picomatch: 4.0.3
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -3712,6 +3700,8 @@ snapshots:
 
   picomatch@4.0.2: {}
 
+  picomatch@4.0.3: {}
+
   postcss-load-config@3.1.4(postcss@8.5.6):
     dependencies:
       lilconfig: 2.1.0
@@ -3731,12 +3721,6 @@ snapshots:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
-
-  postcss@8.5.4:
-    dependencies:
-      nanoid: 3.3.11
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
 
   postcss@8.5.6:
     dependencies:
@@ -3949,11 +3933,11 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  svelte-check@4.2.2(picomatch@4.0.2)(svelte@5.35.2)(typescript@5.8.3):
+  svelte-check@4.2.2(picomatch@4.0.3)(svelte@5.35.2)(typescript@5.8.3):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.28
       chokidar: 4.0.3
-      fdir: 6.4.6(picomatch@4.0.2)
+      fdir: 6.4.6(picomatch@4.0.3)
       picocolors: 1.1.1
       sade: 1.8.1
       svelte: 5.35.2
@@ -3989,9 +3973,9 @@ snapshots:
       magic-string: 0.30.17
       zimmerframe: 1.1.2
 
-  sveltekit-superforms@2.27.1(@sveltejs/kit@2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(@types/json-schema@7.0.15)(esbuild@0.25.5)(svelte@5.35.2)(typescript@5.8.3):
+  sveltekit-superforms@2.27.1(@sveltejs/kit@2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(@types/json-schema@7.0.15)(esbuild@0.25.5)(svelte@5.35.2)(typescript@5.8.3):
     dependencies:
-      '@sveltejs/kit': 2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
+      '@sveltejs/kit': 2.22.2(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)))(svelte@5.35.2)(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1))
       devalue: 5.1.1
       memoize-weak: 1.0.2
       svelte: 5.35.2
@@ -4037,8 +4021,8 @@ snapshots:
 
   tinyglobby@0.2.14:
     dependencies:
-      fdir: 6.4.5(picomatch@4.0.2)
-      picomatch: 4.0.2
+      fdir: 6.4.6(picomatch@4.0.3)
+      picomatch: 4.0.3
 
   tmp@0.0.33:
     dependencies:
@@ -4129,12 +4113,12 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
-  vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1):
+  vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1):
     dependencies:
       esbuild: 0.25.5
-      fdir: 6.4.5(picomatch@4.0.2)
-      picomatch: 4.0.2
-      postcss: 8.5.4
+      fdir: 6.4.6(picomatch@4.0.3)
+      picomatch: 4.0.3
+      postcss: 8.5.6
       rollup: 4.41.1
       tinyglobby: 0.2.14
     optionalDependencies:
@@ -4144,9 +4128,9 @@ snapshots:
       lightningcss: 1.30.1
       yaml: 2.6.1
 
-  vitefu@1.0.7(vite@6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)):
+  vitefu@1.0.7(vite@7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)):
     optionalDependencies:
-      vite: 6.3.5(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
+      vite: 7.0.6(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.6.1)
 
   which@2.0.2:
     dependencies:
