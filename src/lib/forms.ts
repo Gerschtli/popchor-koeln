@@ -28,7 +28,7 @@ export function superFormBuilder<T extends Record<string, unknown>>(data: SuperV
 }
 
 function buildRequiredString(message: string) {
-    return z.string({ required_error: message }).trim().min(1, { message });
+    return z.string({ error: message }).trim().min(1, { message });
 }
 
 function buildRequiredEmail(message: string) {
