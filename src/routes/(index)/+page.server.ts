@@ -11,7 +11,7 @@ import { sendMail } from '$lib/server/mail';
 import { subscribeToNewsletter } from '$lib/server/newsletter';
 import { fail } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms';
-import { zod } from 'sveltekit-superforms/adapters';
+import { zod4 } from 'sveltekit-superforms/adapters';
 
 async function handleNewsletterSubscription(newsletter: boolean, email: string) {
     if (!newsletter) {
@@ -25,8 +25,8 @@ async function handleNewsletterSubscription(newsletter: boolean, email: string) 
 
 export async function load() {
     const [formContact, formNewsletter] = await Promise.all([
-        superValidate(zod(schemaContact)),
-        superValidate(zod(schemaNewsletter)),
+        superValidate(zod4(schemaContact)),
+        superValidate(zod4(schemaNewsletter)),
     ]);
 
     return { formContact, formNewsletter };
@@ -34,7 +34,7 @@ export async function load() {
 
 export const actions = {
     async contact({ request }) {
-        const formContact = await superValidate(request, zod(schemaContact));
+        const formContact = await superValidate(request, zod4(schemaContact));
 
         if (!formContact.valid) {
             return fail(400, { formContact });
@@ -65,7 +65,7 @@ export const actions = {
     },
 
     async newsletter({ request }) {
-        const formNewsletter = await superValidate(request, zod(schemaNewsletter));
+        const formNewsletter = await superValidate(request, zod4(schemaNewsletter));
 
         if (!formNewsletter.valid) {
             return fail(400, { formNewsletter });
