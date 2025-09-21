@@ -6,7 +6,7 @@ import {
     CONTACT_FORM_SENDER_MAIL,
     CONTACT_FORM_SENDER_NAME,
 } from '$env/static/private';
-import { schemaContact, schemaNewsletter } from '$lib/forms.js';
+import { schemaContact, schemaNewsletter } from '$lib/forms';
 import { sendMail } from '$lib/server/mail';
 import { subscribeToNewsletter } from '$lib/server/newsletter';
 import { fail } from '@sveltejs/kit';

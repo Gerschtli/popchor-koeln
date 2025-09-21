@@ -44,5 +44,5 @@ export const schemaContact = z.object({
 });
 export const schemaNewsletter = z.object({
     email: buildRequiredEmail('Bitte trage deine Email Adresse ein.'),
-    acceptTerms: z.literal(true),
+    acceptTerms: z.literal(true).default(false as unknown as true),
 });
