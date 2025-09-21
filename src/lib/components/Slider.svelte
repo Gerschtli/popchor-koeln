@@ -29,6 +29,7 @@
 
     function setCurrentIndex() {
         for (let i = 0; i < sliderElement.children.length; i++) {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             const ele = sliderElement.children.item(i)!;
             if (Math.abs(ele.getBoundingClientRect().left - sliderElement.getBoundingClientRect().left) < 10) {
                 currentIndex = i;

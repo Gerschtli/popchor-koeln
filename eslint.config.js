@@ -8,13 +8,17 @@ import ts from 'typescript-eslint';
 
 const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url));
 
-export default ts.config(
+/** @type {import('eslint').Linter.Config[]} */
+export default [
     includeIgnoreFile(gitignorePath),
     js.configs.recommended,
+    ...ts.configs.strict,
     ...ts.configs.recommended,
-    ...svelte.configs['flat/recommended'],
+    ...ts.configs.stylistic,
+    ...svelte.configs.recommended,
     prettier,
-    ...svelte.configs['flat/prettier'],
+    ...svelte.configs.prettier,
+
     {
         languageOptions: {
             globals: {
@@ -49,6 +53,11 @@ export default ts.config(
         },
     },
     {
+        rules: {
+            '@typescript-eslint/consistent-type-definitions': 'off',
+        },
+    },
+    {
         ignores: ['src/lib/component-types-storyblok.d.ts'],
     },
-);
+];
