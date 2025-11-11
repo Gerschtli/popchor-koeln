@@ -11,6 +11,8 @@ function getStorySlug(slug: string) {
             return 'satzung';
         case 'termine':
             return 'gigs';
+        case 'videos':
+            return 'videos';
         default:
             error(404);
     }
