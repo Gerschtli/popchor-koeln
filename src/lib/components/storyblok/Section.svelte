@@ -12,7 +12,7 @@
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function groupByYear(list: any[], showOnlyFuture: boolean | undefined) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        return list.reduce<Map<number, any[]>>((agg, current) => {
+        const grouped = list.reduce<Map<number, any[]>>((agg, current) => {
             const date = parseDateAsUtc(current.date);
 
             if (showOnlyFuture && parseDateAsUtc(current.date) < now) {
@@ -28,6 +28,13 @@
 
             return agg;
         }, new Map());
+
+        if (!showOnlyFuture) {
+            const reversed = new Map([...grouped.entries()].sort((a, b) => b[0] - a[0]));
+            return reversed;
+        }
+
+        return grouped;
     }
 </script>
 
