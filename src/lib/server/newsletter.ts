@@ -1,6 +1,12 @@
 import { BREVO_API_KEY, BREVO_LIST_ID, BREVO_MOCK } from '$env/static/private';
 
-async function apiPost(url: string, body: Record<string, any>) {
+type BrevoContactBody = {
+    email: string;
+    listIds: number[];
+    updateEnabled?: boolean;
+};
+
+async function apiPost(url: string, body: BrevoContactBody) {
     const response = await fetch(`https://api.brevo.com/v3${url}`, {
         headers: {
             Accept: 'application/json',
