@@ -1,13 +1,13 @@
-import { MAILCHIMP_API_KEY, MAILCHIMP_AUDIENCE_ID, MAILCHIMP_MOCK, MAILCHIMP_SERVER_PREFIX } from '$env/static/private';
+import { BREVO_API_KEY, BREVO_LIST_ID, BREVO_MOCK } from '$env/static/private';
 
-async function apiPut(url: string, body: Record<string, string>) {
-    const response = await fetch(`https://${MAILCHIMP_SERVER_PREFIX}.api.mailchimp.com/3.0${url}`, {
+async function apiPost(url: string, body: Record<string, any>) {
+    const response = await fetch(`https://api.brevo.com/v3${url}`, {
         headers: {
             Accept: 'application/json',
-            Authorization: `Bearer ${MAILCHIMP_API_KEY}`,
+            'api-key': BREVO_API_KEY,
             'Content-Type': 'application/json',
         },
-        method: 'PUT',
+        method: 'POST',
         body: JSON.stringify(body),
     });
 
@@ -17,24 +17,22 @@ async function apiPut(url: string, body: Record<string, string>) {
 }
 
 export async function subscribeToNewsletter(email: string) {
-    if (MAILCHIMP_MOCK) {
+    if (BREVO_MOCK) {
         console.info(`mocked subscription to newsletter. email=${email}`);
-
         return true;
     }
 
     try {
-        await apiPut(`/lists/${MAILCHIMP_AUDIENCE_ID}/members/${encodeURIComponent(email)}`, {
-            email_address: email,
-            status: 'subscribed',
+        await apiPost(`/contacts`, {
+            email: email,
+            listIds: [parseInt(BREVO_LIST_ID)],
+            updateEnabled: true,
         });
 
         console.info('successfully subscribed to newsletter.');
-
         return true;
     } catch (e) {
         console.error('subscribe to newsletter failed.', e);
-
         return false;
     }
 }
