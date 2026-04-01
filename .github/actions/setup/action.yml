@@ -9,7 +9,7 @@ runs:
       uses: cachix/install-nix-action@v31
 
     - name: Setup cachix
-      uses: cachix/cachix-action@v16
+      uses: cachix/cachix-action@v17
       with:
         name: gerschtli
         authToken: ${{ inputs.CACHIX_AUTH_TOKEN }}
