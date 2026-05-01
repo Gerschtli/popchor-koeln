@@ -54,8 +54,8 @@ importers:
         specifier: ^17.0.0
         version: 17.4.0
       lucide-svelte:
-        specifier: ^0.577.0
-        version: 0.577.0(svelte@5.54.1)
+        specifier: ^1.0.0
+        version: 1.0.1(svelte@5.54.1)
       nodemailer:
         specifier: ^8.0.0
         version: 8.0.3
@@ -2274,8 +2274,8 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
-  lucide-svelte@0.577.0:
-    resolution: {integrity: sha512-0i88o57KsaHWnc80J57fY99CWzlZsSdtH5kKjLUJa7z8dum/9/AbINNLzJ7NiRFUdOgMnfAmJt8jFbW2zeC5qQ==}
+  lucide-svelte@1.0.1:
+    resolution: {integrity: sha512-WvzZgk0pqzgda+AErLvgWxHkfg/+GgUwqKMRHvzt0IqyMdmyEDzDCk3Z+Wo/3y753oIgx8u9Q4eUbWkghFa8Jg==}
     peerDependencies:
       svelte: ^3 || ^4 || ^5.0.0-next.42
 
@@ -4976,7 +4976,7 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
-  lucide-svelte@0.577.0(svelte@5.54.1):
+  lucide-svelte@1.0.1(svelte@5.54.1):
     dependencies:
       svelte: 5.54.1
 
