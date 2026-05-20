@@ -3,7 +3,11 @@
     import type { StoryblokRichtext } from '$storyblok/storyblok';
     import { StoryblokComponent } from '@storyblok/svelte';
 
-    export let content: StoryblokRichtext | undefined;
+    interface Props {
+        content: StoryblokRichtext | undefined;
+    }
+
+    let { content }: Props = $props();
 </script>
 
 {#if content?.content}

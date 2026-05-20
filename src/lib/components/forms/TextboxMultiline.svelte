@@ -1,16 +1,17 @@
-<script lang="ts" context="module">
-    type T = Record<string, unknown>;
-</script>
-
 <script lang="ts" generics="T extends Record<string, unknown>">
     import type { FormPathLeaves } from 'sveltekit-superforms';
     import { formFieldProxy, type SuperForm } from 'sveltekit-superforms';
 
-    export let form: SuperForm<T>;
-    export let field: FormPathLeaves<T>;
-    export let name: string;
-    export let label: string;
+    interface Props {
+        form: SuperForm<T>;
+        field: FormPathLeaves<T>;
+        name: string;
+        label: string;
+    }
 
+    let { form, field, name, label }: Props = $props();
+
+    // svelte-ignore state_referenced_locally
     const { value, errors, constraints } = formFieldProxy(form, field);
 </script>
 

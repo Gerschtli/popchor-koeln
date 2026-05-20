@@ -3,7 +3,11 @@
     import type { Image } from '$storyblok/227856/storyblok-components';
     import type { StoryblokAsset } from '$storyblok/storyblok';
 
-    export let blok: Image;
+    interface Props {
+        blok: Image;
+    }
+
+    let { blok }: Props = $props();
 
     function getAspectRatio(asset: StoryblokAsset) {
         const dimensions = getDimensionsOfImageUrl(asset);

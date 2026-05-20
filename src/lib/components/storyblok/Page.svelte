@@ -3,7 +3,11 @@
     import type { Page } from '$storyblok/227856/storyblok-components';
     import { StoryblokComponent } from '@storyblok/svelte';
 
-    export let blok: Page;
+    interface Props {
+        blok: Page;
+    }
+
+    let { blok }: Props = $props();
 </script>
 
 <svelte:head>

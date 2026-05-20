@@ -2,7 +2,11 @@
     import { renderRichText } from '$lib/storyblok/richtext';
     import type { StoryblokRichtext } from '$storyblok/storyblok';
 
-    export let content: StoryblokRichtext | undefined;
+    interface Props {
+        content: StoryblokRichtext | undefined;
+    }
+
+    let { content }: Props = $props();
 </script>
 
 {#if content}

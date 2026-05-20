@@ -6,9 +6,14 @@
     import { superFormBuilder } from '$lib/forms';
     import type { PageData } from './$types';
 
-    export let data: PageData;
+    interface Props {
+        data: PageData;
+    }
+
+    let { data }: Props = $props();
 
     const id = 'newsletter';
+    // svelte-ignore state_referenced_locally
     const { form, status } = superFormBuilder(data.formNewsletter);
 </script>
 

@@ -4,9 +4,13 @@
     import { ChevronRight } from '@lucide/svelte';
     import RichText from './RichText.svelte';
 
-    export let blok: Expandable;
+    interface Props {
+        blok: Expandable;
+    }
 
-    let isExpanded = false;
+    let { blok }: Props = $props();
+
+    let isExpanded = $state(false);
 </script>
 
 <div use:storyblokEditable={blok}>
@@ -16,7 +20,7 @@
         <div class="flex justify-end">
             <button
                 class="text-accent hover:text-accent-dark focus:text-accent-dark flex text-sm"
-                on:click={() => (isExpanded = true)}
+                onclick={() => (isExpanded = true)}
             >
                 {blok.expandButtonText}
                 <ChevronRight class="inline" size={20} />

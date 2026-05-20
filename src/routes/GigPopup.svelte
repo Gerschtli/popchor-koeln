@@ -18,14 +18,14 @@
     import { fade } from 'svelte/transition';
     const localStorageKey = 'gigTwPckPopupClosed';
     const hideAfterDate = new Date('2025-05-17T20:00:00+0100');
-    let closed = !browser || localStorage.getItem(localStorageKey) || new Date() > hideAfterDate;
+    let closed = $state(!browser || localStorage.getItem(localStorageKey) || new Date() > hideAfterDate);
 
     function close() {
         closed = true;
         localStorage.setItem(localStorageKey, 'true');
     }
 
-    let mounted = false;
+    let mounted = $state(false);
     onMount(() => {
         mounted = true;
     });
@@ -36,7 +36,7 @@
         transition:fade
         class="fixed right-2 bottom-2 left-2 z-20 flex flex-col items-center bg-white/75 p-1 text-neutral-600 shadow-lg shadow-neutral-400 sm:left-auto sm:max-w-lg"
     >
-        <button aria-label="Popup schließen" class="self-end" on:click={close}>
+        <button aria-label="Popup schließen" class="self-end" onclick={close}>
             <X class="hover:text-slate-500" size={32} />
         </button>
         <div>

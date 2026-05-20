@@ -4,16 +4,17 @@
     import type { YoutubeVideoSlider } from '$storyblok/227856/storyblok-components';
     import YouTubeVideo from './YouTubeVideo.svelte';
 
-    export let blok: YoutubeVideoSlider;
+    interface Props {
+        blok: YoutubeVideoSlider;
+    }
+
+    let { blok }: Props = $props();
 </script>
 
 <div use:storyblokEditable={blok}>
-    <Slider
-        labelPrevious="Zu vorherigem Video wechseln"
-        labelNext="Zu nächstem Video wechseln"
-        items={blok.videos}
-        let:item
-    >
-        <YouTubeVideo blok={item} />
+    <Slider labelPrevious="Zu vorherigem Video wechseln" labelNext="Zu nächstem Video wechseln" items={blok.videos}>
+        {#snippet children({ item })}
+            <YouTubeVideo blok={item} />
+        {/snippet}
     </Slider>
 </div>

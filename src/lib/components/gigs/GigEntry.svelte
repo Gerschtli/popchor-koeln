@@ -1,25 +1,31 @@
 <script lang="ts">
     import { createDateNowMinusOneWeek, formatDate, formatTime } from '$lib/utils';
     import { ChevronDown, ChevronRight, TicketIcon } from '@lucide/svelte';
+    import type { Snippet } from 'svelte';
     import GigLine from './GigLine.svelte';
 
-    export let title: string;
-    export let date: Date;
-    export let placeShort: string;
-    export let place: string;
-    export let price: string | undefined;
-    export let entryTime: Date | undefined;
-    export let linkTickets: string | undefined;
+    interface Props {
+        title: string;
+        date: Date;
+        placeShort: string;
+        place: string;
+        price: string | undefined;
+        entryTime: Date | undefined;
+        linkTickets: string | undefined;
+        children?: Snippet;
+    }
 
-    let expanded = false;
+    let { title, date, placeShort, place, price, entryTime, linkTickets, children }: Props = $props();
+
+    let expanded = $state(false);
     function toggle() {
         expanded = !expanded;
     }
 
-    $: dateFormatted = `${formatDate(date)} um ${formatTime(date)} Uhr`;
-    $: entryTimeFormatted = entryTime ? `${formatTime(entryTime)} Uhr` : undefined;
+    let dateFormatted = $derived(`${formatDate(date)} um ${formatTime(date)} Uhr`);
+    let entryTimeFormatted = $derived(entryTime ? `${formatTime(entryTime)} Uhr` : undefined);
 
-    $: placeList = place.split(',').map((p) => p.trim());
+    let placeList = $derived(place.split(',').map((p) => p.trim()));
 </script>
 
 <div
@@ -29,7 +35,7 @@
         focus-within:outline-slate-500
     "
 >
-    <button on:click={toggle} class="text-left focus:outline-hidden">
+    <button onclick={toggle} class="text-left focus:outline-hidden">
         <h3 class="font-heading flex items-start font-bold" class:mb-2={expanded}>
             {#if expanded}
                 <ChevronDown class="-ml-1 inline-block shrink-0" size={20} />
@@ -66,7 +72,7 @@
             <GigLine label="Einlass">ab {entryTimeFormatted}</GigLine>
         {/if}
 
-        <p class="mt-2 text-sm text-neutral-600"><slot /></p>
+        <p class="mt-2 text-sm text-neutral-600">{@render children?.()}</p>
 
         {#if linkTickets && date > createDateNowMinusOneWeek()}
             <div class="mt-2 flex justify-end">
@@ -80,7 +86,7 @@
                         ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2
                         focus-visible:outline-slate-500
                     "
-                    on:click={(e) => e.stopPropagation()}
+                    onclick={(e) => e.stopPropagation()}
                 >
                     Tickets
                     <TicketIcon class="inline" size={20} />

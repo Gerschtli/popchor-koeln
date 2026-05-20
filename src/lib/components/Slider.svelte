@@ -1,19 +1,21 @@
-<script lang="ts" context="module">
-    type T = unknown;
-</script>
-
 <script lang="ts" generics="T">
     import { ChevronLeft, ChevronRight } from '@lucide/svelte';
+    import { type Snippet } from 'svelte';
 
-    export let labelPrevious: string;
-    export let labelNext: string;
-    export let items: T[];
-    export let currentIndex = 0;
+    interface Props {
+        labelPrevious: string;
+        labelNext: string;
+        items: T[];
+        currentIndex?: number;
+        children?: Snippet<[{ item: T }]>;
+    }
 
-    let sliderElement: HTMLDivElement;
+    let { labelPrevious, labelNext, items, currentIndex = $bindable(0), children }: Props = $props();
 
-    $: hasPrev = currentIndex > 0;
-    $: hasNext = currentIndex < items.length - 1;
+    let sliderElement = $state<HTMLDivElement>();
+
+    let hasPrev = $derived(currentIndex > 0);
+    let hasNext = $derived(currentIndex < items.length - 1);
 
     function showPrev() {
         if (hasPrev) {
@@ -28,6 +30,8 @@
     }
 
     function setCurrentIndex() {
+        if (!sliderElement) return;
+
         for (let i = 0; i < sliderElement.children.length; i++) {
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             const ele = sliderElement.children.item(i)!;
@@ -37,9 +41,11 @@
         }
     }
 
-    $: if (sliderElement) {
-        sliderElement.scrollLeft = (sliderElement.scrollWidth / items.length) * currentIndex;
-    }
+    $effect(() => {
+        if (sliderElement) {
+            sliderElement.scrollLeft = (sliderElement.scrollWidth / items.length) * currentIndex;
+        }
+    });
 </script>
 
 <div>
@@ -49,7 +55,7 @@
                 class="absolute top-1/2 -left-8 -translate-y-1/2 py-2 text-neutral-600 hover:text-neutral-900 focus:text-neutral-900"
                 aria-label={labelPrevious}
                 title={labelPrevious}
-                on:click={showPrev}
+                onclick={showPrev}
             >
                 <ChevronLeft size={32} />
             </button>
@@ -60,7 +66,7 @@
                 class="absolute top-1/2 -right-8 -translate-y-1/2 py-2 text-neutral-600 hover:text-neutral-900 focus:text-neutral-900"
                 aria-label={labelNext}
                 title={labelNext}
-                on:click={showNext}
+                onclick={showNext}
             >
                 <ChevronRight size={32} />
             </button>
@@ -69,11 +75,11 @@
         <div
             bind:this={sliderElement}
             class="scrollbar-none flex snap-x snap-mandatory gap-4 overflow-x-scroll scroll-smooth"
-            on:scrollend={setCurrentIndex}
+            onscrollend={setCurrentIndex}
         >
             {#each items as item, i (i)}
                 <div class="grid aspect-video w-full shrink-0 snap-center content-center">
-                    <slot {item} />
+                    {@render children?.({ item })}
                 </div>
             {/each}
         </div>

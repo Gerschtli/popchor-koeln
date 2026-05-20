@@ -2,17 +2,20 @@
     import YouTubeIcon from '$lib/assets/YouTubeIcon.svelte';
     import { storyblokEditable } from '$lib/storyblok/util';
     import type { YoutubeVideo } from '$storyblok/227856/storyblok-components';
-    import { twMerge } from 'tailwind-merge';
 
-    export let blok: YoutubeVideo;
+    interface Props {
+        blok: YoutubeVideo;
+    }
 
-    let enabled = false;
+    let { blok }: Props = $props();
+
+    let enabled = $state(false);
 </script>
 
 <div use:storyblokEditable={blok}>
     {#if enabled}
         <iframe
-            class={twMerge('aspect-video w-full', $$props.class)}
+            class="aspect-video w-full"
             src="https://www.youtube.com/embed/{blok.code}?autoplay=1"
             title={blok.title}
             frameborder="0"
@@ -20,7 +23,7 @@
             allowfullscreen
         ></iframe>
     {:else}
-        <button class={twMerge('relative block aspect-video w-full', $$props.class)} on:click={() => (enabled = true)}>
+        <button class="relative block aspect-video w-full" onclick={() => (enabled = true)}>
             <span class="absolute top-1/2 left-1/2 w-12 -translate-x-1/2 -translate-y-1/2"><YouTubeIcon /></span>
             <span class="absolute top-0 right-0 left-0 bg-black/80 px-5 py-3 text-left text-white">
                 <strong>{blok.title}</strong>

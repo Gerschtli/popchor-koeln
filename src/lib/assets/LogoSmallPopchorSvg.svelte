@@ -1,4 +1,12 @@
-<svg class={$$props.class} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 984.92 976.28">
+<script lang="ts">
+    interface Props {
+        class: string;
+    }
+
+    let { class: clazz }: Props = $props();
+</script>
+
+<svg class={clazz} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 984.92 976.28">
     <defs>
         <clipPath id="clip-path"><rect class="cls-1" x="27.05" y="43.91" width="930.81" height="930.81" /></clipPath>
     </defs>

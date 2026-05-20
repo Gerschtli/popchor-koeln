@@ -6,7 +6,11 @@
     import { ChevronRight } from '@lucide/svelte';
     import RichText from './richtext/RichText.svelte';
 
-    export let blok: Section;
+    interface Props {
+        blok: Section;
+    }
+
+    let { blok }: Props = $props();
 
     const now = new Date();
 

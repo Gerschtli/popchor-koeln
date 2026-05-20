@@ -2,8 +2,8 @@
     import { page } from '$app/stores';
     import Section from '$lib/components/Section.svelte';
 
-    $: isNotFoundError = $page.status === 404;
-    $: title = isNotFoundError ? 'Seite nicht gefunden!' : 'Unerwarteter Fehler!';
+    let isNotFoundError = $derived($page.status === 404);
+    let title = $derived(isNotFoundError ? 'Seite nicht gefunden!' : 'Unerwarteter Fehler!');
 </script>
 
 <svelte:head>

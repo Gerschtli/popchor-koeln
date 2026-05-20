@@ -2,8 +2,12 @@
     import type { FormStatus } from '$lib/types';
     import { Check, Loader2, MailWarning } from '@lucide/svelte';
 
-    export let status: FormStatus;
-    export let text: string;
+    interface Props {
+        status: FormStatus;
+        text: string;
+    }
+
+    let { status, text }: Props = $props();
 </script>
 
 <button

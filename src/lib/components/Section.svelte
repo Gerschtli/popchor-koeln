@@ -1,6 +1,13 @@
 <script lang="ts">
-    export let id: string | null = null;
-    export let title: string;
+    import type { Snippet } from 'svelte';
+
+    interface Props {
+        id?: string | null;
+        title: string;
+        children?: Snippet;
+    }
+
+    let { id = null, title, children }: Props = $props();
 </script>
 
 <section {id} class="container mx-auto my-8 p-4">
@@ -14,6 +21,6 @@
     </hgroup>
 
     <div class="space-y-4 px-4 sm:px-8 lg:px-16">
-        <slot />
+        {@render children?.()}
     </div>
 </section>

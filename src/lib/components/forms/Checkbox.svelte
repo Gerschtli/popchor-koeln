@@ -1,16 +1,19 @@
-<script lang="ts" context="module">
-    type T = Record<string, unknown>;
-</script>
-
 <script lang="ts" generics="T extends Record<string, unknown>">
+    import type { Snippet } from 'svelte';
     import type { Writable } from 'svelte/store';
     import type { FormPathLeaves } from 'sveltekit-superforms';
     import { formFieldProxy, type SuperForm } from 'sveltekit-superforms';
 
-    export let form: SuperForm<T>;
-    export let field: FormPathLeaves<T>;
-    export let name: string;
+    interface Props {
+        form: SuperForm<T>;
+        field: FormPathLeaves<T>;
+        name: string;
+        children?: Snippet;
+    }
 
+    let { form, field, name, children }: Props = $props();
+
+    // svelte-ignore state_referenced_locally
     const { value, errors } = formFieldProxy(form, field);
     const checked = value as Writable<boolean>;
 </script>
@@ -33,6 +36,6 @@
     />
 
     <span class="text-sm" class:text-neutral-600={!$errors} class:text-red-500={$errors}>
-        <slot />
+        {@render children?.()}
     </span>
 </label>

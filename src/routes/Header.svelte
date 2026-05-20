@@ -25,7 +25,7 @@
         <button
             aria-label="Menü öffnen"
             class="text-accent focus-within:text-accent-dark hover:text-accent-dark absolute top-6 right-6 p-2"
-            on:click={openNavigation}
+            onclick={openNavigation}
         >
             <Menu size={32} />
         </button>

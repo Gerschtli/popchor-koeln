@@ -1,9 +1,15 @@
 <script lang="ts">
     import type { Component } from 'svelte';
 
-    export let link: string;
-    export let label: string;
-    export let icon: Component<{ size: number }>;
+    interface Props {
+        link: string;
+        label: string;
+        icon: Component<{ size: number }>;
+    }
+
+    let { link, label, icon }: Props = $props();
+
+    const SvelteComponent = $derived(icon);
 </script>
 
 <a
@@ -13,5 +19,5 @@
     rel="noopener noreferrer"
     aria-label={label}
 >
-    <svelte:component this={icon} size={20} />
+    <SvelteComponent size={20} />
 </a>

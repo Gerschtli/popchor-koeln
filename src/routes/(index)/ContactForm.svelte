@@ -8,10 +8,15 @@
     import { superFormBuilder } from '$lib/forms';
     import type { PageData } from './$types';
 
-    export let data: PageData;
+    interface Props {
+        data: PageData;
+    }
+
+    let { data }: Props = $props();
 
     const id = 'kontaktformular';
     const subjectOptions = ['Lob und Kritik', 'Mitsingen', 'Anfrage', 'Sonstiges'];
+    // svelte-ignore state_referenced_locally
     const { form, status } = superFormBuilder(data.formContact);
 </script>
 

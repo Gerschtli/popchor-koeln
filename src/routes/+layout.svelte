@@ -6,7 +6,7 @@
     import Header from './Header.svelte';
     import Navigation from './Navigation.svelte';
 
-    export let data;
+    let { data, children } = $props();
 
     initNavigationModal();
 </script>
@@ -28,7 +28,7 @@
 <Navigation navigationItems={data.navigationItems} />
 
 <main>
-    <slot />
+    {@render children?.()}
 </main>
 
 <Footer />

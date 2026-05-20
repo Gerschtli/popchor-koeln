@@ -5,11 +5,15 @@
     import GigEntry from '../gigs/GigEntry.svelte';
     import RichTextSimple from './richtext/RichTextSimple.svelte';
 
-    export let blok: Gig;
+    interface Props {
+        blok: Gig;
+    }
 
-    $: ({ title, place, placeShort, price, linkTickets, description } = blok);
-    $: date = parseDateAsUtc(blok.date);
-    $: entryTime = blok.entryTime ? parseDateAsUtc(blok.entryTime) : undefined;
+    let { blok }: Props = $props();
+
+    let { title, place, placeShort, price, linkTickets, description } = $derived(blok);
+    let date = $derived(parseDateAsUtc(blok.date));
+    let entryTime = $derived(blok.entryTime ? parseDateAsUtc(blok.entryTime) : undefined);
 </script>
 
 <div use:storyblokEditable={blok}>

@@ -5,7 +5,7 @@
     import ContactForm from './ContactForm.svelte';
     import NewsletterForm from './NewsletterForm.svelte';
 
-    export let data;
+    let { data } = $props();
 </script>
 
 <StoryblokInit story={data.storyHome} visualEditor={data.storyblokVisualEditor} />

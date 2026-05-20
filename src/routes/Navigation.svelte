@@ -4,15 +4,21 @@
     import { X } from '@lucide/svelte';
     import { fly } from 'svelte/transition';
 
-    export let navigationItems: { id: string; title: string }[];
+    interface Props {
+        navigationItems: { id: string; title: string }[];
+    }
+
+    let { navigationItems }: Props = $props();
 
     const navigationModal = getNavigationModal();
 
-    $: if (browser) document.body.classList.toggle('overflow-hidden', $navigationModal.isOpen);
+    $effect(() => {
+        if (browser) document.body.classList.toggle('overflow-hidden', $navigationModal.isOpen);
+    });
 </script>
 
-<svelte:window on:popstate={navigationModal.onPopstate} />
-<svelte:body on:keydown={navigationModal.onKeydown} />
+<svelte:window onpopstate={navigationModal.onPopstate} />
+<svelte:body onkeydown={navigationModal.onKeydown} />
 
 {#if $navigationModal.isOpen}
     <nav class="fixed inset-0 z-10 bg-white/90" transition:fly={{ y: '100%', duration: 200 }}>
@@ -27,7 +33,7 @@
                 {/each}
             </ul>
 
-            <button aria-label="Menü schließen" class="absolute top-6 right-6 p-2" on:click={navigationModal.close}>
+            <button aria-label="Menü schließen" class="absolute top-6 right-6 p-2" onclick={navigationModal.close}>
                 <X class="hover:text-slate-500" size={32} />
             </button>
         </div>
