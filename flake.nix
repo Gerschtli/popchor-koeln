@@ -23,9 +23,9 @@
           {
             default = pkgs.mkShell {
               packages = [
-                pkgs.netlify-cli
                 nodejs
-                nodejs.pkgs.pnpm
+                #pkgs.netlify-cli
+                pkgs.pnpm
               ];
             };
           });
