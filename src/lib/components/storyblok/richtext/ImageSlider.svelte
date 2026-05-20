@@ -3,6 +3,7 @@
     import { getDimensionsOfImageUrl, storyblokEditable } from '$lib/storyblok/util';
     import type { ImageSlider } from '$storyblok/227856/storyblok-components';
     import BiggerPicture, { type BiggerPictureInstance } from 'bigger-picture';
+    // @ts-expect-error - no types available for bigger-picture
     import 'bigger-picture/css';
     import { onMount } from 'svelte';
 
