@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { pushState } from '$app/navigation';
     import LogoSmallPopchorSvg from '$lib/assets/LogoSmallPopchorSvg.svelte';
     import imageHeader160Png from '$lib/assets/header.png?h=160&format=png&imagetools';
     import imageHeader160Webp from '$lib/assets/header.png?h=160&format=webp&imagetools';
@@ -6,11 +7,11 @@
     import imageHeader240Webp from '$lib/assets/header.png?h=240&format=webp&imagetools';
     import imageHeader320Png from '$lib/assets/header.png?h=320&format=png&imagetools';
     import imageHeader320Webp from '$lib/assets/header.png?h=320&format=webp&imagetools';
-    import { getNavigationModal } from '$lib/modal';
     import { Menu } from '@lucide/svelte';
 
-    const navigationModal = getNavigationModal();
-    const openNavigation = navigationModal.open;
+    function openNavigation() {
+        pushState('', { openNavigation: true });
+    }
 </script>
 
 <header>

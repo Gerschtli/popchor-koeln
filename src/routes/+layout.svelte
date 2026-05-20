@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { initNavigationModal } from '$lib/modal';
     import '../app.css';
     import Footer from './Footer.svelte';
     import GigPopup from './GigPopup.svelte';
@@ -7,8 +6,6 @@
     import Navigation from './Navigation.svelte';
 
     let { data, children } = $props();
-
-    initNavigationModal();
 </script>
 
 <svelte:head>
