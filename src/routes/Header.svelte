@@ -32,7 +32,7 @@
         </button>
     </div>
 
-    <div class="flex h-[160px] justify-center sm:h-[240px] md:h-[320px]">
+    <div class="flex h-40 justify-center sm:h-60 md:h-80">
         <picture>
             <source
                 media="(max-width: 639px)"
