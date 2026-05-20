@@ -40,7 +40,7 @@
         />
 
         <img
-            class="max-h-[20rem]"
+            class="max-h-80"
             src={blok.image.filename}
             style:aspect-ratio={getAspectRatio(blok.image)}
             loading="lazy"

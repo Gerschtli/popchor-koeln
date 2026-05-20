@@ -88,7 +88,7 @@
                     type="image/png"
                 />
                 <img
-                    class="max-h-[20rem]"
+                    class="max-h-80"
                     loading="lazy"
                     src="{image.image.filename}/m/608x0/filters:no_upscale():format(png)"
                     alt={image.image.alt}
