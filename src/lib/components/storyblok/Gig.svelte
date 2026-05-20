@@ -1,11 +1,11 @@
 <script lang="ts">
-    import type { GigStoryblok } from '$lib/component-types-storyblok';
+    import { storyblokEditable } from '$lib/storyblok/util';
     import { parseDateAsUtc } from '$lib/utils';
-    import { storyblokEditable } from '@storyblok/svelte';
+    import type { Gig } from '$storyblok/227856/storyblok-components';
     import GigEntry from '../gigs/GigEntry.svelte';
     import RichTextSimple from './richtext/RichTextSimple.svelte';
 
-    export let blok: GigStoryblok;
+    export let blok: Gig;
 
     $: ({ title, place, placeShort, price, linkTickets, description } = blok);
     $: date = parseDateAsUtc(blok.date);

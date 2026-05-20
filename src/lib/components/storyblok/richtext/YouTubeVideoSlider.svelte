@@ -1,10 +1,10 @@
 <script lang="ts">
-    import type { YoutubeVideoSliderStoryblok } from '$lib/component-types-storyblok';
     import Slider from '$lib/components/Slider.svelte';
-    import { storyblokEditable } from '@storyblok/svelte';
+    import { storyblokEditable } from '$lib/storyblok/util';
+    import type { YoutubeVideoSlider } from '$storyblok/227856/storyblok-components';
     import YouTubeVideo from './YouTubeVideo.svelte';
 
-    export let blok: YoutubeVideoSliderStoryblok;
+    export let blok: YoutubeVideoSlider;
 </script>
 
 <div use:storyblokEditable={blok}>

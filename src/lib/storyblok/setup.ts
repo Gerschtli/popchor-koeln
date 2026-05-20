@@ -1,7 +1,7 @@
 import { dev } from '$app/environment';
 import { PUBLIC_STORYBLOK_ACCESS_TOKEN } from '$env/static/public';
-import type { PageStoryblok } from '$lib/component-types-storyblok';
 import { components } from '$lib/components/storyblok';
+import type { Page } from '$storyblok/227856/storyblok-components';
 import { apiPlugin, storyblokInit, useStoryblokApi, type ISbStoryData } from '@storyblok/svelte';
 
 export const resolveRelations = ['gigs_reference.reference'];
@@ -37,5 +37,5 @@ export async function loadStory(
         cv: 1, // disable cache
     });
 
-    return dataStory.data.story as ISbStoryData<PageStoryblok>;
+    return dataStory.data.story as ISbStoryData<Page>;
 }

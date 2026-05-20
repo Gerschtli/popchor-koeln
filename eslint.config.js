@@ -59,6 +59,6 @@ export default [
         },
     },
     {
-        ignores: ['src/lib/component-types-storyblok.d.ts'],
+        ignores: ['.storyblok/types/**/*.d.ts'],
     },
 ];

@@ -1,10 +1,10 @@
 <script lang="ts">
-    import type { ExpandableStoryblok } from '$lib/component-types-storyblok';
-    import { storyblokEditable } from '@storyblok/svelte';
+    import { storyblokEditable } from '$lib/storyblok/util';
+    import type { Expandable } from '$storyblok/227856/storyblok-components';
     import { ChevronRight } from 'lucide-svelte';
     import RichText from './RichText.svelte';
 
-    export let blok: ExpandableStoryblok;
+    export let blok: Expandable;
 
     let isExpanded = false;
 </script>

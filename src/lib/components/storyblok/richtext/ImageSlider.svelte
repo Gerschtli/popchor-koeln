@@ -1,13 +1,12 @@
 <script lang="ts">
-    import type { ImageSliderStoryblok } from '$lib/component-types-storyblok';
     import Slider from '$lib/components/Slider.svelte';
-    import { getDimensionsOfImageUrl } from '$lib/storyblok/util';
-    import { storyblokEditable } from '@storyblok/svelte';
+    import { getDimensionsOfImageUrl, storyblokEditable } from '$lib/storyblok/util';
+    import type { ImageSlider } from '$storyblok/227856/storyblok-components';
     import BiggerPicture, { type BiggerPictureInstance } from 'bigger-picture';
     import 'bigger-picture/css';
     import { onMount } from 'svelte';
 
-    export let blok: ImageSliderStoryblok;
+    export let blok: ImageSlider;
 
     let container: HTMLDivElement;
     let bp: BiggerPictureInstance;

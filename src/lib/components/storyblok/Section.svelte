@@ -1,11 +1,12 @@
 <script lang="ts">
-    import type { SectionStoryblok } from '$lib/component-types-storyblok';
+    import { storyblokEditable } from '$lib/storyblok/util';
     import { parseDateAsUtc } from '$lib/utils';
-    import { StoryblokComponent, storyblokEditable } from '@storyblok/svelte';
+    import type { Section } from '$storyblok/227856/storyblok-components';
+    import { StoryblokComponent } from '@storyblok/svelte';
     import { ChevronRight } from 'lucide-svelte';
     import RichText from './richtext/RichText.svelte';
 
-    export let blok: SectionStoryblok;
+    export let blok: Section;
 
     const now = new Date();
 

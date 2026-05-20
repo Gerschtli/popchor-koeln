@@ -1,15 +1,15 @@
 <script lang="ts">
-    import type { RichtextStoryblok } from '$lib/component-types-storyblok';
     import { renderRichText } from '$lib/storyblok/richtext';
+    import type { StoryblokRichtext } from '$storyblok/storyblok';
     import { StoryblokComponent } from '@storyblok/svelte';
 
-    export let content: RichtextStoryblok | undefined;
+    export let content: StoryblokRichtext | undefined;
 </script>
 
 {#if content?.content}
     {#each content.content as item, i (i)}
         {#if item.type === 'blok'}
-            {#each item.attrs.body as itemInner, i (i)}
+            {#each item.attrs?.body as itemInner, i (i)}
                 <StoryblokComponent blok={itemInner} />
             {/each}
         {:else}

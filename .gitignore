@@ -2,6 +2,7 @@
 .env.*
 !.env.example
 /.netlify
+/.storyblok/logs
 /.svelte-kit
 /build
 /node_modules

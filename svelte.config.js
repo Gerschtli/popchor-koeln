@@ -9,6 +9,12 @@ const config = {
 
     kit: {
         adapter: adapter(),
+
+        alias: {
+            // an alias ending /* will only match
+            // the contents of a directory, not the directory itself
+            '$storyblok/*': '.storyblok/types/*',
+        },
     },
 };
 

@@ -1,10 +1,10 @@
 <script lang="ts">
     import YouTubeIcon from '$lib/assets/YouTubeIcon.svelte';
-    import type { YoutubeVideoStoryblok } from '$lib/component-types-storyblok';
-    import { storyblokEditable } from '@storyblok/svelte';
+    import { storyblokEditable } from '$lib/storyblok/util';
+    import type { YoutubeVideo } from '$storyblok/227856/storyblok-components';
     import { twMerge } from 'tailwind-merge';
 
-    export let blok: YoutubeVideoStoryblok;
+    export let blok: YoutubeVideo;
 
     let enabled = false;
 </script>

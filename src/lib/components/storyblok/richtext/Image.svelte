@@ -1,11 +1,11 @@
 <script lang="ts">
-    import type { AssetStoryblok, ImageStoryblok } from '$lib/component-types-storyblok';
-    import { getDimensionsOfImageUrl } from '$lib/storyblok/util';
-    import { storyblokEditable } from '@storyblok/svelte';
+    import { getDimensionsOfImageUrl, storyblokEditable } from '$lib/storyblok/util';
+    import type { Image } from '$storyblok/227856/storyblok-components';
+    import type { StoryblokAsset } from '$storyblok/storyblok';
 
-    export let blok: ImageStoryblok;
+    export let blok: Image;
 
-    function getAspectRatio(asset: AssetStoryblok) {
+    function getAspectRatio(asset: StoryblokAsset) {
         const dimensions = getDimensionsOfImageUrl(asset);
 
         return `${dimensions.width} / ${dimensions.height}`;

@@ -1,8 +1,9 @@
 <script lang="ts">
-    import type { PageStoryblok } from '$lib/component-types-storyblok';
-    import { StoryblokComponent, storyblokEditable } from '@storyblok/svelte';
+    import { storyblokEditable } from '$lib/storyblok/util';
+    import type { Page } from '$storyblok/227856/storyblok-components';
+    import { StoryblokComponent } from '@storyblok/svelte';
 
-    export let blok: PageStoryblok;
+    export let blok: Page;
 </script>
 
 <svelte:head>

@@ -30,7 +30,7 @@ pnpx storyblok logout
 pnpx storyblok login
 
 # download component definitions (stored in components.227856.json) and update ts
-# definitions (src/lib/component-types-storyblok.d.ts)
+# definitions (.storyblok/types/)
 pnpm run storyblok:pull-components
 ```
 

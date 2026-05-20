@@ -1,8 +1,8 @@
 <script lang="ts">
-    import type { RichtextStoryblok } from '$lib/component-types-storyblok';
     import { renderRichText } from '$lib/storyblok/richtext';
+    import type { StoryblokRichtext } from '$storyblok/storyblok';
 
-    export let content: RichtextStoryblok | undefined;
+    export let content: StoryblokRichtext | undefined;
 </script>
 
 {#if content}
