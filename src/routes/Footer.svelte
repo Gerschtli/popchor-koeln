@@ -1,16 +1,19 @@
 <script lang="ts">
     import SpotifyLogo from '$lib/assets/SpotifyLogo.svelte';
-    import { Facebook, Instagram, Mail, Youtube } from 'lucide-svelte';
+    import FacebookLogo from '$lib/assets/FacebookLogo.svelte';
+    import InstagramLogo from '$lib/assets/InstagramLogo.svelte';
+    import YouTubeLogo from '$lib/assets/YouTubeLogo.svelte';
+    import { Mail } from '@lucide/svelte';
     import SocialLink from './SocialLink.svelte';
 </script>
 
 <footer class="border-t border-slate-500">
     <div class="container mx-auto flex flex-col items-center justify-center gap-y-4 p-4 sm:flex-row sm:px-12 lg:px-20">
         <div class="xs:gap-4 flex justify-center gap-2">
-            <SocialLink label="Facebook" link="https://www.facebook.com/popchorkoeln/" icon={Facebook} />
+            <SocialLink label="Facebook" link="https://www.facebook.com/popchorkoeln/" icon={FacebookLogo} />
             <SocialLink label="Email" link="mailto:hallo@popchor-koeln.de" icon={Mail} />
-            <SocialLink label="Youtube" link="https://www.youtube.com/@popchorkoeln" icon={Youtube} />
-            <SocialLink label="Instagram" link="https://www.instagram.com/popchorkoeln/" icon={Instagram} />
+            <SocialLink label="Youtube" link="https://www.youtube.com/@popchorkoeln" icon={YouTubeLogo} />
+            <SocialLink label="Instagram" link="https://www.instagram.com/popchorkoeln/" icon={InstagramLogo} />
             <SocialLink
                 label="Spotify"
                 link="https://open.spotify.com/intl-de/artist/19H5wDzTqtIbb0Y4CT9qCE?si=-fWY9Ht_QNmiaknfWNWCZQ"

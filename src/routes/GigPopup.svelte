@@ -14,7 +14,7 @@
 
     import { onMount } from 'svelte';
     import { browser } from '$app/environment';
-    import { X } from 'lucide-svelte';
+    import { X } from '@lucide/svelte';
     import { fade } from 'svelte/transition';
     const localStorageKey = 'gigTwPckPopupClosed';
     const hideAfterDate = new Date('2025-05-17T20:00:00+0100');

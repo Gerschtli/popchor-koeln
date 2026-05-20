@@ -1,7 +1,7 @@
 <script lang="ts">
     import { browser } from '$app/environment';
     import { getNavigationModal } from '$lib/modal';
-    import { X } from 'lucide-svelte';
+    import { X } from '@lucide/svelte';
     import { fly } from 'svelte/transition';
 
     export let navigationItems: { id: string; title: string }[];

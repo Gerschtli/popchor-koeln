@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts" generics="T">
-    import { ChevronLeft, ChevronRight } from 'lucide-svelte';
+    import { ChevronLeft, ChevronRight } from '@lucide/svelte';
 
     export let labelPrevious: string;
     export let labelNext: string;

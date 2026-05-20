@@ -3,7 +3,7 @@
     import { parseDateAsUtc } from '$lib/utils';
     import type { Section } from '$storyblok/227856/storyblok-components';
     import { StoryblokComponent } from '@storyblok/svelte';
-    import { ChevronRight } from 'lucide-svelte';
+    import { ChevronRight } from '@lucide/svelte';
     import RichText from './richtext/RichText.svelte';
 
     export let blok: Section;

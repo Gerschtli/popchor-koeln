@@ -1,7 +1,7 @@
 <script lang="ts">
     import { storyblokEditable } from '$lib/storyblok/util';
     import type { Expandable } from '$storyblok/227856/storyblok-components';
-    import { ChevronRight } from 'lucide-svelte';
+    import { ChevronRight } from '@lucide/svelte';
     import RichText from './RichText.svelte';
 
     export let blok: Expandable;

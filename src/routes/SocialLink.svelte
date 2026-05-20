@@ -1,10 +1,9 @@
 <script lang="ts">
-    import type { IconProps } from 'lucide-svelte';
-    import type { SvelteComponent } from 'svelte';
+    import type { Component } from 'svelte';
 
     export let link: string;
     export let label: string;
-    export let icon: typeof SvelteComponent<IconProps>;
+    export let icon: Component<{ size: number }>;
 </script>
 
 <a

@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { FormStatus } from '$lib/types';
-    import { Check, Loader2, MailWarning } from 'lucide-svelte';
+    import { Check, Loader2, MailWarning } from '@lucide/svelte';
 
     export let status: FormStatus;
     export let text: string;

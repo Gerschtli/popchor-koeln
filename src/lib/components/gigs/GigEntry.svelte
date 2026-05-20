@@ -1,6 +1,6 @@
 <script lang="ts">
     import { createDateNowMinusOneWeek, formatDate, formatTime } from '$lib/utils';
-    import { ChevronDown, ChevronRight, TicketIcon } from 'lucide-svelte';
+    import { ChevronDown, ChevronRight, TicketIcon } from '@lucide/svelte';
     import GigLine from './GigLine.svelte';
 
     export let title: string;
