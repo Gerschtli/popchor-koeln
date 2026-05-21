@@ -85,8 +85,10 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
-          deploy_id="$(netlify api listSiteDeploys --data '{"site_id": "${{ secrets.NETLIFY_SITE_ID }}"}' \
-            | jq --raw-output '.[] | select(.commit_ref == "${{ github.sha }}") | .id')"
+          deploy_id="$( \
+            netlify api listSiteDeploys --data '{"site_id": "${{ secrets.NETLIFY_SITE_ID }}"}' \
+            | jq --raw-output '[.[] | select(.commit_ref == "${{ github.sha }}") | .id][0]' \
+          )"
 
           echo "deploy id is $deploy_id"
           echo "deploy-id=$deploy_id" >> "$GITHUB_OUTPUT"
