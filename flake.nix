@@ -56,7 +56,7 @@
                 | ${getExe pkgs.gnused} -e 's,^.*"\(.*\)"$,\1,'
             '';
 
-            pnpm = checker "pnpm" "pnpm version in package.json" nodejs.pkgs.pnpm ''
+            pnpm = checker "pnpm" "pnpm version in package.json" pkgs.pnpm ''
               ${getExe pkgs.jq} --raw-output '.packageManager' ${./package.json} \
                 | ${getExe pkgs.gnused} -e 's,^pnpm@,,'
             '';
