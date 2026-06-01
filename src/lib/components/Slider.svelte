@@ -74,7 +74,7 @@
 
         <div
             bind:this={sliderElement}
-            class="scrollbar-none flex snap-x snap-mandatory gap-4 overflow-x-scroll scroll-smooth"
+            class="flex snap-x snap-mandatory scrollbar-none gap-4 overflow-x-scroll scroll-smooth"
             onscrollend={setCurrentIndex}
         >
             {#each items as item, i (i)}
