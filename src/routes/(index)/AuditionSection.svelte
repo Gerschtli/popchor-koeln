@@ -11,10 +11,10 @@
     const id = 'audition';
 </script>
 
-<div {id} class="space-y-2 [&>p]:text-neutral-600">
-    <div class="flex flex-col gap-6 pt-6 sm:flex-row">
+<div {id}>
+    <div class="flex flex-col gap-6 sm:flex-row">
         <div class="flex-1 rounded-lg bg-gray-50 p-4 shadow-sm">
-            <h3 class="font-heading mb-4 text-lg font-bold">Wir bieten</h3>
+            <h3 class="font-heading mb-4 text-lg font-bold">Wir bieten...</h3>
             <ul class="space-y-2 text-neutral-600">
                 <li class="flex items-start gap-2">
                     <span class="text-accent">
@@ -28,7 +28,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
                     </span>
-                    <span>Modernes A cappella Repertoire</span>
+                    <span>Freundschaftliche, zielorientierte Probenatmosphäre</span>
                 </li>
                 <li class="flex items-start gap-2">
                     <span class="text-accent">
@@ -42,7 +42,21 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
                     </span>
-                    <span>Freundschaftliche Probenatmospäre</span>
+                    <span>Vielseitiges A-capella-Repertoire</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-accent">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </span>
+                    <span>Eigene Arrangements</span>
                 </li>
                 <li class="flex items-start gap-2">
                     <span class="text-accent">
@@ -70,7 +84,21 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
                     </span>
-                    <span>Bla</span>
+                    <span>Professionelle Coachings</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-accent">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </span>
+                    <span>Teilnahme an Festivals und Wettbewerben</span>
                 </li>
             </ul>
         </div>
@@ -78,8 +106,50 @@
         <div class="hidden w-px bg-gradient-to-b from-neutral-300 to-neutral-200 sm:block"></div>
 
         <div class="flex-1 rounded-lg bg-gray-50 p-4 shadow-sm">
-            <h3 class="font-heading mb-4 text-lg font-bold">Wir wünschen</h3>
+            <h3 class="font-heading mb-4 text-lg font-bold">Wir wünschen uns...</h3>
             <ul class="space-y-2 text-neutral-600">
+                <li class="flex items-start gap-2">
+                    <span class="text-accent">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </span>
+                    <span>Aktives Einbringen in das Chorleben</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-accent">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </span>
+                    <span>Erfahrung mit Rhythmus und Gesang</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-accent">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </span>
+                    <span>Wandelbare Stimme für variierende Stile</span>
+                </li>
                 <li class="flex items-start gap-2">
                     <span class="text-accent">
                         <svg
@@ -106,7 +176,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
                     </span>
-                    <span>Freude am Singen</span>
+                    <span>Eigenständige Vorbereitung von Stücken</span>
                 </li>
                 <li class="flex items-start gap-2">
                     <span class="text-accent">
@@ -120,21 +190,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
                     </span>
-                    <span>Teilnahme an Proben und Auftritten</span>
-                </li>
-                <li class="flex items-start gap-2">
-                    <span class="text-accent">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </span>
-                    <span>Teamgeist</span>
+                    <span>Regelmäßige Teilnahme an Proben und Auftritten</span>
                 </li>
             </ul>
         </div>
