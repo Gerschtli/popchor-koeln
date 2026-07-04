@@ -282,47 +282,71 @@
         "display_name": "Seite",
         "description": null,
         "created_at": "2023-04-30T12:13:07.140Z",
-        "updated_at": "2024-07-24T09:19:33.305Z",
+        "updated_at": "2026-06-29T13:41:37.722Z",
         "id": 3909729,
         "schema": {
             "id": {
                 "type": "text",
                 "pos": 0,
                 "display_name": "Sprungmarke",
-                "regex": "[a-z0-9\\-]*"
+                "regex": "[a-z0-9\\-]*",
+                "id": "NS-zzabNRQeyexvaw98fjQ"
             },
             "title": {
                 "type": "text",
                 "pos": 1,
                 "required": true,
-                "display_name": "Titel"
+                "display_name": "Titel",
+                "id": "bj6WpoJDSyOI4z4B6BL_ww"
+            },
+            "auditionText": {
+                "type": "richtext",
+                "pos": 2,
+                "id": "08NKAVjqROiIL0_2DzjEiw",
+                "display_name": "Text für Mitsingen"
+            },
+            "auditionLink": {
+                "type": "multilink",
+                "pos": 3,
+                "id": "LPkP9KOhTb-_aC9EYdttNQ",
+                "display_name": "Link für Mitsingen",
+                "allow_target_blank": true
+            },
+            "showAuditionLink": {
+                "type": "boolean",
+                "pos": 4,
+                "id": "2IYdTrbDRi--psVKXFq5IQ"
             },
             "newsletterText": {
                 "type": "richtext",
                 "description": "Wird nur auf Startseite angezeigt.",
                 "display_name": "Text für Newsletter",
-                "pos": 2
+                "pos": 5,
+                "id": "5EGn-CqGRQW2zTRuNpQdMg"
             },
             "contactText": {
                 "type": "richtext",
                 "description": "Wird nur auf Startseite angezeigt.",
                 "display_name": "Text für Kontaktformular",
-                "pos": 3
+                "pos": 6,
+                "id": "YLNLTbOARGSssxAHQGpBLA"
             },
             "description": {
                 "type": "textarea",
-                "pos": 4,
+                "pos": 7,
                 "required": false,
-                "display_name": "Seitenbeschreibung"
+                "display_name": "Seitenbeschreibung",
+                "id": "fLjxozgSQ2aTHt-1Nlk_ig"
             },
             "body": {
                 "type": "bloks",
-                "pos": 5,
+                "pos": 8,
                 "required": false,
                 "restrict_type": "",
                 "restrict_components": true,
                 "component_whitelist": ["section"],
-                "display_name": "Inhalt"
+                "display_name": "Inhalt",
+                "id": "C8p7QiGwRbK0ITASLR3eKw"
             }
         },
         "image": null,

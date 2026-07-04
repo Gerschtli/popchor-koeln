@@ -1,4 +1,4 @@
-import { contact } from '$lib/sectionHeader';
+import { audition, contact } from '$lib/sectionHeader';
 import { initStoryblokApi, loadStory } from '$lib/storyblok/setup';
 
 export async function load({ url }) {
@@ -11,6 +11,7 @@ export async function load({ url }) {
             id: x.id,
             title: x.title,
         })) ?? [];
+    navigationItems.push(audition);
     navigationItems.push(contact);
 
     return {
