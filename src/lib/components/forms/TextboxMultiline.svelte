@@ -27,8 +27,7 @@
             focus:border-slate-500 focus:bg-white
         "
         class:border-red-600={$errors}
-        class:focus:border-red-600={$errors}
-    ></textarea>
+        class:focus:border-red-600={$errors}></textarea>
 
     {#if $errors}
         <p class="text-xs text-red-600">{$errors[0]}</p>
