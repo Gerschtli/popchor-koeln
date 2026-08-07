@@ -1,28 +1,32 @@
-import { MarkTypes, type StoryblokRichTextNode, richTextResolver } from '@storyblok/richtext';
+import {
+    renderRichText as renderRichTextBase,
+    type SbRichTextInput,
+    type SbRichTextRenderContext,
+} from '@storyblok/richtext';
 
 import type { StoryblokRichtext } from '$storyblok/storyblok';
 
-const richText = richTextResolver({
-    resolvers: {
-        [MarkTypes.LINK]: (node) => {
-            const href = node.attrs?.['href'];
-            const target = node.attrs?.['target'];
+const options: SbRichTextRenderContext = {
+    renderers: {
+        link: ({ attrs, children }) => {
+            const href = attrs?.href ?? '';
+            const target = attrs?.target;
 
-            let attrs = `href="${href}"`;
+            let attrString = `href="${href}"`;
 
             if (target && target !== '_self') {
-                attrs += ` target="${target}"`;
+                attrString += ` target="${target}"`;
             }
 
             if (!href.startsWith('/')) {
-                attrs += ` rel="noopener noreferrer"`;
+                attrString += ` rel="noopener noreferrer"`;
             }
 
-            return `<a ${attrs}>${node.text}</a>`;
+            return `<a ${attrString}>${children}</a>`;
         },
     },
-});
+};
 
 export function renderRichText(blok: StoryblokRichtext) {
-    return richText.render(blok as unknown as StoryblokRichTextNode);
+    return renderRichTextBase(blok as unknown as SbRichTextInput, options);
 }
