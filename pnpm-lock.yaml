@@ -96,8 +96,8 @@ importers:
         specifier: ^8.0.0
         version: 8.2.1(@types/node@26.4.0)(jiti@2.7.0)
       vite-imagetools:
-        specifier: ^10.0.0
-        version: 10.0.1(@types/node@26.4.0)(vite@8.2.1(@types/node@26.4.0)(jiti@2.7.0))
+        specifier: ^12.0.0
+        version: 12.0.1(@types/node@26.4.0)(vite@8.2.1(@types/node@26.4.0)(jiti@2.7.0))
       zod:
         specifier: ^4.3.6
         version: 4.4.3
@@ -1837,8 +1837,8 @@ packages:
     resolution: {integrity: sha512-YYNsSlXBjMk92SKnkwvB5LOVSa6OznlFUGcsvrFgNJbJCd0M1XKeFVRc8ZByeCqz32FivYNHJVooLmdqrmvp/Q==}
     engines: {node: '>= 4'}
 
-  imagetools-core@10.0.0:
-    resolution: {integrity: sha512-wirG+oESU1QTORt+fqR6DAsVMgW5CXgrRaGgf1lo4hu/3q6269GfHBmYpVWzmMIuHM/H01QcaWrHR6kHCC7bOw==}
+  imagetools-core@12.0.0:
+    resolution: {integrity: sha512-9u1nEZrA6qd/dv1okXT/i1bLOnL9YAAg7k5BqnBJe5PxYYRecZ/GNyGxUXG5x6ybyvCa25zlx5XX++nSEAkjQw==}
     engines: {node: '>=22.0.0'}
 
   imurmurhash@0.1.4:
@@ -2652,11 +2652,11 @@ packages:
     resolution: {integrity: sha512-TQ5pAGhd5whStmqWvYF4OjQROlmv9SMFVt37qoCBdqRffuuklWYQlCNnEs2ZaIBD1kZRNnikiZOS1eqgkar0iw==}
     engines: {node: '>= 0.10'}
 
-  vite-imagetools@10.0.1:
-    resolution: {integrity: sha512-JfM1rUSLQoPAA+8RB9TFxxpfSjmBpLTkU5zaSFPlWYlgfc3g2gFfYH+u+HghqNy+6HCw6zJBmq+2exx6pMJFOg==}
+  vite-imagetools@12.0.1:
+    resolution: {integrity: sha512-BZcU5TLmCKJyLo6FIk8detM9TYtFkbwOaZ8ebd+Kt7YQKHXL+xJH/Oxg4bBNx8xcP3NPVblE6DI/VCaKja5nYQ==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
-      vite: '>=7.0.0'
+      vite: '>=8.0.0'
 
   vite@8.2.1:
     resolution: {integrity: sha512-EU/eS7BH3XROHh2YnBefjM6DBKA6ZeMZEYQbj7NLWg5wHYlhB8B/Mayd5XsgWq+NFYccDOTemRpdETWR6Ka/lw==}
@@ -4461,7 +4461,7 @@ snapshots:
 
   ignore@7.0.8: {}
 
-  imagetools-core@10.0.0: {}
+  imagetools-core@12.0.0: {}
 
   imurmurhash@0.1.4: {}
 
@@ -5265,10 +5265,10 @@ snapshots:
   validator@13.15.35:
     optional: true
 
-  vite-imagetools@10.0.1(@types/node@26.4.0)(vite@8.2.1(@types/node@26.4.0)(jiti@2.7.0)):
+  vite-imagetools@12.0.1(@types/node@26.4.0)(vite@8.2.1(@types/node@26.4.0)(jiti@2.7.0)):
     dependencies:
       '@rollup/pluginutils': 5.4.0
-      imagetools-core: 10.0.0
+      imagetools-core: 12.0.0
       sharp: 0.35.3(@types/node@26.4.0)
       vite: 8.2.1(@types/node@26.4.0)(jiti@2.7.0)
     transitivePeerDependencies:
