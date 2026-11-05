@@ -23,7 +23,7 @@
         "@eslint/js": "^10.0.0",
         "@lucide/svelte": "^1.16.0",
         "@storyblok/richtext": "^5.0.0",
-        "@storyblok/svelte": "^6.0.0",
+        "@storyblok/svelte": "^7.0.0",
         "@sveltejs/adapter-netlify": "^6.0.0",
         "@sveltejs/kit": "^2.20.7",
         "@sveltejs/vite-plugin-svelte": "^7.0.0",
