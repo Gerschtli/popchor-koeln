@@ -12,6 +12,21 @@
 </script>
 
 <div {id}>
+    <div class="mt-6 mb-6">
+        <RichTextSimple content={data.storyHome.content.auditionText} />
+        {#if data.storyHome.content.showAuditionLink}
+            <a
+                href={data.storyHome.content.auditionLink?.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="
+        bg-accent hover:bg-accent-dark mt-6 flex w-full items-center justify-center rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors duration-100
+        ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
+            >
+                Jetzt bewerben!
+            </a>
+        {/if}
+    </div>
     <div class="flex flex-col gap-6 sm:flex-row">
         <div class="flex-1 rounded-lg bg-gray-50 p-4 shadow-sm">
             <h3 class="font-heading mb-4 text-lg font-bold">Wir bieten...</h3>
@@ -194,21 +209,5 @@
                 </li>
             </ul>
         </div>
-    </div>
-
-    <div class="mt-6">
-        <RichTextSimple content={data.storyHome.content.auditionText} />
-        {#if data.storyHome.content.showAuditionLink}
-            <a
-                href={data.storyHome.content.auditionLink?.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="
-        bg-accent hover:bg-accent-dark mt-6 flex w-full items-center justify-center rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors duration-100
-        ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
-            >
-                Jetzt bewerben!
-            </a>
-        {/if}
     </div>
 </div>
