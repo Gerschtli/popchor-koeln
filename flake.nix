@@ -27,6 +27,10 @@
                 pkgs.netlify-cli
                 pkgs.pnpm
               ];
+
+              LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [
+                pkgs.libgcc.lib # for sharp
+              ]}";
             };
           });
 
