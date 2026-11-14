@@ -1,8 +1,8 @@
 <script lang="ts">
-    import { page } from '$app/stores';
+    import { page } from '$app/state';
     import Section from '#lib/components/Section.svelte';
 
-    let isNotFoundError = $derived($page.status === 404);
+    let isNotFoundError = $derived(page.status === 404);
     let title = $derived(isNotFoundError ? 'Seite nicht gefunden!' : 'Unerwarteter Fehler!');
 </script>
 
