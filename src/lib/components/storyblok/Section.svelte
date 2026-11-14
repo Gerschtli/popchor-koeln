@@ -1,9 +1,9 @@
 <script lang="ts">
+    import type { Section } from '#lib/storyblok/types.ts';
     import { storyblokEditable } from '#lib/storyblok/util.ts';
     import { parseDateAsUtc } from '#lib/utils.ts';
-    import type { Section } from '$storyblok/227856/storyblok-components';
-    import { StoryblokComponent } from '@storyblok/svelte';
     import { ChevronRight } from '@lucide/svelte';
+    import { StoryblokComponent } from '@storyblok/svelte';
     import RichText from './richtext/RichText.svelte';
 
     interface Props {

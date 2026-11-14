@@ -1,6 +1,6 @@
 <script lang="ts">
+    import type { Page } from '#lib/storyblok/types.ts';
     import { storyblokEditable } from '#lib/storyblok/util.ts';
-    import type { Page } from '$storyblok/227856/storyblok-components';
     import { StoryblokComponent } from '@storyblok/svelte';
 
     interface Props {

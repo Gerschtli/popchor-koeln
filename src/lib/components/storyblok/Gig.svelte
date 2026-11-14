@@ -1,7 +1,7 @@
 <script lang="ts">
+    import type { Gig } from '#lib/storyblok/types.ts';
     import { storyblokEditable } from '#lib/storyblok/util.ts';
     import { parseDateAsUtc } from '#lib/utils.ts';
-    import type { Gig } from '$storyblok/227856/storyblok-components';
     import GigEntry from '../gigs/GigEntry.svelte';
     import RichTextSimple from './richtext/RichTextSimple.svelte';
 

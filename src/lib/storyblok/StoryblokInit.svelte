@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Page } from '$storyblok/227856/storyblok-components';
+    import type { Page } from '#lib/storyblok/types.ts';
     import { type ISbStoryData, StoryblokComponent, useStoryblokBridge } from '@storyblok/svelte';
     import { onMount } from 'svelte';
     import { resolveRelations } from './setup';

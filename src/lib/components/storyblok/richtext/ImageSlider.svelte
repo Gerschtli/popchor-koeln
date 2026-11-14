@@ -1,7 +1,7 @@
 <script lang="ts">
     import Slider from '#lib/components/Slider.svelte';
+    import type { ImageSlider } from '#lib/storyblok/types.ts';
     import { getDimensionsOfImageUrl, storyblokEditable } from '#lib/storyblok/util.ts';
-    import type { ImageSlider } from '$storyblok/227856/storyblok-components';
     import BiggerPicture, { type BiggerPictureInstance } from 'bigger-picture';
     // @ts-expect-error - no types available for bigger-picture
     import 'bigger-picture/css';

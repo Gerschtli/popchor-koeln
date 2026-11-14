@@ -1,7 +1,6 @@
 <script lang="ts">
+    import type { Image, StoryblokAsset } from '#lib/storyblok/types.ts';
     import { getDimensionsOfImageUrl, storyblokEditable } from '#lib/storyblok/util.ts';
-    import type { Image } from '$storyblok/227856/storyblok-components';
-    import type { StoryblokAsset } from '$storyblok/storyblok';
 
     interface Props {
         blok: Image;

@@ -1,4 +1,4 @@
-import type { StoryblokAsset } from '$storyblok/storyblok';
+import type { StoryblokAsset } from '#lib/storyblok/types.ts';
 import { type SbBlokData, storyblokEditable as storyblokEditableOriginal } from '@storyblok/svelte';
 
 export function getDimensionsOfImageUrl(asset: StoryblokAsset) {

@@ -4,7 +4,7 @@ import {
     type SbRichTextRenderContext,
 } from '@storyblok/richtext';
 
-import type { StoryblokRichtext } from '$storyblok/storyblok';
+import type { StoryblokRichtext } from '#lib/storyblok/types.ts';
 
 const options: SbRichTextRenderContext = {
     renderers: {

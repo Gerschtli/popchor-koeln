@@ -1,6 +1,6 @@
 <script lang="ts">
     import { renderRichText } from '#lib/storyblok/richtext.ts';
-    import type { StoryblokRichtext } from '$storyblok/storyblok';
+    import type { StoryblokRichtext } from '#lib/storyblok/types.ts';
 
     interface Props {
         content: StoryblokRichtext | undefined;
