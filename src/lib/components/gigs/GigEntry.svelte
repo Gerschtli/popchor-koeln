@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { createDateNowMinusOneWeek, formatDate, formatTime } from '$lib/utils';
+    import { createDateNowMinusOneWeek, formatDate, formatTime } from '#lib/utils.ts';
     import { ChevronDown, ChevronRight, TicketIcon } from '@lucide/svelte';
     import type { Snippet } from 'svelte';
     import GigLine from './GigLine.svelte';

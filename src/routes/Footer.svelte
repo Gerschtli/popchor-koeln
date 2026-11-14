@@ -1,8 +1,8 @@
 <script lang="ts">
-    import SpotifyLogo from '$lib/assets/SpotifyLogo.svelte';
-    import FacebookLogo from '$lib/assets/FacebookLogo.svelte';
-    import InstagramLogo from '$lib/assets/InstagramLogo.svelte';
-    import YouTubeLogo from '$lib/assets/YouTubeLogo.svelte';
+    import SpotifyLogo from '#lib/assets/SpotifyLogo.svelte';
+    import FacebookLogo from '#lib/assets/FacebookLogo.svelte';
+    import InstagramLogo from '#lib/assets/InstagramLogo.svelte';
+    import YouTubeLogo from '#lib/assets/YouTubeLogo.svelte';
     import { Mail } from '@lucide/svelte';
     import SocialLink from './SocialLink.svelte';
 </script>

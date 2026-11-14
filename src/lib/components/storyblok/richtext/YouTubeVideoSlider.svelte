@@ -1,6 +1,6 @@
 <script lang="ts">
-    import Slider from '$lib/components/Slider.svelte';
-    import { storyblokEditable } from '$lib/storyblok/util';
+    import Slider from '#lib/components/Slider.svelte';
+    import { storyblokEditable } from '#lib/storyblok/util.ts';
     import type { YoutubeVideoSlider } from '$storyblok/227856/storyblok-components';
     import YouTubeVideo from './YouTubeVideo.svelte';
 

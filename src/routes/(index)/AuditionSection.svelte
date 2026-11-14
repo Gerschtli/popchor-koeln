@@ -1,5 +1,5 @@
 <script lang="ts">
-    import RichTextSimple from '$lib/components/storyblok/richtext/RichTextSimple.svelte';
+    import RichTextSimple from '#lib/components/storyblok/richtext/RichTextSimple.svelte';
     import type { PageData } from './$types';
 
     interface Props {

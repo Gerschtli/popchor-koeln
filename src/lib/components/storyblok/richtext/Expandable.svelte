@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { storyblokEditable } from '$lib/storyblok/util';
+    import { storyblokEditable } from '#lib/storyblok/util.ts';
     import type { Expandable } from '$storyblok/227856/storyblok-components';
     import { ChevronRight } from '@lucide/svelte';
     import RichText from './RichText.svelte';

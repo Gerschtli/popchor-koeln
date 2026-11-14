@@ -1,6 +1,6 @@
 <script lang="ts">
-    import YouTubeIcon from '$lib/assets/YouTubeIcon.svelte';
-    import { storyblokEditable } from '$lib/storyblok/util';
+    import YouTubeIcon from '#lib/assets/YouTubeIcon.svelte';
+    import { storyblokEditable } from '#lib/storyblok/util.ts';
     import type { YoutubeVideo } from '$storyblok/227856/storyblok-components';
 
     interface Props {

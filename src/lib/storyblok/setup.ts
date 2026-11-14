@@ -1,6 +1,6 @@
 import { dev } from '$app/env';
 import { PUBLIC_STORYBLOK_ACCESS_TOKEN } from '$app/env/public';
-import { components } from '$lib/components/storyblok';
+import { components } from '#lib/components/storyblok/index.ts';
 import type { Page } from '$storyblok/227856/storyblok-components';
 import { apiPlugin, storyblokInit, useStoryblokApi, type ISbStoryData } from '@storyblok/svelte';
 

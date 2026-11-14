@@ -1,16 +1,16 @@
 <script lang="ts">
-    import ticket180Png from '$lib/assets/popup.png?h=180&format=png&imagetools';
-    import ticket180Webp from '$lib/assets/popup.png?h=180&format=webp&imagetools';
-    import ticket220Png from '$lib/assets/popup.png?h=220&format=png&imagetools';
-    import ticket220Webp from '$lib/assets/popup.png?h=220&format=webp&imagetools';
-    import ticket260Png from '$lib/assets/popup.png?h=260&format=png&imagetools';
-    import ticket260Webp from '$lib/assets/popup.png?h=260&format=webp&imagetools';
-    import ticket360Png from '$lib/assets/popup.png?h=360&format=png&imagetools';
-    import ticket360Webp from '$lib/assets/popup.png?h=360&format=webp&imagetools';
-    import ticket440Png from '$lib/assets/popup.png?h=440&format=png&imagetools';
-    import ticket440Webp from '$lib/assets/popup.png?h=440&format=webp&imagetools';
-    import ticket520Png from '$lib/assets/popup.png?h=520&format=png&imagetools';
-    import ticket520Webp from '$lib/assets/popup.png?h=520&format=webp&imagetools';
+    import ticket180Png from '#lib/assets/popup.png?h=180&format=png&imagetools';
+    import ticket180Webp from '#lib/assets/popup.png?h=180&format=webp&imagetools';
+    import ticket220Png from '#lib/assets/popup.png?h=220&format=png&imagetools';
+    import ticket220Webp from '#lib/assets/popup.png?h=220&format=webp&imagetools';
+    import ticket260Png from '#lib/assets/popup.png?h=260&format=png&imagetools';
+    import ticket260Webp from '#lib/assets/popup.png?h=260&format=webp&imagetools';
+    import ticket360Png from '#lib/assets/popup.png?h=360&format=png&imagetools';
+    import ticket360Webp from '#lib/assets/popup.png?h=360&format=webp&imagetools';
+    import ticket440Png from '#lib/assets/popup.png?h=440&format=png&imagetools';
+    import ticket440Webp from '#lib/assets/popup.png?h=440&format=webp&imagetools';
+    import ticket520Png from '#lib/assets/popup.png?h=520&format=png&imagetools';
+    import ticket520Webp from '#lib/assets/popup.png?h=520&format=webp&imagetools';
 
     import { onMount } from 'svelte';
     import { browser } from '$app/env';

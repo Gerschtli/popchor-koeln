@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { renderRichText } from '$lib/storyblok/richtext';
+    import { renderRichText } from '#lib/storyblok/richtext.ts';
     import type { StoryblokRichtext } from '$storyblok/storyblok';
     import { StoryblokComponent } from '@storyblok/svelte';
 

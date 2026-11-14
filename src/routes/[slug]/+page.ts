@@ -1,4 +1,4 @@
-import { loadStory } from '$lib/storyblok/setup';
+import { loadStory } from '#lib/storyblok/setup.ts';
 import { error } from '@sveltejs/kit';
 
 function getStorySlug(slug: string) {

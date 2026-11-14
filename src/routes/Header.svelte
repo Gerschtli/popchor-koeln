@@ -1,12 +1,12 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
-    import LogoSmallPopchorSvg from '$lib/assets/LogoSmallPopchorSvg.svelte';
-    import imageHeader160Png from '$lib/assets/header.png?h=160&format=png&imagetools';
-    import imageHeader160Webp from '$lib/assets/header.png?h=160&format=webp&imagetools';
-    import imageHeader240Png from '$lib/assets/header.png?h=240&format=png&imagetools';
-    import imageHeader240Webp from '$lib/assets/header.png?h=240&format=webp&imagetools';
-    import imageHeader320Png from '$lib/assets/header.png?h=320&format=png&imagetools';
-    import imageHeader320Webp from '$lib/assets/header.png?h=320&format=webp&imagetools';
+    import LogoSmallPopchorSvg from '#lib/assets/LogoSmallPopchorSvg.svelte';
+    import imageHeader160Png from '#lib/assets/header.png?h=160&format=png&imagetools';
+    import imageHeader160Webp from '#lib/assets/header.png?h=160&format=webp&imagetools';
+    import imageHeader240Png from '#lib/assets/header.png?h=240&format=png&imagetools';
+    import imageHeader240Webp from '#lib/assets/header.png?h=240&format=webp&imagetools';
+    import imageHeader320Png from '#lib/assets/header.png?h=320&format=png&imagetools';
+    import imageHeader320Webp from '#lib/assets/header.png?h=320&format=webp&imagetools';
     import { Menu } from '@lucide/svelte';
 
     function openNavigation() {

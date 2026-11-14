@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { getDimensionsOfImageUrl, storyblokEditable } from '$lib/storyblok/util';
+    import { getDimensionsOfImageUrl, storyblokEditable } from '#lib/storyblok/util.ts';
     import type { Image } from '$storyblok/227856/storyblok-components';
     import type { StoryblokAsset } from '$storyblok/storyblok';
 

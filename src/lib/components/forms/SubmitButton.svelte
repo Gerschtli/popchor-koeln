@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { FormStatus } from '$lib/types';
+    import type { FormStatus } from '#lib/types.ts';
     import { Check, Loader2, MailWarning } from '@lucide/svelte';
 
     interface Props {

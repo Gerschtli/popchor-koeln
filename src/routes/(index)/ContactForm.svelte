@@ -1,11 +1,11 @@
 <script lang="ts">
-    import Checkbox from '$lib/components/forms/Checkbox.svelte';
-    import Select from '$lib/components/forms/Select.svelte';
-    import SubmitButton from '$lib/components/forms/SubmitButton.svelte';
-    import Textbox from '$lib/components/forms/Textbox.svelte';
-    import TextboxMultiline from '$lib/components/forms/TextboxMultiline.svelte';
-    import RichTextSimple from '$lib/components/storyblok/richtext/RichTextSimple.svelte';
-    import { superFormBuilder } from '$lib/forms';
+    import Checkbox from '#lib/components/forms/Checkbox.svelte';
+    import Select from '#lib/components/forms/Select.svelte';
+    import SubmitButton from '#lib/components/forms/SubmitButton.svelte';
+    import Textbox from '#lib/components/forms/Textbox.svelte';
+    import TextboxMultiline from '#lib/components/forms/TextboxMultiline.svelte';
+    import RichTextSimple from '#lib/components/storyblok/richtext/RichTextSimple.svelte';
+    import { superFormBuilder } from '#lib/forms.ts';
     import type { PageData } from './$types';
 
     interface Props {

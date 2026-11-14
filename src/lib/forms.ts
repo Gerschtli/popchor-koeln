@@ -1,4 +1,4 @@
-import type { FormStatus } from '$lib/types';
+import type { FormStatus } from '#lib/types.ts';
 import { derived, writable, type Readable } from 'svelte/store';
 import type { SuperValidated } from 'sveltekit-superforms';
 import { superForm } from 'sveltekit-superforms';

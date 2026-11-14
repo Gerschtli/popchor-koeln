@@ -1,9 +1,9 @@
 <script lang="ts">
-    import Checkbox from '$lib/components/forms/Checkbox.svelte';
-    import SubmitButton from '$lib/components/forms/SubmitButton.svelte';
-    import Textbox from '$lib/components/forms/Textbox.svelte';
-    import RichTextSimple from '$lib/components/storyblok/richtext/RichTextSimple.svelte';
-    import { superFormBuilder } from '$lib/forms';
+    import Checkbox from '#lib/components/forms/Checkbox.svelte';
+    import SubmitButton from '#lib/components/forms/SubmitButton.svelte';
+    import Textbox from '#lib/components/forms/Textbox.svelte';
+    import RichTextSimple from '#lib/components/storyblok/richtext/RichTextSimple.svelte';
+    import { superFormBuilder } from '#lib/forms.ts';
     import type { PageData } from './$types';
 
     interface Props {

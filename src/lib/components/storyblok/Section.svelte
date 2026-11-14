@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { storyblokEditable } from '$lib/storyblok/util';
-    import { parseDateAsUtc } from '$lib/utils';
+    import { storyblokEditable } from '#lib/storyblok/util.ts';
+    import { parseDateAsUtc } from '#lib/utils.ts';
     import type { Section } from '$storyblok/227856/storyblok-components';
     import { StoryblokComponent } from '@storyblok/svelte';
     import { ChevronRight } from '@lucide/svelte';

@@ -1,5 +1,5 @@
-import { audition, contact } from '$lib/sectionHeader';
-import { initStoryblokApi, loadStory } from '$lib/storyblok/setup';
+import { audition, contact } from '#lib/sectionHeader.ts';
+import { initStoryblokApi, loadStory } from '#lib/storyblok/setup.ts';
 
 export async function load({ url }) {
     const storyblokApi = initStoryblokApi();
