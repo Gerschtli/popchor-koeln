@@ -5,7 +5,7 @@ import {
     CONTACT_FORM_RECEIVER_NAME_SINGING,
     CONTACT_FORM_SENDER_MAIL,
     CONTACT_FORM_SENDER_NAME,
-} from '$env/static/private';
+} from '$app/env/private';
 import { schemaContact, schemaNewsletter } from '$lib/forms';
 import { sendMail } from '$lib/server/mail';
 import { subscribeToNewsletter } from '$lib/server/newsletter';

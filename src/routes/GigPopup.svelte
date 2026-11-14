@@ -13,7 +13,7 @@
     import ticket520Webp from '$lib/assets/popup.png?h=520&format=webp&imagetools';
 
     import { onMount } from 'svelte';
-    import { browser } from '$app/environment';
+    import { browser } from '$app/env';
     import { X } from '@lucide/svelte';
     import { fade } from 'svelte/transition';
 

@@ -1,4 +1,5 @@
-import { SMTP_HOST, SMTP_PASSWORD, SMTP_PORT, SMTP_SECURE, SMTP_USERNAME, SMTP_USE_TEST } from '$env/static/private';
+import { SMTP_HOST, SMTP_PASSWORD, SMTP_PORT, SMTP_SECURE, SMTP_USERNAME, SMTP_USE_TEST } from '$app/env/private';
+
 import nodemailer from 'nodemailer';
 import type SMTPTransport from 'nodemailer/lib/smtp-transport';
 

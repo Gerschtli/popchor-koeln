@@ -1,4 +1,4 @@
-import { BREVO_API_KEY, BREVO_LIST_ID, BREVO_MOCK } from '$env/static/private';
+import { BREVO_API_KEY, BREVO_LIST_ID, BREVO_MOCK } from '$app/env/private';
 
 type BrevoContactBody = {
     email: string;
@@ -30,7 +30,7 @@ export async function subscribeToNewsletter(email: string) {
 
     try {
         await apiPost(`/contacts`, {
-            email: email,
+            email,
             listIds: [parseInt(BREVO_LIST_ID)],
             updateEnabled: true,
         });
