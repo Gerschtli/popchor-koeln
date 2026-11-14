@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { pushState } from '$app/navigation';
+    import { goto } from '$app/navigation';
     import LogoSmallPopchorSvg from '$lib/assets/LogoSmallPopchorSvg.svelte';
     import imageHeader160Png from '$lib/assets/header.png?h=160&format=png&imagetools';
     import imageHeader160Webp from '$lib/assets/header.png?h=160&format=webp&imagetools';
@@ -10,7 +10,7 @@
     import { Menu } from '@lucide/svelte';
 
     function openNavigation() {
-        pushState('', { openNavigation: true });
+        goto('', { shallow: true, state: { openNavigation: true } });
     }
 </script>
 
